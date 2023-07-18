@@ -7,7 +7,7 @@ int main(void)
         int First;
     do
     {
-        First = get_int("Enter First population: ");
+        First = get_int("Enter First population: %i\n");
     }
     while (First < 9);
 
@@ -15,7 +15,7 @@ int main(void)
     int Second;
     do
     {
-        Second = get_int("Enter Second population: ");
+        Second = get_int("Enter Second population: %i\n");
     }
     while (First < Second);
     // TODO: Calculate number of years until we reach threshold
@@ -27,5 +27,5 @@ int main(void)
     }
 
     // TODO: Print number of years
-    print ("")
+    print ("Years: %i\n", Years)
 }
