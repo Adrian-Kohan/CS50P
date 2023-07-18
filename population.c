@@ -19,10 +19,13 @@ int main(void)
     }
     while (First < Second);
     // TODO: Calculate number of years until we reach threshold
-    int Years
+    int Years=0;
     while (First < Second)
-
-
+    {
+        First= First + (First/3) - (First/4)
+        Years++1
+    }
 
     // TODO: Print number of years
+    print ("")
 }
