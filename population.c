@@ -7,13 +7,21 @@ int main(void)
         int First;
     do
     {
-        n = get_int("Positive Integer: ");
+        First = get_int("Enter First population: ");
     }
-    while (n < 1);
+    while (First < 9);
 
     // TODO: Prompt for end size
-
+    int Second;
+    do
+    {
+        Second = get_int("Enter Second population: ");
+    }
+    while (First < Second);
     // TODO: Calculate number of years until we reach threshold
+    while (First < Second)
+    
+
 
     // TODO: Print number of years
 }
