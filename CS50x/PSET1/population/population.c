@@ -10,8 +10,8 @@ int main (void)
     {
         First = get_int("First population size: \n");
     }
-    while (First < 1);
-}
+    while (First < 9);
+
     //Second population size
         int Second;
     do
@@ -19,3 +19,4 @@ int main (void)
         Second = get_int("Second population size: \n");
     }
     while (First < Second);
+}
