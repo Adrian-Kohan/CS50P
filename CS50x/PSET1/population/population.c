@@ -21,7 +21,7 @@ int main (void)
     while ( Second<First);
 
     //Calculation of the years that it takes for the First population to reach the Second population
-    int years=0;
+        int years=0;
     while (First<Second)
     {
     First=First+(First/3)-(First/4);
