@@ -1,14 +1,21 @@
-#incluce <stdio.h>
-#incluce <cs50.h>
+#include <stdio.h>
+#include <cs50.h>
 
 int main (void)
 
 {
     //First population size
-     int First;
-  do
-  {
-      First = get_int("First population size: \n");
-  }
-  while (n < 1);
+        int First;
+    do
+    {
+        First = get_int("First population size: \n");
+    }
+    while (First < 1);
 }
+    //Second population size
+        int Second;
+    do
+    {
+        Second = get_int("Second population size: \n");
+    }
+    while (First < Second);
