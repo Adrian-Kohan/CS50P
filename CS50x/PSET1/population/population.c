@@ -20,11 +20,11 @@ int main (void)
     }
     while (First < Second);
 
-    //Calculation of the Years that it takes for the First population to reach the Second population
-    int Years=0;
+    //Calculation of the years that it takes for the First population to reach the Second population
+    int years=0;
     while (Second<First)
     First=First+(First/3)-(First/4);
-    Years++;
+    years++;
     //Showing the Years
-    printf ("Years:%s",Years)
+    printf ("Years:%s\n",years);
 }
