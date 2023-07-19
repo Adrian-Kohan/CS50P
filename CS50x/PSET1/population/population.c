@@ -18,11 +18,11 @@ int main (void)
     {
         Second = get_int("Second population size: \n");
     }
-    while (First < Second);
+    while ( Second<First);
 
     //Calculation of the years that it takes for the First population to reach the Second population
     int years=0;
-    while (Second<First)
+    while (First<Second)
     {
     First=First+(First/3)-(First/4);
     years++;
