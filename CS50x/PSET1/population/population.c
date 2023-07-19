@@ -26,5 +26,5 @@ int main (void)
     First=First+(First/3)-(First/4);
     Years++;
     //Showing the Years
-    print ("Years:%s",Years)
+    printf ("Years:%s",Years)
 }
