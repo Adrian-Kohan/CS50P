@@ -20,5 +20,10 @@ int main (void)
     }
     while (First < Second);
 
-    //Calculation of Years that take till First population gets Second population
+    //Calculation of the Years that it takes for the First population to reach the Second population
+    Years=0
+    Years=First+(First/3)-(First/4);
+    Years++;
+    //Showing the Years
+    print ("Years:%s"Years)
 }
