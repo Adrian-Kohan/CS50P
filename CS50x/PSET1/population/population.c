@@ -19,4 +19,6 @@ int main (void)
         Second = get_int("Second population size: \n");
     }
     while (First < Second);
+
+    //Calculation of Years that take till First population gets Second population
 }
