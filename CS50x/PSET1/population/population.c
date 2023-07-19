@@ -28,5 +28,5 @@ int main (void)
     years++;
     }
     //Showing the Years
-    printf ("Years:%s\n",years);
+    printf ("Years: %i\n",years);
 }
