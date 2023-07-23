@@ -21,7 +21,7 @@ long get_card (void)
     {
         c = get_long ("Enter your card number?\n");
     }
-    while (c < 13 || c > 16);
+    while (c < 1);
     return c;
 }
 
