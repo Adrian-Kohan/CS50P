@@ -16,7 +16,7 @@ int main(void)
 
 long get_card (void)
 {
-    int c;
+    long c;
     do
     {
         c = get_long("Enter your card number?\n");
