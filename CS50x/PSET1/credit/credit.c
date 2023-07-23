@@ -19,7 +19,7 @@ long get_card (void)
     long c;
     do
     {
-        c = get_long("Enter your card number?\n");
+        c = get_long ("Enter your card number?\n");
     }
     while ();
     return c;
