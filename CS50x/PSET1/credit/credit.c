@@ -8,5 +8,5 @@ long Visa (card)
 
 int main(void)
 {
-    long American-Express = g
+    long American-Express = get_long
 }
