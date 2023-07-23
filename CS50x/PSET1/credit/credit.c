@@ -37,5 +37,6 @@ long MasC (long card)
 
 long Visa (long card)
 {
+    if ()
     return 0;
 }
