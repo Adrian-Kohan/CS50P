@@ -3,8 +3,10 @@
 
 long card_number (void)
 long AMEX (card)
-long 
+long MasC (card)
+long Visa (card)
+
 int main(void)
 {
-
+    long American-Express = g
 }
