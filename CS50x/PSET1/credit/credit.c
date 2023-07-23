@@ -26,13 +26,13 @@ long get_card (void)
 }
 long AMEX (long card)
 {
-
+    return 0;
 }
 long MasC (long card)
 {
-
+    return 0;
 }
 long Visa (long card)
 {
-
+    return 0;
 }
