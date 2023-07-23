@@ -16,14 +16,13 @@ int main(void)
 
 long get_card (void)
 {
-    int H;
+    int c;
     do
     {
-        H = get_int("How many cents are you owed?\n");
+        c = get_long("Enter your card number?\n");
     }
     while (H < 0);
     return H;
-}
 }
 long AMEX (long card)
 {
