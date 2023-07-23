@@ -21,17 +21,20 @@ long get_card (void)
     {
         c = get_long("Enter your card number?\n");
     }
-    while (c < 13 || c > 16);
+    while ();
     return c;
 }
+
 long AMEX (long card)
 {
     return 0;
 }
+
 long MasC (long card)
 {
     return 0;
 }
+
 long Visa (long card)
 {
     return 0;
