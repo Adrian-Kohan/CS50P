@@ -1,12 +1,32 @@
 #include <cs50.h>
 #include <stdio.h>
 
-long card_number (void)
-long AMEX (card)
-long MasC (card)
-long Visa (card)
+long get_card (void)
+long AMEX (long card)
+long MasC (long card)
+long Visa (long card)
 
 int main(void)
 {
-    long American-Express = get_long
+    long Card-number = get_card ()
+    long American-express = AMEX (card)
+    long Master-Card = MasC (card)
+    long Visa-Card = Visa (card)
+}
+
+long get_card (void)
+{
+
+}
+long AMEX (long card)
+{
+
+}
+long MasC (long card)
+{
+
+}
+long Visa (long card)
+{
+    
 }
