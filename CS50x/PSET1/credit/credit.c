@@ -37,6 +37,6 @@ long MasC (long card)
 
 long Visa (long card)
 {
-    if ()
+    if (4000000000000000 <= card <= 4999999999999999 || 40000000000000 <= card <= 49999999999999999)
     return 0;
 }
