@@ -52,7 +52,7 @@ int compute_score(string word)
             {
                 word[j] = u[i];
             }
-            while (false);
+            while (true);
             return  word[j];
         }
         score = score + word[j];
