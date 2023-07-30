@@ -24,7 +24,7 @@ int main(void)
         }
 
     }
-    printf("%i\n", bi);
+    printf("%a\n", bi[]);
 
 }
 
