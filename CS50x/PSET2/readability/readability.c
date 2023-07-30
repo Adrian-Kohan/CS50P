@@ -10,5 +10,8 @@ int main(void)
 
 int count_word(int word)
 {
-    
+    for(int i = 0; i < strlen(text); i++)
+    {
+        
+    }
 }
