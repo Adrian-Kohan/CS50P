@@ -9,12 +9,17 @@ int main(void)
     printf("%s\n", text);
 
     int numC = 0;
+    int numW = 1;
     for(int i = 0; i < strlen(text); i++)
     {
 
         if(('a' <= text[i] && text[i] <= 'z') || ('A' <= text[i] && text[i] <= 'Z'))
         {
             numC++;
+        }
+        if(text[i] = " ")
+        {
+            numW++;
         }
     }
 
