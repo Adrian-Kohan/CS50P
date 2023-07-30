@@ -20,7 +20,7 @@ int main(void)
             de = de/2;
         }
     }
-    printf("bi[]\n");
+    printf("%i\n", bi[]);
 
 }
 
