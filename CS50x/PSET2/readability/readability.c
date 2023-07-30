@@ -2,18 +2,19 @@
 #include <stdio.h>
 #include <string.h>
 
-string count_word(string word);
+//string count_word(string word);
 int main(void)
 {
     string text = get_string ("Write some text\n");
-    printf("%s\n", count_word(text));
-
-}
-
-string count_word(string word)
-{
+    printf("%s\n", text);
     for(int i = 0; i < strlen(text); i++)
     {
         printf("%s", text[i]);
     }
+
+}
+
+//string count_word(string word)
+{
+
 }
