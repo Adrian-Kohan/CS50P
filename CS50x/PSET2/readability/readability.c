@@ -10,7 +10,7 @@ int main(void)
     string list[] = text;
     for(int i = 0; i < strlen(text); i++)
     {
-        printf("%s", text[i]);
+        printf("%s", list[i]);
     }
 
 }
