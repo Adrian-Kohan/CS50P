@@ -12,7 +12,7 @@ int main(void)
     int numW = 1;
 
 
-    for(int i =0;; i < strlen(text); i++)
+    for(int i =0; i < strlen(text); i++)
     {
 
         if(('a' <= text[i] && text[i] <= 'z') || ('A' <= text[i] && text[i] <= 'Z'))
