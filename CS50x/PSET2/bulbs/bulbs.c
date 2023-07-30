@@ -11,12 +11,12 @@ int main(void)
     //getting some message
     string m = get_string("Please write a message\n");
 
+    int i = 0;
+    int de = m[i];
     int bi[] = {0, 0, 0, 0, 0, 0, 0, 0};
-    int i;
-    for (i = 0; i < strlen(m); i++)
+    int j = 0;
+    for (; i < strlen(m); i++)
     {
-        int j = 0;
-        int de = m[i];
         while ( de > 0)
         {
             bi[j] = de%2;
