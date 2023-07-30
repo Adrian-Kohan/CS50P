@@ -9,3 +9,6 @@ int main(void)
 }
 
 int count_word(int word)
+{
+    
+}
