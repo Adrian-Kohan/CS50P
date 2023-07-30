@@ -38,18 +38,18 @@ int compute_score(string word)
     //Compute and return score for string
     int score = 0;
     int j = 0;
-    for (j = 0; j < strlen(word); j++ )
+    for (j = 0; j < strlen(word); j++)
     {
-       if  (islower (word[j]))
-       {
-            score += POINTS[word[j] -'a'];
+        if (islower(word[j]))
+        {
+            score += POINTS[word[j] - 'a'];
 
-       }
-        if  (isupper (word[j]))
-       {
-            score += POINTS[word[j] -'A'];
+        }
+        if (isupper(word[j]))
+        {
+            score += POINTS[word[j] - 'A'];
 
-       }
+        }
     }
     return score;
 }
