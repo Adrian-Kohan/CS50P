@@ -12,7 +12,7 @@ int main(void)
     for(int i = 0; i < strlen(text); i++)
     {
 
-        if(a <= text[i] <= z || A <= text[i] <= Z)
+        if('a' <= text[i] <= 'z' || 'A' <= text[i] <= 'Z')
         {
             numC++;
         }
