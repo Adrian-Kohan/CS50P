@@ -10,6 +10,7 @@ int main(void)
 
     int numC = 0;
     int numW = 1;
+    int w = text[i];
     for(int i = 0; i < strlen(text); i++)
     {
 
@@ -17,7 +18,7 @@ int main(void)
         {
             numC++;
         }
-        if(text[i] = " ")
+        if(w = 32)
         {
             numW++;
         }
