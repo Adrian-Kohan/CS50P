@@ -48,7 +48,7 @@ int compute_score(string word)
 
         do
         {
-            word[j] = u[i];
+            word[j] = l[i];
         }
         while (false);
         return word[j];
