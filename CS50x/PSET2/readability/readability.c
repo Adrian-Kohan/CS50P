@@ -12,14 +12,13 @@ int main(void)
     for(int i = 0; i < strlen(text); i++)
     {
 
-        if('a' <= text[i] <= 'z' || 'A' <= text[i] <= 'Z')
+        if(('a' <= text[i] && text[i] <= 'z') || ('A' <= text[i] && text[i] <= 'Z'))
         {
             numC++;
         }
-        //printf("%i\n", text[i]);
     }
 
-
+    printf("%i\n", numC);
 
 //string count_word(string word)
 
