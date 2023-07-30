@@ -59,7 +59,6 @@ int compute_score(string word)
             return  word[j];
         }
         score = score + word[j];
-
     }
     return score;
 }
