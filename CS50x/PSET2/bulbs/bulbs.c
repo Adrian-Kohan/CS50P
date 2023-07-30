@@ -12,7 +12,7 @@ int main(void)
     string m = get_string("Please write a message\n");
     for (int i = 0; i < strlen(m); i++)
     {
-        printf("%i", m[i]);
+        printf("%i\n", m[i]);
     }
 
 }
