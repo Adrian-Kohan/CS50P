@@ -31,8 +31,8 @@ int main(void)
             numS++;
         }
     }
-    int L = (numC / numW) * 100;
-    int S = (numW / numS) * 100;
+    int L = numC / numW * 100;
+    int S = numW / numS * 100;
     int index = 0.0588 * L - 0.296 * S - 15.8;
 
     printf("Grade %i\n", index);
