@@ -50,7 +50,7 @@ int compute_score(string word)
             l[i] = POINTS[i];
             do
             {
-                word[j] = u[i];
+                word[j] = POINTS[i];
             }
             while (false);
             return  word[j];
