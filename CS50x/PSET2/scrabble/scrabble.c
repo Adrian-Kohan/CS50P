@@ -51,10 +51,9 @@ int compute_score(string word)
             word[j] = l[i];
         }
         while (false);
-        return word[j];
+        //return word[j];
 
         score = score + word[j];
-
     }
-    return score;
+    return score && word[j];
 }
