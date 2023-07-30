@@ -10,7 +10,7 @@ int main(void)
 
     for(int i = 0; i < strlen(text); i++)
     {
-        printf("%c\n", text[i]);
+        printf("%i\n", text[i]);
     }
 
 
