@@ -44,18 +44,7 @@ int compute_score(string word)
 
     for (j = 0; j < strlen(word); j++ )
     {
-        for (i = 0; i < 26; i++)
-        {
-            u[i] = l[i];
-            l[i] = POINTS[i];
-            do
-            {
-                word[j] = POINTS[i];
-            }
-            while (false);
-            return  word[j];
-        }
-        score = score + word[j];
+       
     }
     return score;
 }
