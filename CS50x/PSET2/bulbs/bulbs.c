@@ -30,8 +30,6 @@ int main(void)
         }
         printf("\n");
     }
-
-
 }
 
 void print_bulb(int bit)
