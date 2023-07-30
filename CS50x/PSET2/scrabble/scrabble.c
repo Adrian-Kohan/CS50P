@@ -42,13 +42,8 @@ int compute_score(string word)
     int u[] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
     for (i = 0 ; i < 26 ; i++ )
     {
-        u[i] = l[i];
-        l[i] = POINTS[i];
-    }
-
-
-    for (int j = 0; j < strlen(word); j++ )
-    {
+        for (int j = 0; j < strlen(word); j++ )
+        {
         do
         {
             word[j] = u[i];
@@ -56,7 +51,9 @@ int compute_score(string word)
         while (false);
 
         score = score + word[j];
+        }
+        u[i] = l[i];
+        l[i] = POINTS[i];
     }
-
     return score;
 }
