@@ -5,7 +5,7 @@
 //string count_word(string word);
 int main(void)
 {
-    string text = get_string ("Write some text\n");
+    string text = get_string ("Text:\n");
 
 
     int numC = 0;
