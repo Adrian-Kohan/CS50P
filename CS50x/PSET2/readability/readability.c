@@ -8,10 +8,15 @@ int main(void)
     string text = get_string ("Write some text\n");
     printf("%s\n", text);
 
+    int numC = 0;
     for(int i = 0; i < strlen(text); i++)
     {
-        
-        printf("%i\n", text[i]);
+
+        if(a <= text[i] <= z || A <= text[i] <= Z)
+        {
+            numC++;
+        }
+        //printf("%i\n", text[i]);
     }
 
 
