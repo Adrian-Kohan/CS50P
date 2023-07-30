@@ -21,7 +21,7 @@ int main(void)
     // Print the winner
     if (score1 > score2)
     {
-        printf("Player 1 wins!\n");
+        printf("Player 1 wins!%i %i\n");
     }
     else if (score1 < score2)
     {
@@ -48,19 +48,21 @@ int compute_score(string word)
 
         //return word[j];
 
-        score = score + word[j];
+
     }
     for (j = 0; j < strlen(word); j++ )
     {
         for (i = 0; i < 26; i++)
         {
             do
-        {
-            word[j] = l[i];
+            {
+                word[j] = l[i];
+            }
+            while (false);
+            return  word[j];
         }
-        while (false);
-        }
+        score = score + word[j];
 
     }
-    return score && word[j];
+    return score;
 }
