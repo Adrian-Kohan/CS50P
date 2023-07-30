@@ -53,12 +53,12 @@ int compute_score(string word)
         {
             do
             {
-                word[j] = POINTS[u[i]];
+                word[j] = l[i];
             }
             while (false);
             return  word[j];
         }
-        score = score + word[j];
+        score = score + POINTS[word[j]];
     }
     return score;
 }
