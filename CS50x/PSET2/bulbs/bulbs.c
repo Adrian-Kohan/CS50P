@@ -19,8 +19,9 @@ int main(void)
             bi[j] = de%2;
             de = de/2;
         }
+        printf("%i\n", bi[]);
     }
-    printf("%i\n", bi[]);
+
 
 }
 
