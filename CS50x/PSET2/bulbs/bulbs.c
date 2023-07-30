@@ -17,13 +17,13 @@ int main(void)
         int de = m[i];
         int bi[] = {0, 0, 0, 0, 0, 0, 0, 0};
         int j = 0;
-        while ( de > 0)
+        while (de > 0)
         {
-            bi[j] = de%2;
-            de = de/2;
+            bi[j] = de % 2;
+            de = de / 2;
             j++;
         }
-        //reversing the array character
+        //reversing the array character and show them with bulbs
         int q;
         for (q = 7; q >= 0; q--)
         {
