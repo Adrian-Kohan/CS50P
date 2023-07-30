@@ -23,6 +23,7 @@ int main(void)
             de = de/2;
             j++;
         }
+        //reversing the array character
         int q;
         for (q = 7; q >= 0; q--)
         {
