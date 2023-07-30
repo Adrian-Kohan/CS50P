@@ -32,7 +32,7 @@ int main(void)
         }
     }
     int L = numC / numW * 100;
-    int S = numW / numS * 100;
+    int S = numS / numW * 100;
     int index = 0.0588 * L - 0.296 * S - 15.8;
 
     printf("%i %i %i\n", numC, numW, numS);
