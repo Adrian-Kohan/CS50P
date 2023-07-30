@@ -38,13 +38,14 @@ int compute_score(string word)
     //Compute and return score for string
     int score = 0;
     int i = 0;
+    int j = 0;
     int l[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
     int u[] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
-    for (i = 0 ; i < 26 ; i++ )
+    for (i = 0, j = 0; i < 26, j < strlen(word);  i++, j++ )
     {
         u[i] = l[i];
         l[i] = POINTS[i];
-        for (int j = 0; j < strlen(word); j++ )
+        for ()
         {
         do
         {
