@@ -7,10 +7,10 @@ int main(void)
 {
     string text = get_string ("Write some text\n");
     printf("%s\n", text);
-    string list[] = "%s\n",text;
+
     for(int i = 0; i < strlen(text); i++)
     {
-        printf("%s", list[i]);
+        printf("%c", text[i]);
     }
 
 }
