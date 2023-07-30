@@ -23,6 +23,12 @@ int main(void)
             de = de/2;
             j++;
         }
+        int q;
+        for (q = 7; q >= 0; q--)
+        {
+            print_bulb(bi[q]);
+        }
+        printf("\n");
     }
 
 
