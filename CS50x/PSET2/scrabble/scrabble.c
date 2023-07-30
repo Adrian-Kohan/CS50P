@@ -37,19 +37,19 @@ int compute_score(string word)
 {
     //Compute and return score for string
     int score = 0;
-    int i = 0;
     int j = 0;
-    int l[] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-    int u[] = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
-
     for (j = 0; j < strlen(word); j++ )
     {
-       if (word[i] islower)
+       if  (islower (word[i]))
        {
-                index = word[i] - POINTS 'a'
+            score += POINTS (word[i] -'a')
 
        }
+        if  (isupper (word[i]))
+       {
+            score += POINTS (word[i] -'A')
 
+       }
     }
     return score;
 }
