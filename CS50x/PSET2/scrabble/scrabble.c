@@ -44,7 +44,11 @@ int compute_score(string word)
 
     for (j = 0; j < strlen(word); j++ )
     {
-       
+       if (word[i] islower)
+       {
+            
+       }
+
     }
     return score;
 }
