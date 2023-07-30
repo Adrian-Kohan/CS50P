@@ -34,9 +34,21 @@ int main(void)
     int L = numC / numW * 100;
     int S = numS / numW * 100;
     int index = 0.0588 * L - 0.296 * S - 15.8;
-
+    if (index <= 16)
+    {
+        printf("Grade 16+\n");
+    }
+    else if (index < 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else
+    {
+        printf("Grade %i\n", index);
+    }
     printf("%i %i %i\n", numC, numW, numS);
-    printf("Grade %i\n", index);
+
+
 
 //string count_word(string word)
 
