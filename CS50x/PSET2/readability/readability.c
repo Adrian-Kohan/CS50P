@@ -26,7 +26,7 @@ int main(void)
             numW++;
         }
 
-        if(text[i] = "!" || text[i] = "." || text[i] = "?" )
+        if(w == 46 || w == 33 || w == 63 )
         {
             numS++;
         }
