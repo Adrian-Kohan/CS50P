@@ -10,15 +10,17 @@ int main(void)
 
     int numC = 0;
     int numW = 1;
-    int i =0;
-    int w = text[i];
-    for(; i < strlen(text); i++)
+
+
+    for(int i =0;; i < strlen(text); i++)
     {
 
         if(('a' <= text[i] && text[i] <= 'z') || ('A' <= text[i] && text[i] <= 'Z'))
         {
             numC++;
         }
+
+        int w = text[i];
         if(w == 32)
         {
             numW++;
