@@ -55,7 +55,7 @@ int compute_score(string word)
         }
         while (false);
 
-        score = score + u[word[j]];
+        score = score + word[j];
     }
 
     return score;
