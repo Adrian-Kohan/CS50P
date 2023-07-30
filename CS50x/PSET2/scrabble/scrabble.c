@@ -53,7 +53,7 @@ int compute_score(string word)
         {
             word[j] = u[i];
         }
-        while (False);
+        while (false);
 
         score = score + u[word[j]];
     }
