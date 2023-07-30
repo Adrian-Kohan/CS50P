@@ -10,12 +10,12 @@ int main(void)
 
     for(int i = 0; i < strlen(text); i++)
     {
-        printf("%c", text[i]);
+        printf("%c\n", text[i]);
     }
 
-}
+
 
 //string count_word(string word)
-{
+
 
 }
