@@ -10,7 +10,7 @@ int main(void)
 
     int numC = 0;
     int numW = 1;
-
+    int numS = 0;
 
     for(int i =0; i < strlen(text); i++)
     {
@@ -25,9 +25,14 @@ int main(void)
         {
             numW++;
         }
+
+        if(text[i] = ! || text[i] = . || text[i] = ? )
+        {
+            numS++;
+        }
     }
 
-    printf("%i %i\n", numC, numW);
+    printf("%i %i %i\n", numC, numW, numS);
 
 //string count_word(string word)
 
