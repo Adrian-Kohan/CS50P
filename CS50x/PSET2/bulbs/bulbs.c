@@ -15,16 +15,16 @@ int main(void)
     int i;
     for (i = 0; i < strlen(m); i++)
     {
-
+        int j;
         int de = m[i];
-        for (int j = 0; j < 8; j++)
+        for ( j = 0; j < 8; j++)
         {
             bi[j] = de%2;
             de = de/2;
         }
-
+        printf("%i\n", bi[j]);
     }
-    printf("%a\n", bi[]);
+
 
 }
 
