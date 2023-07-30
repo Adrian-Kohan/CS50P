@@ -8,7 +8,13 @@ void print_bulb(int bit);
 
 int main(void)
 {
-    // TODO
+    //getting some message
+    string m = get_string("Please write a message\n");
+    for (int i = 0; i < strlen(m); i++)
+    {
+        printf()
+    }
+
 }
 
 void print_bulb(int bit)
