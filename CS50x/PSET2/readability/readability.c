@@ -26,7 +26,7 @@ int main(void)
             numW++;
         }
 
-        if(text[i] = ! || text[i] = . || text[i] = ? )
+        if(text[i] = "!" || text[i] = "." || text[i] = "?" )
         {
             numS++;
         }
