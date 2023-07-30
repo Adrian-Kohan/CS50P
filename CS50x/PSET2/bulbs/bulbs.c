@@ -12,10 +12,9 @@ int main(void)
     string m = get_string("Please write a message\n");
     for (int i = 0; i < strlen(m); i++)
     {
-        if (printf("%i\n", m[i])%2 = 0)
-        {
-            printf("")
-        }
+        int bi[] = {0, 0, 0, 0, 0, 0, 0, 0}
+        int de = m[i]
+        
     }
 
 }
