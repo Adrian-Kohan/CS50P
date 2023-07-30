@@ -15,14 +15,14 @@ int main(void)
     int i;
     for (i = 0; i < strlen(m); i++)
     {
-        int j;
+        int j = 0;
         int de = m[i];
-        for ( j = 0; j < 8; j++)
+        while ( de > 0)
         {
             bi[j] = de%2;
             de = de/2;
+            j++;
         }
-        printf("%i\n", bi[j]);
     }
 
 
