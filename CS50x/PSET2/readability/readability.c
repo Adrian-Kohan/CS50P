@@ -31,6 +31,7 @@ int main(void)
         }
     }
     printf("%i %i %i\n", numC, numW, numS);
+    
     float L , S = 0;
     L = numC/numW*100;
     S = numS/numW*100;
