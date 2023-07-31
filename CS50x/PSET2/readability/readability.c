@@ -12,16 +12,27 @@ int main(void)
     //Calculating the letters, words and sentences
 
     int numC = 0;
-    
+    int numW = 1;
     int numS = 0;
 
     for(int i =0; i < strlen(text); i++)
     {
+        //Calculating the letters
 
         if(('a' <= text[i] && text[i] <= 'z') || ('A' <= text[i] && text[i] <= 'Z'))
         {
             numC++;
         }
+
+        //Calculating the words
+
+        int w = text[i];
+        if(w == 32)
+        {
+            numW++;
+        }
+
+        //Calculating the sentences
 
         if(w == 46 || w == 33 || w == 63 )
         {
@@ -36,6 +47,8 @@ int main(void)
     float index = 0.0588 * L - 0.296 * S - 15.8;
     int rounded = round(index);
 
+    //Printing the grade
+
     if (rounded >= 16)
     {
         printf("Grade 16+\n");
@@ -49,19 +62,4 @@ int main(void)
         printf("Grade %i\n", rounded);
     }
 
-
-}
-
-//string count_word(string word)
-{
-
-    for(int i =0; i < strlen(text); i++)
-    {
-        int w = text[i];
-        if(w == 32)
-        {
-            numW++;
-        }
-        erturn numW;
-    }
 }
