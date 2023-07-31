@@ -31,9 +31,9 @@ int main(void)
         }
     }
     printf("%i %i %i\n", numC, numW, numS);
-    float L = (numC / numW) * 100;
-    float S = (numS / numW) * 100;
-    printf("%f %f\n", L, S);
+    int L = ((numC / numW) * 100);
+    int S = (numS / numW) * 100;
+    printf("%i %i\n", L, S);
     float index = 0.0588 * L - 0.296 * S - 15.8;
     if (index >= 16)
     {
