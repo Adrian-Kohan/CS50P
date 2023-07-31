@@ -32,10 +32,10 @@ int main(void)
     }
     printf("%i %i %i\n", numC, numW, numS);
 
-    float L , S = 0;
+    int L , S = 0;
     L = numC*100/numW;
     S = numS*100/numW;
-    printf("%f %f\n", L, S);
+    printf("%i %i\n", L, S);
     float index = 0.0588 * L - 0.296 * S - 15.8;
     if (index >= 16)
     {
