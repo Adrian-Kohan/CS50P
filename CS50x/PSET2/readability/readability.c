@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 //string count_word(string word);
 int main(void)
@@ -33,19 +34,20 @@ int main(void)
 
     int L = numC*100/numW;
     int S = numS*100/numW;
-    int index = 0.0588 * L - 0.296 * S - 15.8;
+    float index = 0.0588 * L - 0.296 * S - 15.8;
+    int rounded = round(index);
 
-    if (index >= 16)
+    if (rounded >= 16)
     {
         printf("Grade 16+\n");
     }
-    else if (index < 1)
+    else if (rounded < 1)
     {
         printf("Before Grade 1\n");
     }
     else
     {
-        printf("Grade %i\n", index);
+        printf("Grade %i\n", rounded);
     }
 
 
