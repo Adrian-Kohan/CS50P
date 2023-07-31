@@ -45,6 +45,8 @@ int main(void)
     int L = numC*100/numW;
     int S = numS*100/numW;
     float index = 0.0588 * L - 0.296 * S - 15.8;
+    printf("%f\n", index);
+    
     int rounded = round(index);
 
     //Printing the grade
