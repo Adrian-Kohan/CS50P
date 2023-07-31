@@ -19,20 +19,18 @@ int main(void)
         {
             numC++;
         }
-        return numC;
         int w = text[i];
         if(w == 32)
         {
             numW++;
         }
-        return numW;
 
         if(w == 46 || w == 33 || w == 63 )
         {
             numS++;
         }
-        return numS;
     }
+    printf("%i %i %i\n", numC, numW, numS);
     float L = (numC / numW) * 100;
     float S = (numS / numW) * 100;
     printf("%f %f\n", L, S);
