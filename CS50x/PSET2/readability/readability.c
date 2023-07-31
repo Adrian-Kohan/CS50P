@@ -7,7 +7,7 @@ int main(void)
 {
     //Getting a text from user
 
-    string text = get_string ("Text: ");
+    string text = get_string("Text: ");
 
     //Calculating the letters, words and sentences
 
@@ -15,11 +15,11 @@ int main(void)
     float numW = 1;
     float numS = 0;
 
-    for(int i =0; i < strlen(text); i++)
+    for (int i = 0; i < strlen(text); i++)
     {
         //Calculating the letters
 
-        if(('a' <= text[i] && text[i] <= 'z') || ('A' <= text[i] && text[i] <= 'Z'))
+        if (('a' <= text[i] && text[i] <= 'z') || ('A' <= text[i] && text[i] <= 'Z'))
         {
             numC++;
         }
@@ -27,14 +27,14 @@ int main(void)
         //Calculating the words
 
         int w = text[i];
-        if(w == 32)
+        if (w == 32)
         {
             numW++;
         }
 
         //Calculating the sentences
 
-        if(w == 46 || w == 33 || w == 63 )
+        if (w == 46 || w == 33 || w == 63)
         {
             numS++;
         }
@@ -42,8 +42,8 @@ int main(void)
 
     //Calculating the grade
 
-    float L = numC*100/numW;
-    float S = numS*100/numW;
+    float L = numC * 100 / numW;
+    float S = numS * 100 / numW;
     float index = 0.0588 * L - 0.296 * S - 15.8;
     printf("%f\n", index);
 
