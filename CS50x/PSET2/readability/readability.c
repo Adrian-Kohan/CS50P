@@ -5,7 +5,7 @@
 //string count_word(string word);
 int main(void)
 {
-    string text = get_string ("Text:\n");
+    string text = get_string ("Text: ");
 
 
     int numC = 0;
@@ -30,13 +30,11 @@ int main(void)
             numS++;
         }
     }
-    printf("%i %i %i\n", numC, numW, numS);
 
-    int L , S = 0;
-    L = numC*100/numW;
-    S = numS*100/numW;
-    printf("%i %i\n", L, S);
-    float index = 0.0588 * L - 0.296 * S - 15.8;
+    int L = numC*100/numW;
+    int S = numS*100/numW;
+    int index = 0.0588 * L - 0.296 * S - 15.8;
+
     if (index >= 16)
     {
         printf("Grade 16+\n");
@@ -47,9 +45,8 @@ int main(void)
     }
     else
     {
-        printf("Grade %f\n", index);
+        printf("Grade %i\n", index);
     }
-    printf("%i %i %i\n", numC, numW, numS);
 
 
 
