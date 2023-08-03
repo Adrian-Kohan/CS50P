@@ -68,12 +68,12 @@ bool vote(string name)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (vote(name))
+        if ()
         candidates[i].name = argv[i + 1];
         candidates[i].votes = 0;
     }
 
-    
+
     return false;
 }
 
