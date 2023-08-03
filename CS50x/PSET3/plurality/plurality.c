@@ -18,7 +18,7 @@ candidate candidates[MAX];
 
 // Number of candidates
 int candidate_count;
-int voter_count;
+
 
 // Function prototypes
 bool vote(string name);
@@ -46,7 +46,7 @@ int main(int argc, string argv[])
         candidates[i].votes = 0;
     }
 
-    voter_count = get_int("Number of voters: ");
+    int voter_count = get_int("Number of voters: ");
 
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
@@ -67,7 +67,7 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    for (int i = 0; i < voter_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (strcmp(candidates[i].name,name)==0)
         {
