@@ -70,8 +70,9 @@ bool vote(string name)
     {
         if (strcomp(candidates[i].name,name)==0)
         {
-            candidates[i].votes = 0
+            candidates[i].votes += 1;
         }
+        return true;
     }
 
 
