@@ -92,7 +92,7 @@ void print_winner(void)
             }
 
         }
-     printf ("")
+     printf (argv[candidate_count])
     }
     return;
 }
