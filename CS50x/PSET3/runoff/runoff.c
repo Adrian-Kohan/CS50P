@@ -128,6 +128,18 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     // TODO
+    for (int i = 0; i < voter_count; i++)
+    {
+        // Query for each rank
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (strcmp(candidates[i].name) == 0)
+            {
+                preferences[][] = preferences[i][j];
+                return true;
+            }
+        }
+    }
     return false;
 }
 
