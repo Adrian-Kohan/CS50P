@@ -1,0 +1,1 @@
+SELECT title FROM movies, people, stars, ratings WHERE people.id = stars.person_id AND stars.movie_id = ratings.movie_id AND ratings.rating >= 9 ORDER BY people.birth;
