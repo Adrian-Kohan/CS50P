@@ -1,0 +1,1 @@
+SELECT name FROM movies, people, stars WHERE people.id = stars.person_id AND stars.movie_id = movies.id AND people.name = 'Kevin Bacon';
