@@ -1,1 +1,1 @@
-SELECT name, rating FROM ratings, movies WHERE movies.id = ratings.movie_id AND year = 2010 ORDER BY rating DESC AND WHERE ratings.movie_id = ratings.movie_id ;
+SELECT name, rating FROM ratings, movies WHERE movies.id = ratings.movie_id AND year = 2010 ORDER BY rating DESC AND WHERE ratings.movie_id = ratings.movie_id ORDER BY name ACS;
