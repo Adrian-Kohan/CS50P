@@ -30,7 +30,7 @@ def main():
     for person in database:
         match = 0
         for sub in subsequences
-        if int (person[subsequences] == result[subsequences]):
+        if int (person[subsequences]) == result[subsequences]:
             match += 1
         if match == len(subsequences):
             print(person["name"])
