@@ -37,7 +37,7 @@ bool check(const char *word)
         {
             return true;
         }
-        n -> next;
+        n = n -> next;
     }
     return false;
 }
@@ -47,7 +47,7 @@ unsigned int hash(const char *word)
 {
     // Improve this hash function
     long sum = 0;
-    for(int i; i < strlen(word); i++)
+    for(int i = 0; i < strlen(word); i++)
     {
         sum += tolower(word[i]);
     }
@@ -79,7 +79,7 @@ bool load(const char *dictionary)
         table[hash_value] = n;
         dict_size++;
     }
-    fclose(dicr_point)
+    fclose(dict_point);
     return true;
 }
 
@@ -92,7 +92,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    for(int i; i < N: i++)
+    for(int i = 0; i < N; i++)
     {
         node *n = table[i];
         while(n != NULL)
