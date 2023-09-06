@@ -58,7 +58,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    FILE *dict_point = fopen(dictionary, 'r')
+    FILE *dict_point = fopen(dictionary, 'r');
     if (dictionary == NULL)
     {
         printf ("Can't open the %\n", dictionary);
@@ -98,7 +98,7 @@ bool unload(void)
         while(n != NULL)
         {
             node *tmp = n;
-            n -> next;
+            n = n -> next;
             free(tmp);
         }
         if (n == NULL && i == N - 1)
