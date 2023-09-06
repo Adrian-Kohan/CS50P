@@ -44,6 +44,20 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE *dict_point = fopen(dictionary, 'r')
+    if (dictionary == NULL)
+    {
+        printf ("Can't open the %\n", dictionary);
+        return false;
+    }
+    char next_word[LENGTH + 1];
+    while(fscanf(dict_point, "%", next_word) != EOF)
+    {
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            return false;
+        }
+    }
     return false;
 }
 
