@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+
 #include "dictionary.h"
 
 // Represents a node in a hash table
