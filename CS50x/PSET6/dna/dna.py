@@ -23,15 +23,15 @@ def main():
 
     # Find longest match of each STR in DNA sequence
     result = {}
-    for sub in subsequences
+    for sub in subsequences:
         result[sub] = longest_match(sequence, sub)
 
     # Check database for matching profiles
     for person in database:
         match = 0
-        for sub in subsequences
-        if int (person[subsequences]) == result[subsequences]:
-            match += 1
+        for sub in subsequences:
+            if int (person[subsequences]) == result[subsequences]:
+                match += 1
         if match == len(subsequences):
             print(person["name"])
             return
