@@ -57,8 +57,15 @@ bool load(const char *dictionary)
         {
             return false;
         }
+        srtcpy(n -> word, next_word);
+        int hash_value = hash(next_word);
+
+        n -> next = table[hash_value];
+        table[hash_value] = n;
+        dict_size++;
     }
-    return false;
+    fclose(dicr_point)
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
