@@ -66,6 +66,9 @@ def simulate_tournament(teams):
     if round >= 2:
         teams = simulate_round(teams)
         return simulate_tournament(teams)
+    else:
+        winner = teams[0]["team"]
+        return winner
 
 
 if __name__ == "__main__":
