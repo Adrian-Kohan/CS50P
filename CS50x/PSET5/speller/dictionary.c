@@ -28,7 +28,10 @@ int dict_size = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    int hash_value = hash(word);
+    node *n = table[hash_value];
+
+    strcasecomp
     return false;
 }
 
