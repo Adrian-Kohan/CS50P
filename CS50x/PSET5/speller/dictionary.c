@@ -31,7 +31,14 @@ bool check(const char *word)
     int hash_value = hash(word);
     node *n = table[hash_value];
 
-    strcasecomp
+    while (n != NULL)
+    {
+        if(strcasecmp(word, n -> word) == 0 )
+        {
+            return true;
+        }
+        n -> next;
+    }
     return false;
 }
 
