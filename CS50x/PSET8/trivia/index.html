@@ -39,14 +39,15 @@
                 if (event.target.id == "correct")
                 {
                     event.target.classList.add('correct');
-                    correctButton.setBackground(Color.Green);
+                    correct.style.backgroundColor = "green";
                     corChecker(true, "awn");
                 }
                 else
                 {
                     event.target.classList.add('incorrect');
                     corChecker(false, "awn");
-                    correct.style.backgroundColor = "red";
+                    correctButton.setBackground(Color.Green);
+
                 }
             }
             document.addEventListener ("DOMContentLoaded", function(event)
