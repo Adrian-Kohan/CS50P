@@ -7,39 +7,73 @@
         <title>Trivia!</title>
         <script>
             // Add code to check answers to questions
-            document.addEventListener('DOMContentLoaded', function() {
+            let correct = document.querySelector('#correct');
+                    let incorrect = document.querySelectorAll('#incorrect');
+                    let status = document.querySelector('#status');
 
-            // When click  on correct answer button, set the green color
-            let correct = document.querySelector('.correct');
-            correct.addEventListener('click', function(event) {
-                correct.style.backgroundColor = 'green';
-                document.querySelector('#feedback1').innerHTML = 'Correct!';
-                });
+                    correct.onclick = function() {
+                        correct.style.backgroundColor = 'green';
+                        status.innerHTML = "Correct!";
+                    };
 
-            // When click  on incorrect answer button, set the red color
-            let incorrects = document.querySelectorAll('.incorrect');
-            for(let i = 0; i < incorrects.length; i++)
+                    for (let i = 0; i < incorrect.length; i++) {
+                        incorrect[i].onclick = function() {
+                            incorrect[i].style.backgroundColor = 'red';
+                            status.innerHTML = "Incorrect!";
+                        };
+                    }
+            function corChecker(correct, element)
             {
-                incorrects[i].addEventListener('click', function(event) {
-                incorrects[i].style.backgroundColor = 'red';
-                document.querySelector('#feedback1').innerHTML = 'Incorrect';
-                });
-            }
-
-            document.querySelector('#check').addEventListener('click', function()
-            {
-            let input = document.querySelector('input');
-            if(input.value == 'Asia'){
-                input.style.backgroundColor = 'green';
-                document.querySelector('#feedback2').innerHTML = 'Correct!';
-            }
-            else {
-                input.style.backgroundColor = 'red';
-                document.querySelector('#feedback2').innerHTML = 'Incorrect';
+                if (correct)
+                {
+                    document.getElementById(element).innerHTML = "Correct";
                 }
+                else
+                {
+                    document.getElementById(element).innerHTML = "Incorrect";
+                }
+            }
+
+            function resetBtn()
+            {
+                var bottons = document.querySelectorAll(".button");
+                bottons.forEach(function (btn)
+                {
+                    btn.classList.remove('incorrect');
+                    btn.classList.remove('correct');
+                });
+
+            }
+
+            function answerGet()
+            {
+                resetBtn();
+                if (event.target.id == "correct")
+                {
+                    event.target.classList.add('correct');
+                    correct.style.backgroundColor = "green";
+                    corChecker(true, "awn");
+                }
+                else
+                {
+                    event.target.classList.add('incorrect');
+                    for (let i = 0; i < incorrect.length; i++)
+                    {
+                        incorrect[i].addEventListener("click", function() { incorrect[i].style.backgroundColor = "red";
+                    });
+                    }
+                    corChecker(false, "awn");
+                }
+            }
+            document.addEventListener ("DOMContentLoaded", function(event)
+            {
+                var bottons = document.querySelectorAll (".button");
+                bottons.forEach(function (btn)
+                {
+                    btn.addEventListener("click", answerGet);
+                });
             });
 
-        });
 
 
         </script>
@@ -60,8 +94,6 @@
                 <button id="incorrect" class="button">Hypertext Transfer Model Language</button>
                 <button id="correct" class="button">Hypertext Markup Language</button>
                 <button id="incorrect" class="button">Hyperlink and Text Markup Language</button>
-                <p id = "feedback1"></p>
-
             </div>
 
             <div class="section">
