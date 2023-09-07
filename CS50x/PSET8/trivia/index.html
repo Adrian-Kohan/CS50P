@@ -42,7 +42,8 @@
                 {
                     event.target.classList.add('incorrect');
                     for (let i = 0; i < incorrect.length; i++) {
-                            incorrect[i].style.backgroundColor = 'red';}
+                        incorrect[i].addEventListener("click", function() { incorrect[i].style.backgroundColor = "red";
+                    }});
                     corChecker(false, "awn");
                 }
             }
@@ -56,8 +57,7 @@
 
                 let correct = document.querySelector(".correct");
                 correct.addEventListener("click", function() { correct.style.backgroundColor = "green"; });
-                let incorrect = document.querySelector(".correct");
-                incorrect.addEventListener("click", function() { incorrect.style.backgroundColor = "red"; });
+
             });
 
 
