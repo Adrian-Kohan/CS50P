@@ -21,6 +21,10 @@
 
             function resetBtn()
             {
+                let correct = document.querySelector(".correct");
+                correct.addEventListener("click", answerGet);
+                let incorrect = document.querySelector(".incorrect");
+                incorrect.addEventListener("click", answerGet);
                 var bottons = document.querySelectorAll(".button");
                 bottons.forEach(function (btn)
                 {
