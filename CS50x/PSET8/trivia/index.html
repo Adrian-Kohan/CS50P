@@ -20,11 +20,11 @@
             }
             function resetBtn()
             {
-                var btns = document.querySelectorAll(".button");
-                btns.forEach(function (btn)
+                var bottons = document.querySelectorAll(".button");
+                bottons.forEach(function (bottons)
                 {
-                    btn.classList.remove('incorrect');
-                    btn.classList.remove('correct');
+                    bottons.classList.remove('incorrect');
+                    bottons.classList.remove('correct');
                 });
             }
 
@@ -42,7 +42,7 @@
                     corChecker(false, "awn");
                 }
             }
-            document.addEventListener ("DOMContentLoaded",function(event)
+            document.addEventListener ("DOMContentLoaded", function(event)
             {
                 var btns = document. querySelectorAll (".button");
                 btns.forEach(function (btn)
