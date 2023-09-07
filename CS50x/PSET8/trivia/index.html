@@ -22,7 +22,19 @@
                             status.innerHTML = "Incorrect!";
                         };
                     }
+                    document.addEventListener('submit', function() {
+                            let status2 = document.querySelector('#status2');
+                            let value = document.querySelector('#value');
 
+                            if (value.value == 'Switzerland' || value.value == 'switzerland' || value.value == 'SWITZERLAND') {
+                                value.style.backgroundColor = 'green';
+                                status2.innerHTML = 'Correct!';
+                            }
+                            else {
+                                value.style.backgroundColor = 'red';
+                                status2.innerHTML = 'Incorrect!';
+                            }
+                        });
 
         </script>
     </head>
