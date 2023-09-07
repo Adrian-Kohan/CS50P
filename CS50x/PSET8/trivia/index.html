@@ -7,21 +7,6 @@
         <title>Trivia!</title>
         <script>
             // Add code to check answers to questions
-            let correct = document.querySelector('#correct');
-                    let incorrect = document.querySelectorAll('#incorrect');
-                    let status = document.querySelector('#status');
-
-                    correct.onclick = function() {
-                        correct.style.backgroundColor = 'green';
-                        status.innerHTML = "Correct!";
-                    };
-
-                    for (let i = 0; i < incorrect.length; i++) {
-                        incorrect[i].onclick = function() {
-                            incorrect[i].style.backgroundColor = 'red';
-                            status.innerHTML = "Incorrect!";
-                        };
-                    }
             function corChecker(correct, element)
             {
                 if (correct)
