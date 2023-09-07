@@ -28,6 +28,10 @@
                     btn.classList.remove('correct');
                     //btn.classList.remove(backgroundColor)
                 });
+                let correct = document.querySelector(".correct");
+                correct.addEventListener("click", function() { correct.style.backgroundColor = "green"; });
+
+
             }
 
             function answerGet()
