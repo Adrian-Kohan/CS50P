@@ -27,6 +27,22 @@
                     btn.classList.remove('correct');
                 });
             }
+
+            function answerGet ()
+            {
+                resetBtn();
+                if (event.target.id == "correct")
+                {
+                    event.target.classList.add('correct');
+                    corChecker(true, "awn");
+                }
+                else
+                {
+                    event.target.classList.add('incorrect');
+                    corChecker(false, "awn");
+                }
+            }
+            
         </script>
     </head>
     <body>
