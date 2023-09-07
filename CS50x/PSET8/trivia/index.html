@@ -11,12 +11,21 @@
             {
                 if (correct)
                 {
-                    document.getElementById(element) . innerHTML = "Correct"
+                    document.getElementById(element).innerHTML = "Correct"
                 }
                 else
                 {
-                document. getElementById (element). innerHTML = "Incorrect"
+                    document.getElementById (element).innerHTML = "Incorrect"
                 }
+            }
+            function resetBtn()
+            {
+                var btns = document.querySelectorAll(".button");
+                btns.forEach(function (btn)
+                {
+                    btn.classList.remove('incorrect');
+                    btn.classList.remove('correct');
+                });
             }
         </script>
     </head>
