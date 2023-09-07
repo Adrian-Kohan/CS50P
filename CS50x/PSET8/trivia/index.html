@@ -41,7 +41,7 @@
                 else
                 {
                     event.target.classList.add('incorrect');
-                    correct.style.backgroundColor = "red";
+                    incorrect.style.backgroundColor = "red";
                     corChecker(false, "awn");
                 }
             }
@@ -52,7 +52,10 @@
                 {
                     btn.addEventListener("click", answerGet);
                 });
-                
+                let correct = document.querySelector(".correct");
+                correct.addEventListener("click", answerGet);
+                let incorrect = document.querySelector(".incorrect");
+                incorrect.addEventListener("click", answerGet);
             });
 
 
