@@ -7,7 +7,40 @@
         <title>Trivia!</title>
         <script>
             // Add code to check answers to questions
-            
+            document.addEventListener('DOMContentLoaded', function() {
+
+            // When click  on correct answer button, set the green color
+            let correct = document.querySelector('.correct');
+            correct.addEventListener('click', function(event) {
+                correct.style.backgroundColor = 'green';
+                document.querySelector('#feedback1').innerHTML = 'Correct!';
+                });
+
+            // When click  on incorrect answer button, set the red color
+            let incorrects = document.querySelectorAll('.incorrect');
+            for(let i = 0; i < incorrects.length; i++)
+            {
+                incorrects[i].addEventListener('click', function(event) {
+                incorrects[i].style.backgroundColor = 'red';
+                document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                });
+            }
+
+            document.querySelector('#check').addEventListener('click', function(){
+            let input = document.querySelector('input');
+            if(input.value == 'Asia'){
+                input.style.backgroundColor = 'green';
+                document.querySelector('#feedback2').innerHTML = 'Correct!';
+            }
+            else {
+                input.style.backgroundColor = 'red';
+                document.querySelector('#feedback2').innerHTML = 'Incorrect';
+            }
+            });
+
+            });
+
+
         </script>
     </head>
     <body>
@@ -26,6 +59,8 @@
                 <button id="incorrect" class="button">Hypertext Transfer Model Language</button>
                 <button id="correct" class="button">Hypertext Markup Language</button>
                 <button id="incorrect" class="button">Hyperlink and Text Markup Language</button>
+                <p id = "feedback1"></p>
+
             </div>
 
             <div class="section">
