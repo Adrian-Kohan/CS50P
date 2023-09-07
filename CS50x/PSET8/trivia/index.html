@@ -41,9 +41,11 @@
                 else
                 {
                     event.target.classList.add('incorrect');
-                    for (let i = 0; i < incorrect.length; i++) {
+                    for (let i = 0; i < incorrect.length; i++)
+                    {
                         incorrect[i].addEventListener("click", function() { incorrect[i].style.backgroundColor = "red";
-                    }});
+                    });
+                    }
                     corChecker(false, "awn");
                 }
             }
@@ -54,10 +56,6 @@
                 {
                     btn.addEventListener("click", answerGet);
                 });
-
-                let correct = document.querySelector(".correct");
-                correct.addEventListener("click", function() { correct.style.backgroundColor = "green"; });
-
             });
 
 
