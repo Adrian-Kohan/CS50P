@@ -7,35 +7,7 @@
         <title>Trivia!</title>
         <script>
             // Add code to check answers to questions
-            let correct = document.querySelector('#correct');
-            let incorrect = document.querySelectorAll('#incorrect');
-                    let status = document.querySelector('#status');
-
-                    correct.onclick = function() {
-                        correct.style.backgroundColor = 'green';
-                        status.innerHTML = "Correct!";
-                    };
-
-                    for (let i = 0; i < incorrect.length; i++) {
-                        incorrect[i].onclick = function() {
-                            incorrect[i].style.backgroundColor = 'red';
-                            status.innerHTML = "Incorrect!";
-                        };
-                    }
-                    document.addEventListener('submit', function() {
-                            let status2 = document.querySelector('#status2');
-                            let value = document.querySelector('#value');
-
-                            if (value.value == 'Switzerland' || value.value == 'switzerland' || value.value == 'SWITZERLAND') {
-                                value.style.backgroundColor = 'green';
-                                status2.innerHTML = 'Correct!';
-                            }
-                            else {
-                                value.style.backgroundColor = 'red';
-                                status2.innerHTML = 'Incorrect!';
-                            }
-                        });
-
+            
         </script>
     </head>
     <body>
