@@ -30,20 +30,17 @@
 
             function answerGet()
             {
-                let correct = document.querySelector(".correct");
-                correct.addEventListener("click", function()
-                    {
-                        correct.style.backgroundColor = "green";
-                    });
                 resetBtn();
                 if (event.target.id == "correct")
                 {
                     event.target.classList.add('correct');
+                    correct.style.backgroundColor = "green";
                     corChecker(true, "awn");
                 }
                 else
                 {
                     event.target.classList.add('incorrect');
+                    correct.style.backgroundColor = "red";
                     corChecker(false, "awn");
                 }
             }
@@ -53,6 +50,11 @@
                 bottons.forEach(function (btn)
                 {
                     btn.addEventListener("click", answerGet);
+                });
+                let correct = document.querySelector(".correct");
+                correct.addEventListener("click", function()
+                {
+                    correct.style.backgroundColor = "green";
                 });
             });
 
