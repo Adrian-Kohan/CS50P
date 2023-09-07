@@ -42,7 +42,7 @@
                 {
                     event.target.classList.add('incorrect');
                     corChecker(false, "awn");
-                    incorrect.style.backgroundColor = "red";
+                    correct.style.backgroundColor = "red";
                 }
             }
             document.addEventListener ("DOMContentLoaded", function(event)
@@ -52,10 +52,7 @@
                 {
                     btn.addEventListener("click", answerGet);
                 });
-                let correct = document.querySelector(".correct");
-                correct.addEventListener("click", answerGet);
-                let incorrect = document.querySelector(".incorrect");
-                incorrect.addEventListener("click", answerGet);
+
             });
 
 
