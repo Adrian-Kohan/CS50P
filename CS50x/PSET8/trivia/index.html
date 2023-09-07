@@ -42,7 +42,12 @@
                     corChecker(false, "awn");
                 }
             }
-            
+            document.addEventListener ("DOMContentLoaded",function(event)
+                var btns = document. querySelectorAll (".button");
+                btns.forEach(function (btn)
+                {
+                    btn.addEventListener("cLick", answerGet);
+                });
         </script>
     </head>
     <body>
