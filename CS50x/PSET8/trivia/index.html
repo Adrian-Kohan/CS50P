@@ -27,18 +27,12 @@
                     btn.classList.remove('incorrect');
                     btn.classList.remove('correct');
                 });
-                
+
                 let correct = document.querySelector(".correct");
-                correct.forEach(function (btn)
-                {
-                    correct.style.backgroundColor = " ";
-                });
+                correct.addEventListener("click", function() { correct.style.backgroundColor = " "; })
 
                 let incorrect = document.querySelector(".correct");
-                incorrect.forEach(function (btn)
-                {
-                    incorrect.style.backgroundColor = " ";
-                });
+                incorrect.addEventListener("click", function() { incorrect.style.backgroundColor = " "; })
 
             }
 
