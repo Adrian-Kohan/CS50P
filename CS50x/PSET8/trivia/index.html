@@ -26,10 +26,13 @@
                 {
                     btn.classList.remove('incorrect');
                     btn.classList.remove('correct');
-                    //btn.classList.remove(backgroundColor)
                 });
                 let correct = document.querySelector(".correct");
-                correct.addEventListener("click", function() { correct.style.backgroundColor = "green"; });
+                correct.forEach(function (btn)
+                {
+                    btn.classList.remove('incorrect');
+                    btn.classList.remove('correct');
+                });
 
 
             }
