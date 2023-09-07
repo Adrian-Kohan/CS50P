@@ -7,64 +7,21 @@
         <title>Trivia!</title>
         <script>
             // Add code to check answers to questions
-            function corChecker(correct, element)
-            {
-                if (correct)
-                {
-                    document.getElementById(element).innerHTML = "Correct";
-                }
-                else
-                {
-                    document.getElementById(element).innerHTML = "Incorrect";
-                }
-            }
+            let correct = document.querySelector('#correct');
+            let incorrect = document.querySelectorAll('#incorrect');
+                    let status = document.querySelector('#status');
 
-            function resetBtn()
-            {
-                var bottons = document.querySelectorAll(".button");
-                bottons.forEach(function (btn)
-                {
-                    btn.classList.remove('incorrect');
-                    btn.classList.remove('correct');
-                });
+                    correct.onclick = function() {
+                        correct.style.backgroundColor = 'green';
+                        status.innerHTML = "Correct!";
+                    };
 
-                let correct = document.querySelector(".correct");
-                correct.addEventListener("click", function() { correct.style.backgroundColor = " "; })
-
-                let incorrect = document.querySelector(".correct");
-                incorrect.addEventListener("click", function() { incorrect.style.backgroundColor = " "; })
-
-            }
-
-            function answerGet()
-            {
-                resetBtn();
-                if (event.target.id == "correct")
-                {
-                    event.target.classList.add('correct');
-                    correct.style.backgroundColor = "green";
-                    corChecker(true, "awn");
-                }
-                else
-                {
-                    event.target.classList.add('incorrect');
-                    for (let i = 0; i < incorrect.length; i++)
-                    {
-                        incorrect[i].addEventListener("click", function() { incorrect[i].style.backgroundColor = "red";
-                    });
+                    for (let i = 0; i < incorrect.length; i++) {
+                        incorrect[i].onclick = function() {
+                            incorrect[i].style.backgroundColor = 'red';
+                            status.innerHTML = "Incorrect!";
+                        };
                     }
-                    corChecker(false, "awn");
-                }
-            }
-            document.addEventListener ("DOMContentLoaded", function(event)
-            {
-                var bottons = document.querySelectorAll (".button");
-                bottons.forEach(function (btn)
-                {
-                    btn.addEventListener("click", answerGet);
-                });
-            });
-
 
 
         </script>
