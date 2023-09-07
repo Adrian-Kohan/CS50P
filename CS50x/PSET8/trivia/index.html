@@ -30,6 +30,11 @@
 
             function answerGet()
             {
+                let correct = document.querySelector(".correct");
+                correct.addEventListener("click", function()
+            {
+                correct.style.backgroundColor = "green";
+            });
                 resetBtn();
                 if (event.target.id == "correct")
                 {
@@ -50,11 +55,7 @@
                     btn.addEventListener("click", answerGet);
                 });
             });
-            let correct = document.querySelector(".correct");
-            correct.addEventListener("click", function()
-            {
-                correct.style.backgroundColor = "green";
-            });
+
 
 
         </script>
