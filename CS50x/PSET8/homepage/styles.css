@@ -4,6 +4,9 @@ h1 {font-size: 30px;
    }
    #position {font-size: 18px;
     font-weight:bold;}
+    .w3-row-padding img {
+        margin-bottom: 12px
+    }
    .summery {font-size: 16px;
     line-height: 20px;
    }
