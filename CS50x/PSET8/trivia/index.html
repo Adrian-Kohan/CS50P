@@ -6,69 +6,85 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            // TODO: Add code to check answers to questions
-            document.addEventListener('DOMContentLoaded', function() {
+            // Add code to check answers to questions
+            function corChecker(correct, element)
+            {
+                if (correct)
+                {
+                    document.getElementById(element).innerHTML = "Correct";
+                }
+                else
+                {
+                    document.getElementById(element).innerHTML = "Incorrect";
+                }
+            }
 
-// When click  on correct answer button, set the green color
-let correct = document.querySelector('.correct');
-correct.addEventListener('click', function(event) {
-    correct.style.backgroundColor = 'green';
-    document.querySelector('#feedback1').innerHTML = 'Correct!';
-    });
+            function resetBtn()
+            {
+                var bottons = document.querySelectorAll(".button");
+                bottons.forEach(function (btn)
+                {
+                    btn.classList.remove('incorrect');
+                    btn.classList.remove('correct');
+                });
 
-// When click  on incorrect answer button, set the red color
-let incorrects = document.querySelectorAll('.incorrect');
-for(let i = 0; i < incorrects.length; i++)
-{
-    incorrects[i].addEventListener('click', function(event) {
-    incorrects[i].style.backgroundColor = 'red';
-    document.querySelector('#feedback1').innerHTML = 'Incorrect';
-    });
-}
+            }
 
-document.querySelector('#check').addEventListener('click', function(){
-   let input = document.querySelector('input');
-   if(input.value == 'Asia'){
-       input.style.backgroundColor = 'green';
-       document.querySelector('#feedback2').innerHTML = 'Correct!';
-   } else {
-       input.style.backgroundColor = 'red';
-       document.querySelector('#feedback2').innerHTML = 'Incorrect';
-   }
-});
+            function answerGet()
+            {
+                resetBtn();
+                if (event.target.id == "correct")
+                {
+                    event.target.classList.add('correct');
+                    correct.style.backgroundColor = "green";
+                    corChecker(true, "awn");
+                }
+                else
+                {
+                    event.target.classList.add('incorrect');
+                    for (let i = 0; i < incorrect.length; i++)
+                    {
+                        incorrect[i].addEventListener("click", function() { incorrect[i].style.backgroundColor = "red";
+                    });
+                    }
+                    corChecker(false, "awn");
+                }
+            }
+            document.addEventListener ("DOMContentLoaded", function(event)
+            {
+                var bottons = document.querySelectorAll (".button");
+                bottons.forEach(function (btn)
+                {
+                    btn.addEventListener("click", answerGet);
+                });
+            });
 
-});
 
-</script>
-</head>
-<body>
-<div class="header">
-<h1>Trivia!</h1>
-</div>
 
-<div class="container">
-<div class="section">
-<h2>Part 1: Multiple Choice </h2>
-<hr>
-<!-- TODO: Add multiple choice question here -->
-<h3>In what year Albert Einstein was born?</h3>
-<button class = "incorrect">1955</button>
-<button class = "incorrect">1980</button>
-<button class = "incorrect">1860</button>
-<button class = "correct">1879</button>
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
 
-<p id = "feedback1"></p>
-</div>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!--  multiple choice question here -->
+                <h3>What does the acronym "HTML" stand for in web development?</h3>
+                <h4 id="awn"></h4>
+                <button id="incorrect" class="button">Hyper Transfer Markup Language</button>
+                <button id="incorrect" class="button">Hypertext Transfer Model Language</button>
+                <button id="correct" class="button">Hypertext Markup Language</button>
+                <button id="incorrect" class="button">Hyperlink and Text Markup Language</button>
+            </div>
 
-<div class="section">
-<h2>Part 2: Free Response</h2>
-<hr>
-<!-- TODO: Add free response question here -->
-<h3>Which is the largest continent?</h3>
-<input type = 'text'></input>
-<button id = "check">Check Answer</button>
-
-<p id = "feedback2"></p>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
             </div>
         </div>
     </body>
