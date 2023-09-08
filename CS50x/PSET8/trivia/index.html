@@ -26,7 +26,7 @@
                     let status2 = document.querySelector('#status2');
                     let value = document.querySelector('#value');
 
-                    if (value.value == 'Switzerland' || value.value == 'switzerland' || value.value == 'SWITZERLAND') {
+                    if (input.Field.valuetoLowerCase() == 'ruby') {
                         value.style.backgroundColor = 'green';
                         status2.innerHTML = 'Correct!';
                         }
