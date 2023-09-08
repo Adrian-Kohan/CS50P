@@ -28,7 +28,7 @@
 
             document.querySelector('#check').addEventListener('click', function(){
             let input = document.querySelector('input');
-            if(inputField.value.toLowerCase() == 'ruby'){
+            if(input.value == 'ruby' || input.value == 'Rubby' || input.value == 'RUBY'){
                 input.style.backgroundColor = 'green';
                 document.querySelector('#status2').innerHTML = 'Correct!';
             } else {
