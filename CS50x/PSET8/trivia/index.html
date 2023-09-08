@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
     <head>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
@@ -9,37 +10,37 @@
             // Add code to check answers to questions
             document.addEventListener('DOMContentLoaded', function() {
 
-            // When click  on correct answer button, set the green color
-            let correct = document.querySelector('.correct');
-            correct.addEventListener('click', function(event) {
-                correct.style.backgroundColor = 'green';
-                document.querySelector('#status').innerHTML = 'Correct!';
+                // Set the Green color and show Correct when click  on correct answer button
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function(event) {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#status').innerHTML = 'Correct!';
                 });
 
-            // When click  on incorrect answer button, set the red color
-            let incorrects = document.querySelectorAll('.incorrect');
-            for(let i = 0; i < incorrects.length; i++)
-            {
-                incorrects[i].addEventListener('click', function(event) {
-                incorrects[i].style.backgroundColor = 'red';
-                document.querySelector('#status').innerHTML = 'Incorrect';
+                // Set the red color and show Incorrect when click  on incorrect answer button
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function(event) {
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#status').innerHTML = 'Incorrect';
+                    });
+                }
+                // Set the red color and show Incorrect when click  on incorrect answer button and Set the Green color and show Correct when click  on correct answer button
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if (input.value == 'ruby' || input.value == 'Ruby' || input.value == 'RUBY') {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#status2').innerHTML = 'Correct!';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#status2').innerHTML = 'Incorrect';
+                    }
                 });
-            }
-
-            document.querySelector('#check').addEventListener('click', function(){
-            let input = document.querySelector('input');
-            if(input.value == 'ruby' || input.value == 'Rubby' || input.value == 'RUBY'){
-                input.style.backgroundColor = 'green';
-                document.querySelector('#status2').innerHTML = 'Correct!';
-            } else {
-                input.style.backgroundColor = 'red';
-                document.querySelector('#status2').innerHTML = 'Incorrect';
-            }
-            });
 
             });
         </script>
     </head>
+
     <body>
         <div class="header">
             <h1>Trivia!</h1>
@@ -64,9 +65,10 @@
                 <!-- Add free response question here -->
                 <h3>Which programming language is often used for building web applications and websites?</h3>
                 <h4 id="status1"></h4>
-                <input type = 'text'></input>
-                <button id = "check">Check Answer</button>
+                <input type='text'></input>
+                <button id="check">Check Answer</button>
             </div>
         </div>
     </body>
+
 </html>
