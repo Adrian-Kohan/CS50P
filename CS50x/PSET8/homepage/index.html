@@ -1,87 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>W3.CSS Template</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            body,
-            h1 {
-                font-family: "Raleway", Arial, sans-serif
-            }
-
-            h1 {
-                letter-spacing: 6px
-            }
-
-            .w3-row-padding img {
-                margin-bottom: 12px
-            }
-        </style>
-    </head>
+  <head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <style>
+    body {font-family: "Raleway", Arial, sans-serif}
+    .w3-row img {margin-bottom: -8px}
+    </style>
+  </head>
 <body>
 
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-content" style="max-width:1500px">
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
 
-        <!-- Header -->
-        <header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
-            <h1 class="w3-xlarge">PHOTOGRAPHER</h1>
-            <h1>John Dean</h1>
+  <!-- Header -->
+  <header class="w3-container w3-xlarge w3-padding-24">
+    <a href="#" class="w3-left w3-button w3-white">MY ART</a>
+    <a href="#about" class="w3-right w3-button w3-white">About</a>
+  </header>
 
-            <div class="w3-padding-32">
-                <div class="w3-bar w3-border">
-                    <a href="#" class="w3-bar-item w3-button">Home</a>
-                    <a href="#" class="w3-bar-item w3-button w3-light-grey">Portfolio</a>
-                    <a href="#" class="w3-bar-item w3-button">Contact</a>
-                    <a href="#" class="w3-bar-item w3-button w3-hide-small">Weddings</a>
-                </div>
-            </div>
-        </header>
-
-        <!-- Photo Grid -->
-        <div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
-            <div class="w3-half">
-                <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-                <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
-                <img src="https://www.w3schools.com/w3images/falls2.jpg" style="width:100%">
-                <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
-                <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%">
-                <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%">
-                <img src="https://www.w3schools.com/w3images/paris.jpg" style="width:100%">
-            </div>
-
-            <div class="w3-half">
-                <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-                <img src="https://www.w3schools.com/w3images/ocean.jpg" style="width:100%">
-                <img src="https://www.w3schools.com/w3images/wedding.jpg" style="width:100%">
-                <img src="https://www.w3schools.com/w3images/mountainskies.jpg" style="width:100%">
-                <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%">
-                <img src="https://www.w3schools.com/w3images/underwater.jpg" style="width:100%">
-            </div>
-        </div>
-
-        <!-- End Page Content -->
+  <!-- Photo Grid -->
+  <div class="w3-row">
+    <div class="w3-half">
+      <img src="https://www.w3schools.com/w3images/streetart.jpg" style="width:100%">
+      <img src="https://www.w3schools.com/w3images/streetart2.jpg" style="width:100%">
+      <img src="https://www.w3schools.com/w3images/streetart5.jpg" style="width:100%">
     </div>
 
-    <!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
-    <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-        <p class="w3-small">This website was made with W3schools Spaces. Make your own free website today!</p>
-        <a class="w3-button w3-round-xxlarge w3-small w3-dark-grey w3-margin-bottom" href="https://www.w3schools.com/spaces" target="_blank">Start now</a>
-    <!-- End footer. -->
-    </footer>
+    <div class="w3-half">
+      <img src="https://www.w3schools.com/w3images/streetart3.jpg" style="width:100%">
+      <img src="https://www.w3schools.com/w3images/streetart4.jpg" style="width:100%">
+    </div>
+  </div>
 
+<!-- End Page Content -->
+</div>
 
+<!-- Footer / About Section -->
+<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+  <h2>About</h2>
+  <img src="https://www.w3schools.com/w3images/boy.jpg" class="w3-image w3-padding-32" width="300" height="300">
+  <form style="margin:auto;width:60%" action="/action_page.php" target="_blank">
+    <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    <p class="w3-large w3-text-pink">Do not hesitate to contact me!</p>
+    <div class="w3-section">
+      <label><b>Name</b></label>
+      <input class="w3-input w3-border" type="text" required name="Name">
+    </div>
+    <div class="w3-section">
+      <label><b>Email</b></label>
+      <input class="w3-input w3-border" type="text" required name="Email">
+    </div>
+    <div class="w3-section">
+      <label><b>Message</b></label>
+      <input class="w3-input w3-border" required name="Message">
+    </div>
+    <button type="submit" class="w3-button w3-block w3-dark-grey">Send</button>
+  </form>
+  <br>
+  <p>Made with <a href="https://www.w3schools.com/spaces" target="_blank" class="w3-hover-text-green">W3Schools Spaces</a></p>
+</footer>
 
 </body>
-
 </html>
