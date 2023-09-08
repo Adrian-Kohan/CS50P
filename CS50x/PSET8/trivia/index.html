@@ -7,34 +7,37 @@
         <title>Trivia!</title>
         <script>
             // Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+
+            // When click  on correct answer button, set the green color
             let correct = document.querySelector('.correct');
-            let incorrect = document.querySelectorAll('.incorrect');
-            let status = document.querySelector('.status');
-
-            correct.onclick = function() {
+            correct.addEventListener('click', function(event) {
                 correct.style.backgroundColor = 'green';
-                status.innerHTML = "Correct!";
-                };
-
-            for (let i = 0; i < incorrect.length; i++) {
-                incorrect[i].onclick = function() {
-                    incorrect[i].style.backgroundColor = 'red';
-                    status.innerHTML = "Incorrect!";
-                    };
-                }
-            document.addEventListener('submit', function() {
-                    let status2 = document.querySelector('#status2');
-                    let value = document.querySelector('#value');
-
-                    if (input.Field.valuetoLowerCase() == 'ruby') {
-                        value.style.backgroundColor = 'green';
-                        status2.innerHTML = 'Correct!';
-                        }
-                    else {
-                        value.style.backgroundColor = 'red';
-                        status2.innerHTML = 'Incorrect';
-                        }
+                document.querySelector('#status').innerHTML = 'Correct!';
                 });
+
+            // When click  on incorrect answer button, set the red color
+            let incorrects = document.querySelectorAll('.incorrect');
+            for(let i = 0; i < incorrects.length; i++)
+            {
+                incorrects[i].addEventListener('click', function(event) {
+                incorrects[i].style.backgroundColor = 'red';
+                document.querySelector('#status').innerHTML = 'Incorrect';
+                });
+            }
+
+            document.querySelector('#check').addEventListener('click', function(){
+            let input = document.querySelector('input');
+            if(input.value == 'Ruby'){
+                input.style.backgroundColor = 'green';
+                document.querySelector('#status2').innerHTML = 'Correct!';
+            } else {
+                input.style.backgroundColor = 'red';
+                document.querySelector('#status2').innerHTML = 'Incorrect';
+            }
+            });
+
+            });
         </script>
     </head>
     <body>
@@ -62,7 +65,7 @@
                 <h3>Which programming language is often used for building web applications and websites?</h3>
                 <h4 id="status1"></h4>
                 <input type = 'text' id="value"></input>
-                <button>Check Answer</button>
+                <button id = "check">Check Answer</button>
             </div>
         </div>
     </body>
