@@ -17,7 +17,5 @@ V = lower_name1.count("v") + lower_name2.count("v")
 E = lower_name1.count("e") + lower_name2.count("e")
 total_love_score = str(L + O + V + E)
 love_score = total_true_score + total_love_score
-print(f"Your Love Score is: {love_score}")
-if love_score 
-
-
+if love_score < 10 and love_score > 90:
+    print(f"Your Score is {love_score}, you go together like coke and mentos")
