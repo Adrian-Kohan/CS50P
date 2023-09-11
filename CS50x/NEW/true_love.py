@@ -18,4 +18,10 @@ E = lower_name1.count("e") + lower_name2.count("e")
 total_love_score = str(L + O + V + E)
 love_score = total_true_score + total_love_score
 if love_score < 10 and love_score > 90:
-    print(f"Your Score is {love_score}, you go together like coke and mentos")
+    print(f"Your Score is {love_score}, you go together like coke and mentos.")
+elif 40 < love_score < 50:
+    print(f"Your Score is {love_score}, you are alright together.")
+else:
+    print(f"Your Score is {love_score}, you go together like coke and mentos.")
+
+
