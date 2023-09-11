@@ -31,7 +31,7 @@ if direction == "left":
     if swim_or_boat == "wait":
         door = input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose?\n").lower()
         if door == "yellow":
-            print("You win! :)")
+            print("You win! you found the treasure :)")
         else:
             print("Game Over :(")
     else:
