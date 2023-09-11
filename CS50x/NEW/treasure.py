@@ -1,4 +1,6 @@
 print('''
+      ********************************************
+      ********************************************
              _.--.
                         _.-'_:-'||
                     _.-'_.-::::'||
@@ -18,7 +20,9 @@ print('''
                |'-._   || |'|_.-'_.-'
             jgs '-._'-.|| |' `_.-'
                     '-.||_/.-'
-''')
+**************************************************
+      ********************************************
+      ''')
 print("Welcome to Tresure Island.")
 print("Your mission is to find the treasure.")
 direction = input(print("You're at a cross road. Where do you want to go? Type 'left' or 'right'\n"))
