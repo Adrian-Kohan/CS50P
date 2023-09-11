@@ -22,8 +22,12 @@ print('''
 ''')
 print("Welcome to Tresure Island.")
 print("Your mission is to find the treasure.")
-L_or_R = input(print("You're at a cross road. Where do you want to go? Type 'left' or 'right'\n"))
-if L_or_R == 
+direction = input(print("You're at a cross road. Where do you want to go? Type 'left' or 'right'\n"))
+lower_direction = direction.lower()
+if lower_direction == "left":
+    print
+
+
  left
 You come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat. Type "swim" to swim across. wait
 You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose?
