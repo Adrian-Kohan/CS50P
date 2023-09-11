@@ -10,9 +10,10 @@ T = lower_name1.count("t") + lower_name2.count("t")
 R = lower_name1.count("r") + lower_name2.count("r")
 U = lower_name1.count("u") + lower_name2.count("u")
 E = lower_name1.count("e") + lower_name2.count("e")
-total_true
+total_true_score = T + R + U + E
 L = lower_name1.count("l") + lower_name2.count("l")
 O = lower_name1.count("o") + lower_name2.count("o")
 V = lower_name1.count("v") + lower_name2.count("v")
 E = lower_name1.count("e") + lower_name2.count("e")
+total_love_score = 
 
