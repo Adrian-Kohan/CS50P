@@ -36,7 +36,7 @@ if lower_direction == "left":
         if lower_door == "yellow":
             print("You win! :)")
         else:
-        print("Game Over :(")
+            print("Game Over :(")
     else:
         print("Game Over :(")
 else:
