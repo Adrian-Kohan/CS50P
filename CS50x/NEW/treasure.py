@@ -18,7 +18,6 @@ print('''
                |'-._   || |'|_.-'_.-'
             jgs '-._'-.|| |' `_.-'
                     '-.||_/.-'
-
 ''')
 print("Welcome to Tresure Island.")
 print("Your mission is to find the treasure.")
