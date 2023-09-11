@@ -30,7 +30,7 @@ lower_direction = direction.lower()
 if lower_direction == "left":
     swim_or_boat = input("You come to a lake. There is an island in the middle of the lake. Type 'wait' to wait for a boat. Type 'swim' to swim across.\n")
     lower_swim_or_boat = swim_or_boat.lower()
-    if lower_swim_or_boat == "boat":
+    if lower_swim_or_boat == "wait":
         door = input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose?\n")
         lower_door = door.lower()
         if lower_door == "yellow":
