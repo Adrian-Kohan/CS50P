@@ -36,14 +36,14 @@ print(computer)
 if computer == "rock" and shapes[user] == "scissors":
     print("You lose")
 elif computer == "rock" and shapes[user] == "rock":
-    print("Tie")
+    print("It's a draw")
 elif computer == "paper" and shapes[user] == "rock":
     print("You lose")
 elif computer == "paper" and shapes[user] == "paper":
-    print("Tie")
+    print("It's a draw")
 elif computer == "scissors" and shapes[user] == "rock":
     print("You lose")
 elif computer == "scissors" and shapes[user] == "scissors":
-    print("Tie")
+    print("It's a draw")
 else:
     print("You win")
