@@ -12,3 +12,12 @@ print(r'''
 
 dice = random.randint(1,6)
 print(dice)
+
+if dice == 1:
+    print("
+
+          
+        |   o   |o/
+        |_______|/
+''')
+          ")
