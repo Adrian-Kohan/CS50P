@@ -28,7 +28,7 @@ scissors = """
 
 shapes = [rock, paper, scissors]
 user = int(input("What do you choose?Type 0 for Rock, 1 for Paper and 2 for Scissors.\n"))
-computer = random.choice(shapes)
+computer = random.randint(0, 2)
 
 if 0 > user or user >= 3:
     print("You pick up a wrong number so you loose")
@@ -36,7 +36,7 @@ else:
     print(shapes[user])
     print("Computer chose:")
     print(computer)
-    if computer == "rock" and shapes[user] == "scissors":
+    if computer[] == "rock" and shapes[user] == "scissors":
         print("You lose")
     elif computer == "rock" and shapes[user] == "rock":
         print("It's a draw")
