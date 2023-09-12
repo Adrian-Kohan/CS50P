@@ -30,7 +30,7 @@ shapes = [rock, paper, scissors]
 user = int(input("What do you choose?Type 0 for Rock, 1 for Paper and 2 for Scissors.\n"))
 computer = random.choice(shapes)
 
-if 0 > user and user >= 3:
+if 0 > user or user >= 3:
     print("You pick up a wrong number so you loose")
 else:
     print(shapes[user])
