@@ -24,3 +24,6 @@ print(f"{row1}\n{row2}\n{row3}")
 #vertical = int(position[1])
 #selected_row = map[vertical -1]
 #selected_row[horezental -1] = "🟨"
+
+#orrr
+#map[vertical -1][horezental -1] = "🟨"
