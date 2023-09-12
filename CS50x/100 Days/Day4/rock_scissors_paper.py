@@ -27,23 +27,23 @@ scissors = """
 """
 
 shapes = [rock, paper, scissors]
-user = input("What do you choose?Type 0 for Rock, 1 for Paper and 2 for Scissors.\n")
+user = int(input("What do you choose?Type 0 for Rock, 1 for Paper and 2 for Scissors.\n"))
 print(shapes[user])
 print("Computer chose:")
 computer = random.choice(shapes)
 print(computer)
 
 if computer == "rock" and shapes[user] == "scissors":
-    priint("You lose")
+    print("You lose")
 elif computer == "rock" and shapes[user] == "rock":
-    priint("Tie")
+    print("Tie")
 elif computer == "paper" and shapes[user] == "rock":
-    priint("You lose")
+    print("You lose")
 elif computer == "paper" and shapes[user] == "paper":
-    priint("Tie")
+    print("Tie")
 elif computer == "scissors" and shapes[user] == "rock":
-    priint("You lose")
+    print("You lose")
 elif computer == "scissors" and shapes[user] == "scissors":
-    priint("Tie")
+    print("Tie")
 else:
     print("You win")
