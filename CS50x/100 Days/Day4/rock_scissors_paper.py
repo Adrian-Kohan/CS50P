@@ -28,14 +28,16 @@ scissors = """
 
 shapes = [rock, paper, scissors]
 user = int(input("What do you choose?Type 0 for Rock, 1 for Paper and 2 for Scissors.\n"))
-print(shapes[user])
-print("Computer chose:")
-computer = random.choice(shapes)
-print(computer)
 
-if 0 > user and user <= 3:
+if 0 > user and user >= 3:
     print("You pick up a wrong nimber so you loose")
-elif computer == "rock" and shapes[user] == "scissors":
+else:
+    print(shapes[user])
+    print("Computer chose:")
+    computer = random.choice(shapes)
+    print(computer)
+
+if computer == "rock" and shapes[user] == "scissors":
     print("You lose")
 elif computer == "rock" and shapes[user] == "rock":
     print("It's a draw")
