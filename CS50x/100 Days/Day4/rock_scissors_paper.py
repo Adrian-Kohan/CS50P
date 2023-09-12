@@ -33,7 +33,9 @@ print("Computer chose:")
 computer = random.choice(shapes)
 print(computer)
 
-if computer == "rock" and shapes[user] == "scissors":
+if 0 > user and user <= 3:
+    print("You pick up a wrong nimber so you loose")
+elif computer == "rock" and shapes[user] == "scissors":
     print("You lose")
 elif computer == "rock" and shapes[user] == "rock":
     print("It's a draw")
