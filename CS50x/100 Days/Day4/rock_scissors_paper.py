@@ -32,22 +32,21 @@ computer = random.choice(shapes)
 
 if 0 > user and user >= 3:
     print("You pick up a wrong number so you loose")
-elif 0 <= user <= 2:
+else:
     print(shapes[user])
     print("Computer chose:")
     print(computer)
-
-if computer == "rock" and shapes[user] == "scissors":
-    print("You lose")
-elif computer == "rock" and shapes[user] == "rock":
-    print("It's a draw")
-elif computer == "paper" and shapes[user] == "rock":
-    print("You lose")
-elif computer == "paper" and shapes[user] == "paper":
-    print("It's a draw")
-elif computer == "scissors" and shapes[user] == "rock":
-    print("You lose")
-elif computer == "scissors" and shapes[user] == "scissors":
-    print("It's a draw")
-else:
-    print("You win")
+    if computer == "rock" and shapes[user] == "scissors":
+        print("You lose")
+    elif computer == "rock" and shapes[user] == "rock":
+        print("It's a draw")
+    elif computer == "paper" and shapes[user] == "rock":
+        print("You lose")
+    elif computer == "paper" and shapes[user] == "paper":
+        print("It's a draw")
+    elif computer == "scissors" and shapes[user] == "rock":
+        print("You lose")
+    elif computer == "scissors" and shapes[user] == "scissors":
+        print("It's a draw")
+    else:
+        print("You win")
