@@ -9,11 +9,11 @@ position = input("Where do you want to put the treasure?\n")
 horizental = int(position[0]) - 1
 vertical = int(position[1])
 if vertical == 1:
-    row1[vertical] = "🟨"
+    row1[horizental] = "🟨"
 elif vertical == 2:
-    row2[vertical] = "🟨"
+    row2[horizental] = "🟨"
 elif vertical == 3:
-    row3[vertical] = "🟨"
+    row3[horizental] = "🟨"
 
 print(f"{row1}\n{row2}\n{row3}")
 
