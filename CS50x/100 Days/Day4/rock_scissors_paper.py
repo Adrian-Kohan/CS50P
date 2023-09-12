@@ -36,17 +36,17 @@ else:
     print(shapes[user])
     print("Computer chose:")
     print(shapes[computer])
-    if shapes[computer] == "rock" and shapes[user] == "scissors":
+    if computer == 0 and user == 2:
         print("You lose")
-    elif shapes[computer] == "rock" and shapes[user] == "rock":
+    elif computer == "rock" and user == 0:
         print("It's a draw")
-    elif shapes[computer] == "paper" and shapes[user] == "rock":
+    elif computer == 1 and user == 0:
         print("You lose")
-    elif shapes[computer] == "paper" and shapes[user] == "paper":
+    elif computer == 1 and user == 1:
         print("It's a draw")
-    elif shapes[computer] == "scissors" and shapes[user] == "rock":
+    elif computer == 2 and user == 0:
         print("You lose")
-    elif shapes[computer] == "scissors" and shapes[user] == "scissors":
+    elif computer == 2 and user == 2:
         print("It's a draw")
     else:
         print("You win")
