@@ -19,3 +19,8 @@ print(f"{row1}\n{row2}\n{row3}")
 
 
 
+#or
+#horizental = int(position[0])
+#vertical = int(position[1])
+#selected_row = map[vertical -1]
+#selected_row[horezental -1] = "🟨"
