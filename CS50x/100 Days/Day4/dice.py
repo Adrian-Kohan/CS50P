@@ -11,7 +11,6 @@ print(r'''
 ''')
 
 dice = random.randint(1,6)
-print(dice)
 
 if dice == 1:
     print(r'''
@@ -24,10 +23,45 @@ if dice == 1:
 
 elif dice == 2:
     print(r'''
-
          _______
         |       |
-        | o  o  |
+        | o   o |
         |_______|
+
+          ''')
+
+elif dice == 3:
+    print(r'''
+         _______
+        |       |
+        | o o o |
+        |_______|
+
+          ''')
+
+elif dice == 4:
+    print(r'''
+         _______
+        | o   o |
+        |       |
+        |_o_ _o_|
+
+          ''')
+
+elif dice == 5:
+    print(r'''
+         _______
+        | o   o |
+        |   o   |
+        |_o_ _o_|
+
+          ''')
+
+else:
+    print(r'''
+         _______
+        | o   o |
+        | o   o |
+        |_o__ o_|
 
           ''')
