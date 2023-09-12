@@ -28,13 +28,13 @@ scissors = """
 
 shapes = [rock, paper, scissors]
 user = int(input("What do you choose?Type 0 for Rock, 1 for Paper and 2 for Scissors.\n"))
+computer = random.choice(shapes)
 
 if 0 > user and user >= 3:
-    print("You pick up a wrong nimber so you loose")
-else:
+    print("You pick up a wrong number so you loose")
+elif 0 <= user <= 2:
     print(shapes[user])
     print("Computer chose:")
-    computer = random.choice(shapes)
     print(computer)
 
 if computer == "rock" and shapes[user] == "scissors":
