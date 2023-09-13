@@ -23,5 +23,6 @@ for i in range(1, nr_numbers + 1):
     index = random.randint(0, len(numbers) - 1)
     password += numbers[index]
 
+#or I could just create a list instead of srting for password and shuffle trow it (random.shuffle(password)) to mess up the order and then with a for loop turned it to a string
 result = ''.join((random.sample(password, len(password))))
-print(result)
+print(f"Yor password is: {result}")
