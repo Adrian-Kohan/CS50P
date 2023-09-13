@@ -22,5 +22,5 @@ for i in range(1, nr_numbers + 1):
     index = random.randint(0, len(numbers) - 1)
     password += numbers[index]
 
-result = ''.join((random.choice(password)) for x in range(length))
-print(password)
+result = ''.join((random.choice(password)) for x in range(nr_numbers + nr_symbols + nr_letters))
+print(result)
