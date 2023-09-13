@@ -12,4 +12,6 @@ nr_symbols = int(input (f"How many symbols would you like?\n"))
 nr_numbers = int(input (f"How many numbers would you like?\n"))
 
 password = 0
-for 
+for nr_letters in letters:
+    password = random.randint()
+print(password)
