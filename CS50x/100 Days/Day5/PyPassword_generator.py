@@ -13,6 +13,7 @@ password = ""
 for i in range(1, nr_letters + 1):
     index = random.randint(0, len(letters) - 1)
     password += letters[index]
+    #or password += random.chioce(letters)
 
 for i in range(1, nr_symbols + 1):
     index = random.randint(0, len(symbols) - 1)
