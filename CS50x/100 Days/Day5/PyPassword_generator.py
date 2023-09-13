@@ -13,10 +13,12 @@ password = []
 for i in (1, nr_letters + 1):
     ind = random.randint(0, len(letters) - 1)
     password.append(letters[ind])
+print(password)
 
 for i in (1, nr_symbols + 1):
     ind = random.randint(0, len(symbols) - 1)
     password.append(symbols[ind])
+print(password)
 
 for i in (1, nr_numbers + 1):
     ind = random.randint(0, len(numbers) - 1)
