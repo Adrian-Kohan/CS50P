@@ -89,7 +89,7 @@ while "_" in guess_list:
     for i in range(len(chosen_word)):
         if guess == chosen_word[i]:
             guess_list[i] = guess
-            print(guess_list)
+        print(guess_list)
     if guess != chosen_word[i] and lives != 0:
         lives -= 1
         print(stages[s])
