@@ -5,12 +5,13 @@ word_list = ["ardvark", "baboon", "camel"]
 chosen_word = random.choice(word_list)
 print(chosen_word)
 #ask the user to guess a letter and assign it to a variable called guess. make guess lowercase
+
 guess = input("Guess a letter: ").lower()
 guess_list = []
 for i in chosen_word:
     guess_list.append("_")
     #or guess_list += "_"
-    
+
 #check if the letter user guessed is one of the lettere in the chosen word
 for i in range(len(chosen_word)):
     if guess == chosen_word[i]:
