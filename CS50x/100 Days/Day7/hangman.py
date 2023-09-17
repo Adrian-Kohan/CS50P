@@ -61,7 +61,7 @@ stages =['''
      |
      |___
          ''',
-         '''
+         r'''
       _______
      |/      |
      |       O
@@ -83,7 +83,7 @@ for i in chosen_word:
     #or guess_list += "_"
 #ask the user to guess a letter and assign it to a variable called guess. make guess lowercase
 s = 0
-while "_" in guess_list:
+while "_" in guess_list and lives > 0:
     guess = input("Guess a letter: ").lower()
     #check if the letter user guessed is one of the lettere in the chosen word
     if guess in chosen_word:
@@ -98,7 +98,7 @@ while "_" in guess_list:
         s += 1
 
     elif lives == 0:
-        print(f"{stages[5]}\n You loose.")
+        print(f"{stages[6]}\n You loose.")
 
     elif "_" not in guess_list:
         print("You win.")
