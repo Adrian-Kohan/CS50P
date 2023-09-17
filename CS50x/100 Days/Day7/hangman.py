@@ -91,9 +91,11 @@ while not end_of_game:
         if chosen_word[i] == guess:
             guess_list[i] = guess
         print(guess_list)
-        elif "_" not in guess_list:
-        end_of_game = True
-        print("You win.")
+
+        if "_" not in guess_list:
+            end_of_game = True
+            print("You win.")
+
 
     if guess not in chosen_word:
         lives -= 1
