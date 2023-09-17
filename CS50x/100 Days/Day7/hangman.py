@@ -86,16 +86,19 @@ s = 0
 while "_" in guess_list:
     guess = input("Guess a letter: ").lower()
     #check if the letter user guessed is one of the lettere in the chosen word
-    if guess == chosen_word[i]:
+    if guess in guess_list:
         for i in range(len(chosen_word)):
             guess_list[i] = guess
-        print(guess_list)
-    elif guess != chosen_word[i] and lives != 0:
+            print(guess_list)
+
+    elif guess not in chosen_word and lives != 0:
         lives -= 1
         print(stages[s])
         s += 1
+
     elif lives == 0:
         print("You loose.")
+        
     elif "_" not in guess_list:
         print("You win.")
 
