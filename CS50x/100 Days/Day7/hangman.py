@@ -87,9 +87,10 @@ end_of_game = False
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
     #check if the letter user guessed is one of the lettere in the chosen word
-    for i in range(len(chosen_word)):
-        if chosen_word[i] == guess:
-            guess_list[i] = guess
+    if guess  in chosen_word:
+        for i in range(len(chosen_word)):
+            if chosen_word[i] == guess:
+                guess_list[i] = guess
         print(guess_list)
 
         if "_" not in guess_list:
@@ -97,7 +98,7 @@ while not end_of_game:
             print("You win.")
 
 
-    if guess not in chosen_word:
+    elif guess not in chosen_word:
         lives -= 1
         print(stages[s])
         s += 1
