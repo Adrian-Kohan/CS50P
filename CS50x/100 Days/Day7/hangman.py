@@ -1,6 +1,78 @@
 import random
 
 word_list = ["ardvark", "baboon", "camel"]
+stages =[r'''
+      _______
+     |/      |
+     |       O
+     |
+     |
+     |
+     |
+     |___
+         ''',
+         '''
+      _______
+     |/      |
+     |       O
+     |       |
+     |
+     |
+     |
+     |___
+         ''',
+         '''
+      _______
+     |/      |
+     |       O
+     |       |/
+     |
+     |
+     |
+     |___
+         ''',
+         '''
+      _______
+     |/      |
+     |       O
+     |      \|/
+     |
+     |
+     |
+     |___
+         ''',
+         '''
+      _______
+     |/      |
+     |       O
+     |      \|/
+     |       |
+     |
+     |
+     |___
+         ''',
+         '''
+      _______
+     |/      |
+     |       O
+     |      \|/
+     |       |
+     |      /
+     |
+     |___
+         ''',
+         '''
+      _______
+     |/      |
+     |       O
+     |      \|/
+     |       |
+     |      / \
+     |
+     |___
+         '''
+         ]
+lives = 6
 #randomly chosen a word from word_list and assign it to a variable named word_chosen
 chosen_word = random.choice(word_list)
 print(chosen_word)
@@ -11,12 +83,20 @@ for i in chosen_word:
     #or guess_list += "_"
 #ask the user to guess a letter and assign it to a variable called guess. make guess lowercase
 
+l = 0
 while "_" in guess_list:
     guess = input("Guess a letter: ").lower()
     #check if the letter user guessed is one of the lettere in the chosen word
     for i in range(len(chosen_word)):
         if guess == chosen_word[i]:
             guess_list[i] = guess
-    print(guess_list)
-if "_" not in guess_list:
-    print("You win")
+            print(guess_list)
+        else:
+            lives -= 1
+            print(stages[l])
+            l += 1
+if lives == 0:
+    print("You loose.")
+elif "_" not in guess_list:
+    print("You win.")
+
