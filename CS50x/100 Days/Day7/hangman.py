@@ -1,7 +1,7 @@
 import random
 
 word_list = ["ardvark", "baboon", "camel"]
-stages =[r'''
+stages =["'''
       _______
      |/      |
      |       O
@@ -10,8 +10,8 @@ stages =[r'''
      |
      |
      |___
-         ''',
-         '''
+         '''",
+        " '''
       _______
      |/      |
      |       O
@@ -20,8 +20,8 @@ stages =[r'''
      |
      |
      |___
-         ''',
-         '''
+         '''",
+         "'''
       _______
      |/      |
      |       O
@@ -30,8 +30,8 @@ stages =[r'''
      |
      |
      |___
-         ''',
-         '''
+         '''",
+         "'''
       _______
      |/      |
      |       O
@@ -40,8 +40,8 @@ stages =[r'''
      |
      |
      |___
-         ''',
-         '''
+         '''",
+        " '''
       _______
      |/      |
      |       O
@@ -50,8 +50,8 @@ stages =[r'''
      |
      |
      |___
-         ''',
-         '''
+         '''",
+         "'''
       _______
      |/      |
      |       O
@@ -60,8 +60,8 @@ stages =[r'''
      |      /
      |
      |___
-         ''',
-         '''
+         '''",
+         "'''
       _______
      |/      |
      |       O
@@ -70,8 +70,9 @@ stages =[r'''
      |      / \
      |
      |___
-         '''
+         '''"
          ]
+
 lives = 6
 #randomly chosen a word from word_list and assign it to a variable named word_chosen
 chosen_word = random.choice(word_list)
@@ -86,15 +87,15 @@ for i in chosen_word:
 while "_" in guess_list:
     guess = input("Guess a letter: ").lower()
     #check if the letter user guessed is one of the lettere in the chosen word
-    l = 0
+    s = 0
     for i in range(len(chosen_word)):
         if guess == chosen_word[i]:
             guess_list[i] = guess
             print(guess_list)
         else:
             lives -= 1
-            print(stages[l])
-            l += 1
+            print(stages[s])
+            s += 1
 if lives == 0:
     print("You loose.")
 elif "_" not in guess_list:
