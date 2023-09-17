@@ -19,4 +19,5 @@ while guess_list[index] == "_":
             guess_list[i] = guess
     index += 1
     print(guess_list)
+    if 
 print("You win")
