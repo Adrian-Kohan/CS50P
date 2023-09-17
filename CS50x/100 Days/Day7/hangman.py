@@ -10,7 +10,9 @@ guess_list = []
 for i in chosen_word:
     guess_list.append("_")
 #check if the letter user guessed is one of the lettere in the chosen word
-for i in chosen_word:
-    if guess == i:
-        guess_list[i] = guess
-        print(quess_list)
+index = 0
+for letter in chosen_word:
+    if guess == letter:
+        guess_list[0] = guess
+        print(guess_list)
+        index += 1
