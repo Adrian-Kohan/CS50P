@@ -14,5 +14,5 @@ index = 0
 for letter in chosen_word:
     if guess == letter:
         guess_list[0] = guess
-        print(guess_list)
         index += 1
+        print(guess_list)
