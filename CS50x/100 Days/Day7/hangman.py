@@ -1,7 +1,7 @@
 import random
 
 word_list = ["ardvark", "baboon", "camel"]
-stages =["'''
+stages =['''
       _______
      |/      |
      |       O
@@ -10,8 +10,8 @@ stages =["'''
      |
      |
      |___
-         '''",
-        " '''
+         ''',
+         '''
       _______
      |/      |
      |       O
@@ -20,8 +20,8 @@ stages =["'''
      |
      |
      |___
-         '''",
-         "'''
+         ''',
+         '''
       _______
      |/      |
      |       O
@@ -30,8 +30,8 @@ stages =["'''
      |
      |
      |___
-         '''",
-         "'''
+         ''',
+         '''
       _______
      |/      |
      |       O
@@ -40,8 +40,8 @@ stages =["'''
      |
      |
      |___
-         '''",
-        " '''
+         ''',
+         '''
       _______
      |/      |
      |       O
@@ -50,8 +50,8 @@ stages =["'''
      |
      |
      |___
-         '''",
-         "'''
+         ''',
+         '''
       _______
      |/      |
      |       O
@@ -60,8 +60,8 @@ stages =["'''
      |      /
      |
      |___
-         '''",
-         "'''
+         ''',
+         '''
       _______
      |/      |
      |       O
@@ -70,9 +70,8 @@ stages =["'''
      |      / \
      |
      |___
-         '''"
+         '''
          ]
-
 lives = 6
 #randomly chosen a word from word_list and assign it to a variable named word_chosen
 chosen_word = random.choice(word_list)
