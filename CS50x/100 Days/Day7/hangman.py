@@ -75,7 +75,16 @@ stages =['''
 lives = 6
 #randomly chosen a word from word_list and assign it to a variable named word_chosen
 chosen_word = random.choice(word_list)
-print(chosen_word)
+print(r'''
+ _
+| |
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |
+                   |___/
+      ''')
 
 guess_list = []
 for i in chosen_word:
