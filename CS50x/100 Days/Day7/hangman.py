@@ -97,11 +97,11 @@ while not end_of_game:
         lives -= 1
         print(stages[s])
         s += 1
-
-    elif lives == 0:
-        end_of_game = True
-        print(f"{stages[6]}\n You loose.")
+        if lives == 0:
+            end_of_game = True
+            print(f"{stages[6]}\n You loose.")
 
     elif "_" not in guess_list:
+        end_of_game = True
         print("You win.")
 
