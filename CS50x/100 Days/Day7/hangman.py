@@ -74,6 +74,9 @@ stages =['''
          ]
 lives = 6
 #randomly chosen a word from word_list and assign it to a variable named word_chosen
+#from hangman_word import word_list
+#or import hangman_word
+#chosen_word = random.choice(hangman_word.word_list)
 chosen_word = random.choice(word_list)
 print(r'''
  _
