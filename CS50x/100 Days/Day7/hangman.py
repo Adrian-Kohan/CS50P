@@ -9,6 +9,6 @@ guess = input("Guess a letter: ").lower()
 #check if the letter user guessed is one of the lettere in the chosen word
 for i in chosen_word:
     if guess == i:
-        print("correct")
+        print("Right")
     else:
-        print("incorrect")
+        print("Wrong")
