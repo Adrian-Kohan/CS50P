@@ -82,6 +82,7 @@ for i in chosen_word:
     guess_list.append("_")
     #or guess_list += "_"
 #ask the user to guess a letter and assign it to a variable called guess. make guess lowercase
+s = 0
 while "_" in guess_list:
     guess = input("Guess a letter: ").lower()
     #check if the letter user guessed is one of the lettere in the chosen word
@@ -89,11 +90,11 @@ while "_" in guess_list:
         if guess == chosen_word[i]:
             guess_list[i] = guess
             print(guess_list)
-    for i in range(6):
-        if guess != chosen_word[i] and lives != 0:
-            lives -= 1
-            print(stages[i])
-    if lives == 0:
+    if guess != chosen_word[i] and lives != 0:
+        lives -= 1
+        print(stages[s])
+        s += 1
+    elif lives == 0:
         print("You loose.")
     elif "_" not in guess_list:
         print("You win.")
