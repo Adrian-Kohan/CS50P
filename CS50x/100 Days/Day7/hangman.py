@@ -98,7 +98,7 @@ while "_" in guess_list:
         s += 1
 
     elif lives == 0:
-        print("You loose.")
+        print(f"{stages[5]}\n You loose.")
 
     elif "_" not in guess_list:
         print("You win.")
