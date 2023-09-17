@@ -93,8 +93,8 @@ while "_" in guess_list:
             print(guess_list)
         else:
             lives -= 1
-        print(stages[s])
-        s += 1
+print(stages[s])
+s += 1
 if lives == 0:
     print("You loose.")
 elif "_" not in guess_list:
