@@ -11,8 +11,8 @@ for i in chosen_word:
     guess_list.append("_")
 #check if the letter user guessed is one of the lettere in the chosen word
 i = 0
-for i in chosen_word:
-    if guess == chosen_word[int(i)]:
-        guess_list[int(i)] = guess
+for i in range len(chosen_word):
+    if guess == chosen_word[i]:
+        guess_list[i] = guess
         i += 1
         print(guess_list)
