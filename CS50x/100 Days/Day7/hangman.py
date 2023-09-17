@@ -17,7 +17,7 @@ while guess_list[index] == "_":
     for i in range(len(chosen_word)):
         if guess == chosen_word[i]:
             guess_list[i] = guess
-    index += 1
     print(guess_list)
+    index += 1
     if 
 print("You win")
