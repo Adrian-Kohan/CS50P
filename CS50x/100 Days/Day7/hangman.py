@@ -83,10 +83,10 @@ for i in chosen_word:
     #or guess_list += "_"
 #ask the user to guess a letter and assign it to a variable called guess. make guess lowercase
 
-l = 0
 while "_" in guess_list:
     guess = input("Guess a letter: ").lower()
     #check if the letter user guessed is one of the lettere in the chosen word
+    l = 0
     for i in range(len(chosen_word)):
         if guess == chosen_word[i]:
             guess_list[i] = guess
