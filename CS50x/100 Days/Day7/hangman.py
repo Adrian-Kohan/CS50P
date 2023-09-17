@@ -8,9 +8,9 @@ print(chosen_word)
 guess = input("Guess a letter: ").lower()
 guess_list = []
 for i in chosen_word:
-    guess-list.append("_")
+    guess_list.append("_")
 #check if the letter user guessed is one of the lettere in the chosen word
 for i in chosen_word:
     if guess == i:
-        
-        print("Right")
+        guess_list[i] = guess
+        print(quess_list)
