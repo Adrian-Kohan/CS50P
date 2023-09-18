@@ -1,8 +1,10 @@
+from art import logo
+print(logo)
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 direction = input ("Type 'encode' to encrypt, type 'decode' to decrypt: \n")
 text = input("Type your message: \n").lower()
 shift = int(input("Type the shift number: \n"))
-from art import logo
+
 def caesar(sh, txt, direct):
     #create a new list that holds new encrypted alphabet
     new_alphabet = []
@@ -13,7 +15,7 @@ def caesar(sh, txt, direct):
             start = (i + shift) - len(alphabet)
             new_alphabet += alphabet[start]
         else:
-            start = shift % 26
+            start = (i + (shift % 26)) - len(alphabet)
             new_alphabet += alphabet[start]
 
     #decode or incode the text based on the user input
@@ -37,5 +39,4 @@ def caesar(sh, txt, direct):
     #   new_position = position + sh
     #   end_txt += alphabet[new_position]
     #print(f"The {direct}d text is {txt}")
-#print(logo)
 caesar(sh = shift, txt = text, direct = direction)
