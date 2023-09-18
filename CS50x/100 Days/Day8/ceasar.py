@@ -40,9 +40,9 @@ def caesar(sh, txt, direct):
     #   end_txt += alphabet[new_position]
     #print(f"The {direct}d text is {txt}")
 caesar(sh = shift, txt = text, direct = direction)
-answer = print("Type 'Yes' if you want to go again. Otherwise type 'no'")
+answer = input("Type 'Yes' if you want to go again. Otherwise type 'no'\n")
 if answer == "Yes":
     caesar(sh = shift, txt = text, direct = direction)
-else:
+elif answer == "no":
     print("Goodbye")
 
