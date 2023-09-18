@@ -34,9 +34,7 @@ def decrypt(sh, txt):
     #and we can just use alphabet.index(ch) instead of some of the below code
     new_txt = ""
     for ch in txt:
-        for i in range(len(new_alphabet)):
-            if alphabet[i] == ch:
-                new_txt += new_alphabet[i]
+        
 
     print(new_alphabet)
     print(f"The encoded text is: {new_txt})
