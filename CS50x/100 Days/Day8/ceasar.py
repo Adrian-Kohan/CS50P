@@ -3,12 +3,13 @@ direction = input ("Type 'encode' to encrypt, type 'decode' to decrypt: \n")
 text = input("Type your message: \n").lower()
 shift = int(input("Type the shift number: \n"))
 def encrypt(sh):
+    new_alphabet = []
     for i in range(len(alphabet)):
         if (i + shift) < len(alphabet):
-            alphabet[i] = alphabet[i + shift]
+            new_alphabet += alphabet[i + shift]
         else:
-            start = (i + shift) - len(alphabet) - 1
-            alphabet[i] = alphabet[start]
-    print(alphabet)
+            start = (i + shift) - len(alphabet) 
+            new_alphabet += alphabet[start]
+    print(new_alphabet)
 
 encrypt(shift)
