@@ -1,4 +1,4 @@
-def gteet():
+def greet():
     print("Hello")
     print("world")
     print("!")
