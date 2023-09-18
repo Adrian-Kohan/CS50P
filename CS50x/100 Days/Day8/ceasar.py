@@ -3,6 +3,7 @@ direction = input ("Type 'encode' to encrypt, type 'decode' to decrypt: \n")
 text = input("Type your message: \n").lower()
 shift = int(input("Type the shift number: \n"))
 def encrypt(sh, txt):
+    #we just can duplicate our alphabet list [a-z,a-z] instead of doing the below
     new_alphabet = []
     for i in range(len(alphabet)):
         if (i + shift) < len(alphabet):
@@ -11,6 +12,7 @@ def encrypt(sh, txt):
             start = (i + shift) - len(alphabet)
             new_alphabet += alphabet[start]
 
+    #and we can just use alphabet.index(ch) instead of some of the below code
     new_txt = ""
     for ch in txt:
         for i in range(len(new_alphabet)):
