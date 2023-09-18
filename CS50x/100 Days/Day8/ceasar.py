@@ -55,11 +55,12 @@ def caesar(sh, txt, direc):
         else:
             start = (i + shift) - len(alphabet)
             new_alphabet += alphabet[start]
-    #run our functions based on the user choice
+
     if direction == "encode":
-       
+
     elif direction == "decode":
         decrypt(sh = shift, txt = text)
     else:
         print("Please insert correct input")
 
+caesar(sh = shift, txt = text, direct = direction)
