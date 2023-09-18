@@ -42,11 +42,24 @@ def decrypt(sh, txt):
 
     print(f"The decoded text is: {new_txt}")
 
-#run our functions based on the user choice
-if direction == "encode":
-    encrypt(sh = shift, txt = text)
-elif direction == "decode":
-    decrypt(sh = shift, txt = text)
-else:
-    print("Please insert correct input")
+
+
+
+def caesar(sh, txt, direc):
+    #create a new list that holds new encrypted alphabet
+    #we just can duplicate our alphabet list [a-z,a-z] instead of doing the below
+    new_alphabet = []
+    for i in range(len(alphabet)):
+        if (i + shift) < len(alphabet):
+            new_alphabet += alphabet[i + shift]
+        else:
+            start = (i + shift) - len(alphabet)
+            new_alphabet += alphabet[start]
+    #run our functions based on the user choice
+    if direction == "encode":
+       
+    elif direction == "decode":
+        decrypt(sh = shift, txt = text)
+    else:
+        print("Please insert correct input")
 
