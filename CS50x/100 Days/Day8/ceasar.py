@@ -47,7 +47,9 @@ caesar(sh = shift, txt = text, direct = direction)
 while True:
     answer = input("Type 'yes' if you want to go again. Otherwise type 'no'\n")
     if answer == "yes":
+        caesar(sh = shift, txt = text, direct = direction)
         continue
+
     elif answer == "no":
         print("Goodbye")
         break
