@@ -5,4 +5,4 @@ def area_calculation(w, h, cover):
     number_of_cans = round((w * h) / cover)
     print(f"You'll need {number_of_cans} cans of paint")
 
-area_calculation(5,5,5)
+area_calculation(w,h,cover)
