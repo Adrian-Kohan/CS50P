@@ -10,9 +10,12 @@ def caesar(sh, txt, direct):
     for i in range(len(alphabet)):
         if (i + shift) < len(alphabet):
             new_alphabet += alphabet[i + shift]
-        elif (i + shift) >= len(alphabet):
+        elif (i + shift) >= len(alphabet) and shift <= len(alphabet):
             start = (i + shift) - len(alphabet)
             new_alphabet += alphabet[start]
+        else:
+            start = shift % 26
+
     #decode or incode the text based on the user input
     new_txt = ""
     if direct == "encode":
