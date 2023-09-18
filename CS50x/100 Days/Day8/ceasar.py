@@ -4,4 +4,6 @@ direction = input ("Type 'encode' to encrypt, type 'decode' to decrypt: \n")
 text = input("Type your message: \n").Lower()
 5
 shift = int(input("Type the shift number: \n"))
-def encrypt(txt, shift)
+def encrypt(txt, shift):
+    for i in range(len(alphabet)):
+        alphabet[i] = alphabet[shift]
