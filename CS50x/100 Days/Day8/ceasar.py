@@ -45,12 +45,11 @@ def caesar(sh, txt, direct):
     #print(f"The {direct}d text is {txt}")
 caesar(sh = shift, txt = text, direct = direction)
 while True:
-    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-    direction = input ("Type 'encode' to encrypt, type 'decode' to decrypt: \n")
-    text = input("Type your message: \n").lower()
-    shift = int(input("Type the shift number: \n"))
     answer = input("Type 'yes' if you want to go again. Otherwise type 'no'\n")
     if answer == "yes":
+        irection = input ("Type 'encode' to encrypt, type 'decode' to decrypt: \n")
+        text = input("Type your message: \n").lower()
+        shift = int(input("Type the shift number: \n"))
         caesar(sh = shift, txt = text, direct = direction)
         continue
 
