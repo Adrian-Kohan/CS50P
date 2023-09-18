@@ -25,10 +25,10 @@ def caesar(sh, txt, direct):
 #or we can duplicate the alphabet ([a-z,a-z]) and ...
 #def caesar(sh, txt, direct):
     #end_txt = ''
+    #if direct == "decode":
+    #   sh *= -1
     #for letter in txt:
     #   position = alphabet.index(letter)
-    #   if direct == "decode":
-    #       sh *= -1
     #   new_position = position + sh
     #   end_txt += alphabet[new_position]
     #print(f"The {direct}d text is {txt}")
