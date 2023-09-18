@@ -26,7 +26,7 @@ def decrypt(sh, txt):
     new_alphabet = []
     for i in range(len(alphabet)):
         if (i - shift) >= 0:
-            new_alphabet += alphabet[i + shift]
+            new_alphabet += alphabet[i - shift]
         else:
             start = (i - shift) + len(alphabet)
             new_alphabet += alphabet[start]
