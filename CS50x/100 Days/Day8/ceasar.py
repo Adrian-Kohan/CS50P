@@ -25,10 +25,10 @@ def decrypt(sh, txt):
     #we just can duplicate our alphabet list [a-z,a-z] instead of doing the below
     new_alphabet = []
     for i in range(len(alphabet)):
-        if (i - shift) >= 0:
-            new_alphabet += alphabet[i - shift]
+        if (i + shift) < len(alphabet):
+            new_alphabet += alphabet[i + shift]
         else:
-            start = (i - shift) + len(alphabet)
+            start = (i + shift) - len(alphabet)
             new_alphabet += alphabet[start]
 
     #and we can just use alphabet.index(ch) instead of some of the below code
