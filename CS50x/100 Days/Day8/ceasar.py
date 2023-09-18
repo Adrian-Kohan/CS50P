@@ -6,6 +6,5 @@ text = input("Type your message: \n").Lower()
 shift = int(input("Type the shift number: \n"))
 def encrypt(txt, shift):
     for i in range(len(alphabet)):
-        alphabet[i] = alphabet[shift]
+        alphabet[i] = alphabet[i + shift]
     for i in txt:
-        
