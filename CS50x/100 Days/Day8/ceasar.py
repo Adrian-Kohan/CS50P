@@ -40,4 +40,4 @@ def decrypt(sh, txt):
     print(f"The decoded text is: {new_txt}")
 
 
-encrypt(sh = shift, txt = text)
+if direction == "encrypt"encrypt(sh = shift, txt = text)
