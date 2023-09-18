@@ -19,7 +19,7 @@ def encrypt(sh, txt):
             if alphabet[i] == ch:
                 new_txt += new_alphabet[i]
 
-    print(f"The encoded text is: {new_txt})
+    print(f"The encoded text is: {new_txt}")
 
 def decrypt(sh, txt):
     #we just can duplicate our alphabet list [a-z,a-z] instead of doing the below
@@ -36,8 +36,8 @@ def decrypt(sh, txt):
     for ch in txt:
         new_txt += alphabet[new_alphabet.index(ch)]
 
-    print(new_alphabet)
-    print(f"The encoded text is: {new_txt})
+
+    print(f"The decoded text is: {new_txt}")
 
 
 encrypt(sh = shift, txt = text)
