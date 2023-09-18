@@ -1,11 +1,12 @@
 from art import logo
-print(logo)
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-direction = input ("Type 'encode' to encrypt, type 'decode' to decrypt: \n")
-text = input("Type your message: \n").lower()
-shift = int(input("Type the shift number: \n"))
+
 
 def caesar(sh, txt, direct):
+    print(logo)
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    direction = input ("Type 'encode' to encrypt, type 'decode' to decrypt: \n")
+    text = input("Type your message: \n").lower()
+    shift = int(input("Type the shift number: \n"))
     #create a new list that holds new encrypted alphabet
     new_alphabet = []
     for i in range(len(alphabet)):
@@ -46,7 +47,7 @@ def caesar(sh, txt, direct):
 caesar(sh = shift, txt = text, direct = direction)
 answer = input("Type 'yes' if you want to go again. Otherwise type 'no'\n")
 if answer == "yes":
-    print("CS50x/100 Days/Day8/ $ python ceasar.py")
+    caesar(sh = shift, txt = text, direct = direction)
 elif answer == "no":
     print("Goodbye")
 
