@@ -18,6 +18,6 @@ def encrypt(sh, txt):
                 new_txt += new_alphabet[i]
 
     print(new_alphabet)
-    print(new_txt)
+    print(f"The encoded text is: {new_txt})
 
 encrypt(sh = shift, txt = text)
