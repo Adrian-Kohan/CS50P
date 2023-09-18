@@ -46,7 +46,7 @@ def caesar(sh, txt, direct):
 caesar(sh = shift, txt = text, direct = direction)
 answer = input("Type 'yes' if you want to go again. Otherwise type 'no'\n")
 if answer == "yes":
-    print("python ceasar.py")
+    print("CS50x/100 Days/Day8/ $ python ceasar.py")
 elif answer == "no":
     print("Goodbye")
 
