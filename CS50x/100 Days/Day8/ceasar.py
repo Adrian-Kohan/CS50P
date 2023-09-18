@@ -4,6 +4,7 @@ text = input("Type your message: \n").lower()
 shift = int(input("Type the shift number: \n"))
 def encrypt(sh):
     for i in range(len(alphabet)):
+        f
         if (i + shift) <= len(alphabet):
             alphabet[i] = alphabet[i + shift]
         else:
@@ -11,4 +12,4 @@ def encrypt(sh):
             alphabet[i] = alphabet[start]
     print(alphabet)
 
-encrypt(sh = shift)
+encrypt(shift)
