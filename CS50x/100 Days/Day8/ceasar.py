@@ -15,6 +15,7 @@ def caesar(sh, txt, direct):
             new_alphabet += alphabet[start]
         else:
             start = shift % 26
+            new_alphabet += alphabet[start]
 
     #decode or incode the text based on the user input
     new_txt = ""
