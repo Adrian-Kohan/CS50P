@@ -26,7 +26,7 @@ def caesar(sh, txt, direct):
                 new_txt += new_alphabet[alphabet.index(ch)]
             else:
                 new_txt += ch
-            print(f"The encoded text is: {new_txt}")
+        print(f"The encoded text is: {new_txt}")
 
     elif direct == "decode":
         for ch in txt:
