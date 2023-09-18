@@ -32,7 +32,7 @@ def caesar(sh, txt, direct):
         for ch in txt:
             new_txt += alphabet[new_alphabet.index(ch)]
         print(f"The decoded text is: {new_txt}")
-    
+
 #or we can duplicate the alphabet ([a-z,a-z]) and ...
 #def caesar(sh, txt, direct):
     #end_txt = ''
@@ -46,7 +46,7 @@ def caesar(sh, txt, direct):
 caesar(sh = shift, txt = text, direct = direction)
 answer = input("Type 'yes' if you want to go again. Otherwise type 'no'\n")
 if answer == "yes":
-    caesar(sh = shift, txt = text, direct = direction)
+    print("python ceasar.py")
 elif answer == "no":
     print("Goodbye")
 
