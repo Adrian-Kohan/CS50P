@@ -12,11 +12,12 @@ def encrypt(sh, txt):
             new_alphabet += alphabet[start]
 
     for i in range(len(alphabet)):
+        new_txt = ""
         for ch in txt:
             if alphabet[i] == ch:
-                ch = new_alphabet[i]
+                new_txt += new_alphabet[i]
 
     print(new_alphabet)
-    print(txt)
+    print(new_txt)
 
 encrypt(sh = shift, txt = text)
