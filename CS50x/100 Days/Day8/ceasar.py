@@ -2,7 +2,7 @@ alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'
 direction = input ("Type 'encode' to encrypt, type 'decode' to decrypt: \n")
 text = input("Type your message: \n").lower()
 shift = int(input("Type the shift number: \n"))
-def caesar(sh, txt, direc):
+def caesar(sh, txt, direct):
     #create a new list that holds new encrypted alphabet
     #we just can duplicate our alphabet list [a-z,a-z] instead of doing the below
     new_alphabet = []
@@ -14,7 +14,7 @@ def caesar(sh, txt, direc):
             new_alphabet += alphabet[start]
 
     new_txt = ""
-    if direc == "encode":
+    if direct == "encode":
         for ch in txt:
             new_txt += new_alphabet[alphabet.index(ch)]
         print(f"The encoded text is: {new_txt}")
