@@ -3,6 +3,7 @@ direction = input ("Type 'encode' to encrypt, type 'decode' to decrypt: \n")
 text = input("Type your message: \n").lower()
 shift = int(input("Type the shift number: \n"))
 def encrypt(sh, txt):
+    #create a new list that holds new encrypted alphabet
     #we just can duplicate our alphabet list [a-z,a-z] instead of doing the below
     new_alphabet = []
     for i in range(len(alphabet)):
@@ -12,6 +13,7 @@ def encrypt(sh, txt):
             start = (i + shift) - len(alphabet)
             new_alphabet += alphabet[start]
 
+    #encode new text based of the alphabet position with new alphabet list
     #and we can just use alphabet.index(ch) instead of some of the below code
     new_txt = ""
     for ch in txt:
@@ -22,6 +24,7 @@ def encrypt(sh, txt):
     print(f"The encoded text is: {new_txt}")
 
 def decrypt(sh, txt):
+    #create a new list that holds new encrypted alphabet
     #we just can duplicate our alphabet list [a-z,a-z] instead of doing the below
     new_alphabet = []
     for i in range(len(alphabet)):
@@ -31,7 +34,7 @@ def decrypt(sh, txt):
             start = (i + shift) - len(alphabet)
             new_alphabet += alphabet[start]
 
-    #and we can just use alphabet.index(ch) instead of some of the below code
+    #decode new text based of the new alphabet position with alphabet list
     new_txt = ""
     for ch in txt:
         new_txt += alphabet[new_alphabet.index(ch)]
@@ -39,7 +42,7 @@ def decrypt(sh, txt):
 
     print(f"The decoded text is: {new_txt}")
 
-
+#run our functions based on the user choice
 if direction == "encode":
     encrypt(sh = shift, txt = text)
 elif direction == "decode":
