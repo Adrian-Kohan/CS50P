@@ -24,7 +24,4 @@ def caesar(sh, txt, direct):
             new_txt += alphabet[new_alphabet.index(ch)]
         print(f"The decoded text is: {new_txt}")
 
-    else:
-        print("Please insert correct input")
-
 caesar(sh = shift, txt = text, direct = direction)
