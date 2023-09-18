@@ -13,7 +13,7 @@ def encrypt(sh, txt):
 
         for ch in txt:
             new_txt = ""
-            for i in range(len(alphabet)):
+            for i in range(len(new_alphabet)):
                 if alphabet[i] == ch:
                     new_txt += new_alphabet[i]
 
