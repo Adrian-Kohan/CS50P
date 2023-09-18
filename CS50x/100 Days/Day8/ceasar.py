@@ -8,9 +8,6 @@ shift = int(input("Type the shift number: \n"))
 def caesar(sh, txt, direct):
     #create a new list that holds new encrypted alphabet
     new_alphabet = []
-    for letter in txt:
-        if letter == " " or letter == ".":
-            
     for i in range(len(alphabet)):
         if (i + shift) < len(alphabet):
             new_alphabet += alphabet[i + shift]
@@ -25,8 +22,13 @@ def caesar(sh, txt, direct):
     new_txt = ""
     if direct == "encode":
         for ch in txt:
-            new_txt += new_alphabet[alphabet.index(ch)]
-        print(f"The encoded text is: {new_txt}")
+            if ch != " " or ch != ".":
+                new_txt += new_alphabet[alphabet.index(ch)]
+            elif ch == " ":
+                new_txt += " "
+            elif ch == ".":
+                new_txt += "."
+            print(f"The encoded text is: {new_txt}")
 
     elif direct == "decode":
         for ch in txt:
