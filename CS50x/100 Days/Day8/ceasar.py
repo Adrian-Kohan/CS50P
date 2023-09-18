@@ -4,7 +4,6 @@ text = input("Type your message: \n").lower()
 shift = int(input("Type the shift number: \n"))
 def caesar(sh, txt, direct):
     #create a new list that holds new encrypted alphabet
-    #we just can duplicate our alphabet list [a-z,a-z] instead of doing the below
     new_alphabet = []
     for i in range(len(alphabet)):
         if (i + shift) < len(alphabet):
@@ -12,7 +11,7 @@ def caesar(sh, txt, direct):
         else:
             start = (i + shift) - len(alphabet)
             new_alphabet += alphabet[start]
-
+    #decode or incode the text based on the user input
     new_txt = ""
     if direct == "encode":
         for ch in txt:
