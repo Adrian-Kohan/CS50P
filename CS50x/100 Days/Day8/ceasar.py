@@ -43,11 +43,13 @@ def caesar(sh, txt, direct):
     #   new_position = position + sh
     #   end_txt += alphabet[new_position]
     #print(f"The {direct}d text is {txt}")
-caesar(sh , txt , direct )
-answer = input("Type 'yes' if you want to go again. Otherwise type 'no'\n")
-if answer == "yes":
-    continue
-elif answer == "no":
-    print("Goodbye")
-    break
+caesar(sh = shift, txt = text, direct = direction)
+while True:
+    answer = input("Type 'yes' if you want to go again. Otherwise type 'no'\n")
+    if answer == "yes":
+        continue
+    elif answer == "no":
+        print("Goodbye")
+        break
+
 
