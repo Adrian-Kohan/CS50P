@@ -13,23 +13,17 @@ def caesar(sh, txt, direc):
             start = (i + shift) - len(alphabet)
             new_alphabet += alphabet[start]
 
-    if direction == "encode":
-        new_txt = ""
-    for ch in txt:
-        for i in range(len(new_alphabet)):
-            if alphabet[i] == ch:
-                new_txt += new_alphabet[i]
-
-    print(f"The encoded text is: {new_txt}")
-
-    elif direction == "decode":
-         #decode new text based of the new alphabet position with alphabet list
     new_txt = ""
-    for ch in txt:
-        new_txt += alphabet[new_alphabet.index(ch)]
+    if direc == "encode":
+        for ch in txt:
+            new_txt += new_alphabet[alphabet.index(ch)]
+        print(f"The encoded text is: {new_txt}")
 
+    elif direct == "decode":
+        for ch in txt:
+            new_txt += alphabet[new_alphabet.index(ch)]
+        print(f"The decoded text is: {new_txt}")
 
-    print(f"The decoded text is: {new_txt}")
     else:
         print("Please insert correct input")
 
