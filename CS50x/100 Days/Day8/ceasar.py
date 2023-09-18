@@ -3,7 +3,6 @@ direction = input ("Type 'encode' to encrypt, type 'decode' to decrypt: \n")
 text = input("Type your message: \n").lower()
 shift = int(input("Type the shift number: \n"))
 from art import logo
-print(logo)
 def caesar(sh, txt, direct):
     #create a new list that holds new encrypted alphabet
     new_alphabet = []
@@ -38,5 +37,5 @@ def caesar(sh, txt, direct):
     #   new_position = position + sh
     #   end_txt += alphabet[new_position]
     #print(f"The {direct}d text is {txt}")
-
+#print(logo)
 caesar(sh = shift, txt = text, direct = direction)
