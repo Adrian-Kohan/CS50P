@@ -27,9 +27,9 @@ def caesar(sh, txt, direct):
     #end_txt = ''
     #for letter in txt:
     #   position = alphabet.index(letter)
-    #   if direct == "encode":
+    #   if direct == "decode":
     #       sh *= -1
-    #   new_position = position +sh
+    #   new_position = position + sh
     #   end_txt += alphabet[new_position]
     #print(f"The {direct}d text is {txt}")
 
