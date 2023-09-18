@@ -22,12 +22,10 @@ def caesar(sh, txt, direct):
     new_txt = ""
     if direct == "encode":
         for ch in txt:
-            if ch != " " or ch != ".":
+            if ch in new_alphabet:
                 new_txt += new_alphabet[alphabet.index(ch)]
-            elif ch == " ":
-                new_txt += " "
-            elif ch == ".":
-                new_txt += "."
+            else:
+                new_txt += ch
             print(f"The encoded text is: {new_txt}")
 
     elif direct == "decode":
