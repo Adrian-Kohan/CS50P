@@ -7,7 +7,7 @@ def encrypt(sh):
         if (i + shift) < len(alphabet):
             alphabet[i] = alphabet[i + shift]
         else:
-            start = (i + shift) - len(alphabet)
+            start = (i + shift) - len(alphabet) - 1
             alphabet[i] = alphabet[start]
     print(alphabet)
 
