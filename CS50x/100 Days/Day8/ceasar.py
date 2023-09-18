@@ -10,8 +10,13 @@ def encrypt(sh, txt):
         else:
             start = (i + shift) - len(alphabet)
             new_alphabet += alphabet[start]
-    for i in txt:
-        
-    print(new_alphabet)
 
-encrypt(shift)
+    for i in range(len(alphabet)):
+        for ch in txt:
+            if alphabet[i] == ch:
+                ch = new_alphabet[i]
+
+    print(new_alphabet)
+    print(txt)
+
+encrypt(sh = shift, txt = text)
