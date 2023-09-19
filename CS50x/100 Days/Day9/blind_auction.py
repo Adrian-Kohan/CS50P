@@ -14,7 +14,7 @@ def auction(input_name, input_bid):
         if secret_auction[0][0] < secret_auction[i][0]:
             max = secret_auction[i][0]
     print(secret_auction)
-    print(f"The winner is {name} with a bid of {max}")
+    print(f"The winner is {input_name} with a bid of {max}")
 
 
 
