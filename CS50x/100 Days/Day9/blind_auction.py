@@ -3,7 +3,7 @@ from replit import clear
 print(logo)
 print("Welcome to the secret auction program.")
 secret_auction = {}
-
+def winner()
 while True:
     name = input("What is your name?: ")
     bid = int(input("What's your bid? $"))
