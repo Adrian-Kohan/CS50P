@@ -22,9 +22,9 @@ while True:
         clear()
         name = input("What is your name?: ")
         bid = input("What's your bid? $")
-        auction(name, bid)
         continue
 
     elif answer == "no":
+        auction(name, bid)
         break
 
