@@ -16,3 +16,5 @@ for key in student_score:
         student_grade[key] = "Acceptable"
     else:
         student_grade[key] = "Fail"
+
+print(student_grade)
