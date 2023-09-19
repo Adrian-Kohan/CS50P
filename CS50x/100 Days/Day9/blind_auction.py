@@ -3,11 +3,13 @@ from replit import clear
 print(logo)
 print("Welcome to the secret auction program.")
 secret_auction = {}
+
 def winner(auction):
     max = 0
     for person in auction:
-        if auction[name] > max:
-            max = auction[name]
+        bid_amount = auction[name]
+        if bid_amount > max:
+            max = bid_amount
             winner = person
     print(f"The winner is {winner} with a bid of {max}")
 
