@@ -3,7 +3,14 @@ from replit import clear
 print(logo)
 print("Welcome to the secret auction program.")
 secret_auction = {}
-def winner()
+def winner(auction):
+    max = 0
+    for person in auction:
+        if auction[name] > max:
+            max = auction[name]
+            winner = person
+    print(f"The winner is {winner} with a bid of {max}")
+
 while True:
     name = input("What is your name?: ")
     bid = int(input("What's your bid? $"))
@@ -13,11 +20,6 @@ while True:
         clear()
         continue
     elif answer == "no":
-        max = 0
-        for person in secret_auction:
-            if secret_auction[name] > max:
-                max = secret_auction[name]
-                winner = person
-        print(f"The winner is {winner} with a bid of {max}")
+        winner(secret_auction)
         break
 
