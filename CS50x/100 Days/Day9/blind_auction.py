@@ -17,6 +17,7 @@ while True:
         for person in secret_auction:
             if secret_auction[name] > max:
                 max = secret_auction[name]
-        print(f"The winner is {name} with a bid of {max}")
+                winner = person
+        print(f"The winner is {winner} with a bid of {max}")
         break
 
