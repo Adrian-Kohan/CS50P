@@ -21,10 +21,12 @@ while True:
         continue
 
     elif answer == "no":
+        print(secret_auction)
+        print(secret_auction[0][name])
         max = secret_auction[0][name]
         for i in range(len(secret_auction)):
             if secret_auction[0][name] < secret_auction[i][name]:
                 max = secret_auction[i][name]
-        print(f"The winner is {name} with a bid of {max}")
+        print(f"The winner is {secret_auction[i]} with a bid of {max}")
         break
 
