@@ -6,4 +6,8 @@ bid = input("What's your bid? $")
 
 def auction(input_name, input_bid):
     secret_auction ={}
-    for key
+    max = ''
+    for key in secrect_auction:
+        secrect_auction[name] = bid
+        max = secrect_auction[0]
+        
