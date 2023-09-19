@@ -11,7 +11,7 @@ def auction(input_name, input_bid):
     secret_auction = {}
     secret_auction[input_name] = [input_bid]
     parti = []
-    parti += secret_auction
+    partis = parti.append(secret_auction)
 
     print(parti)
 
