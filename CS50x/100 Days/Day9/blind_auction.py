@@ -5,8 +5,6 @@ print("Welcome to the secret auction program.")
 secret_auction = {}
 secret_auction[name] = bid
 
-auction(name, bid)
-
 while True:
     name = input("What is your name?: ")
     bid = input("What's your bid? $")
