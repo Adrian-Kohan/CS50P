@@ -1,6 +1,6 @@
-from gavel import logo
+#from gavel import logo
 from replit import clear
-print(logo)
+#print(logo)
 print("Welcome to the secret auction program.")
 name = input("What is your name?: ")
 bid = input("What's your bid? $")
