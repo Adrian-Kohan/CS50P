@@ -6,6 +6,7 @@ secret_auction = {}
 
 def winner(auction):
     max = 0
+    winner = ""
     for person in auction:
         bid_amount = auction[name]
         if bid_amount > max:
