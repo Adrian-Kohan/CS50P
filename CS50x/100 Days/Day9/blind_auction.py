@@ -14,10 +14,10 @@ while True:
         continue
 
     elif answer == "no":
-         max = 0
+        max = 0
         for person in secret_auction:
-            if secret_auction[name] > max:
-                max = bid_amount
+            if secret_auction[person] > max:
+                max = secret_auction[person]
                 winner = person
         print(f"The winner is {winner} with a bid of {max}")
         break
