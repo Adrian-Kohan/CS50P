@@ -22,7 +22,7 @@ while True:
 
     elif answer == "no":
         print(secret_auction)
-        print(secret_auction[0][name])
+        print(secret_auction[0][name][0])
         max = secret_auction[0][name]
         for i in range(len(secret_auction)):
             if secret_auction[0][name] < secret_auction[i][name]:
