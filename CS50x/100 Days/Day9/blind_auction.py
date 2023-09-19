@@ -8,14 +8,6 @@ secret_auction =[]
 
 def auction(input_name, input_bid):
     secret_auction.append({input_name : [input_bid] })
-    print(secret_auction)
-
-    max = secret_auction[0][input_name][0]
-    for i in range(len(secret_auction)):
-        if secret_auction[0][input_name][0] < secret_auction[i][input_name][0]:
-            max = secret_auction[i][input_name][0]
-    print(f"The winner is {input_name} with a bid of {max}")
-
 
 auction(name, bid)
 
@@ -29,7 +21,10 @@ while True:
         continue
 
     elif answer == "no":
-
-
+        max = secret_auction[0][name]
+        for i in range(len(secret_auction)):
+            if secret_auction[0][name] < secret_auction[i][name]:
+                max = secret_auction[i][name]
+        print(f"The winner is {name} with a bid of {max}")
         break
 
