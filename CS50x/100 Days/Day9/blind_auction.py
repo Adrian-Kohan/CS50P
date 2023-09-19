@@ -10,10 +10,10 @@ def auction(input_name, input_bid):
     max = ''
     for key in secret_auction:
         secrect_auction[name] = bid
-    for i in range(len(secrect_auction)):
-        max = secrect_auction[0]
-        if secrect_auction[0] < secrect_auction[1]:
-            max = secrect_auction[i]
+    for i in range(len(secret_auction)):
+        max = secret_auction[0]
+        if secret_auction[0] < secret_auction[1]:
+            max = secret_auction[i]
     print(f"The winner is {name} with a bid of {max}")
 
 while True:
