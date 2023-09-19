@@ -9,14 +9,11 @@ bid = input("What's your bid? $")
 def auction(input_name, input_bid):
     secret_auction = []
     secret_auction += {input_name : input_bid}
-    max = secret_auction[0][0]
-    for i in range(len(secret_auction)):
-        if secret_auction[0][0] < secret_auction[i][0]:
-            max = secret_auction[i][0]
+
     print(secret_auction)
-    print(f"The winner is {input_name} with a bid of {max}")
 
 
+auction(name, bid)
 
 while True:
     answer = input("Are there any other bidders? Type 'yes' or 'no'\n")
