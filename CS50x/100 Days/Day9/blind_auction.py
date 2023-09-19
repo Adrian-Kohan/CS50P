@@ -7,10 +7,12 @@ bid = input("What's your bid? $")
 
 
 def auction(input_name, input_bid):
+    parti = []
     secret_auction = {}
     secret_auction[input_name] = [input_bid]
+    parti += secret_auction
 
-    print(secret_auction)
+    print(parti)
 
 
 auction(name, bid)
