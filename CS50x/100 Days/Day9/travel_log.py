@@ -10,12 +10,12 @@ travel_log = [
 "cities": ["Berlin", "Hambura", "Stuttgart"]
 },
 ]
-def add_new_country(coun, visit, city):
+def add_new_country(county_visited, times_visit, cities_visited):
     travel_log.append({
-        "country": coun,
-        "visits": visit,
-        "cities": city
+        "country": county_visited,
+        "visits": times_visit,
+        "cities": cities_visited
     },)
 
-add_new_country("Russia", 2, ["Moscow", "Sain Peters", "som"])
+add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
 print(travel_log)
