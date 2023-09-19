@@ -9,5 +9,4 @@ def auction(input_name, input_bid):
     max = ''
     for key in secrect_auction:
         secrect_auction[name] = bid
-        max = secrect_auction[0]
         
