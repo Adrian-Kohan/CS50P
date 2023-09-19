@@ -15,11 +15,7 @@ while True:
     answer = input("Are there any other bidders? Type 'yes' or 'no'\n")
     if answer == "yes":
         clear()
-        name = input("What is your name?: ")
-        bid = input("What's your bid? $")
-        auction(name, bid)
         continue
-
     elif answer == "no":
         print(secret_auction)
         print(secret_auction[0][name][0])
