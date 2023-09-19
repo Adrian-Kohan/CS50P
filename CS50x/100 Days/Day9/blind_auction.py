@@ -4,16 +4,11 @@ from replit import clear
 print("Welcome to the secret auction program.")
 name = input("What is your name?: ")
 bid = input("What's your bid? $")
-
+secret_auction =[]
 
 def auction(input_name, input_bid):
-
-    secret_auction = {}
-    secret_auction[input_name] = [input_bid]
-    parti = []
-    partis = parti.append(secret_auction)
-
-    print(parti)
+    secret_auction.append({input_name : input_bid })
+    print(secret_auction)
 
 
 auction(name, bid)
