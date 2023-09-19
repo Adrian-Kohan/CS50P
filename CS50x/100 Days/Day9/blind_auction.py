@@ -7,9 +7,9 @@ bid = input("What's your bid? $")
 
 def auction(input_name, input_bid):
     secret_auction ={}
-    max = ''
     for key in secret_auction:
-        secrect_auction[name] = bid
+        secret_auction[name] += bid
+        
     for i in range(len(secret_auction)):
         max = secret_auction[0]
         if secret_auction[0] < secret_auction[1]:
