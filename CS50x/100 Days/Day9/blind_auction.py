@@ -7,8 +7,8 @@ bid = input("What's your bid? $")
 
 
 def auction(input_name, input_bid):
-    secret_auction = []
-    secret_auction += {input_name : input_bid}
+    secret_auction = {}
+    secret_auction[input_name] = [input_bid]
 
     print(secret_auction)
 
