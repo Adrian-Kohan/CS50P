@@ -14,7 +14,7 @@ operations = {
     "*" : multiply,
     "+" : add,
     "-" : subtract,
-    "/" : devide
+    "/" : divide
 }
 
 num1 = int(input("What's the first number?: "))
