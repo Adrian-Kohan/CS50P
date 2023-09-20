@@ -1,4 +1,6 @@
-f
+from art import logo
+
+from replit import clear
 def add(n1, n2):
     return n1 + n2
 
