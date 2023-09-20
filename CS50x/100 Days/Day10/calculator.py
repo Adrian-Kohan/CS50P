@@ -32,8 +32,9 @@ while continue_calculating:
         answer = function(num1, num2)
 
     print(f"{num1} {operation_symbol} {num2} = {answer}")
-    anwser2 = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to exit.: ")
-
-    if anwser2 == 'n':
+    answer2 = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to exit.: ")
+    if answer2 == "y":
+        num1 = answer
+    else:
         continue_calculating = False
 
