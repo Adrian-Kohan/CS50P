@@ -24,3 +24,8 @@ for operator in operations:
     print(operator)
 
 operation_symbol =input("Pick an operation from the line above: ")
+
+for operator in operations:
+    answer = operations[operator]
+
+print(f"{num1} {operation_symbol} {num2} = {answer}")
