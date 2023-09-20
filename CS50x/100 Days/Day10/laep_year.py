@@ -12,7 +12,7 @@ def is_leap_year(year):
 
 def days_in_month(input_year, input_month):
     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    if is_leap_year
+    if is_leap_year(inpu)
 
 
 year = int(input("Enter a year: "))
