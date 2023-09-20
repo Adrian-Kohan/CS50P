@@ -14,12 +14,12 @@ def days_in_month(input_year, input_month):
     month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     if is_leap_year(input_year) == True:
         month_days[1] = 28
-        month_index = input_month -1
-        return month_days[month_index]
-    elif is_leap_year(input_year) == False:
-        month_index = input_month -1
-        return month_days[month_index]
-
+        return month_days[input_month -1]
+    return month_days[input_month -1]
+#or
+#if leap_year and input_month == 2:
+    #return 29
+#return month_days[input_month -1]
 
 year = int(input("Enter a year: "))
 month = int(input("Enter a month: "))
