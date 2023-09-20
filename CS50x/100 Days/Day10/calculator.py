@@ -33,6 +33,12 @@ while continue_calculating:
 
     print(f"{num1} {operation_symbol} {num2} = {answer}")
     anwser2 = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to exit.: ")
+    num3 = int(input("What's the next number?: "))
+    for operator in operations:
+        function = operations[operation_symbol]
+        answer3 = function(function(num1, num2), num3)
+
+    print(f"{answer} {operation_symbol} {num3} = {answer3}")
 
     if anwser2 == 'n':
         continue_calculating = False
