@@ -34,3 +34,8 @@ for operator in operations:
     answer = function(num1, num2)
 
 print(f"{num1} {operation_symbol} {num2} = {answer}")
+
+continue_calculating = True
+while continue_calculating:
+    anwser2 = input(f"Type 'y' to continue calculating with {answer}, or type 'no' to wxit")
+    if anwser2 == 'y':
