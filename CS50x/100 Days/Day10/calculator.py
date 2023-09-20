@@ -26,6 +26,6 @@ for operator in operations:
 operation_symbol =input("Pick an operation from the line above: ")
 
 for operator in operations:
-    answer = operations[operator]
+    answer = operations[operation_symbol]
 
 print(f"{num1} {operation_symbol} {num2} = {answer}")
