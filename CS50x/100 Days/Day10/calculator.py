@@ -10,15 +10,17 @@ def divide(n1, n2):
 def subtract(n1, n2):
     n1 - n2
 
-operations = {
-    "*" : multiply,
-    "+" : add,
-    "-" : subtract,
-    "/" : divide
-}
+
 
 num1 = int(input("What's the first number?: "))
 num2 = int(input("What's the second number?: "))
+
+operations = {
+    "*" : multiply(num1, num2),
+    "+" : add(num1, num2),
+    "-" : subtract(num1, num2),
+    "/" : divide(num1, num2)
+}
 
 for operator in operations:
     print(operator)
