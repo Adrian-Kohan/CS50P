@@ -50,17 +50,25 @@ def blackjack():
             print_result()
             print("Win, with a Blackjack 😎")
 
-        elif (computer_score > 21 and current_score <= 21) or (current_score < 21 and computer_score < current_score):
+        elif computer_score < current_score:
             print_result()
-            print("You win")
+            print("You win 😃")
 
-        elif current_score > 21 or (current_score < 21 and computer_score > current_score):
+        elif current_score > 21:
             print_result()
-            print("You went over. You lose.")
+            print("You went over. You lose.😭")
 
-        else:
+        elif computer_score > 21:
+            print_result()
+            print("opponent went over. You win.😁")
+
+        elif current_score == computer_score:
             print_result()
             print("Draw 🙃")
+
+        else computer_score > current_score:
+
+
 
     continue_game = True
     while continue_game:
