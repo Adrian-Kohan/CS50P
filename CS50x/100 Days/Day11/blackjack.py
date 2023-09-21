@@ -30,6 +30,8 @@ def blackjack():
         computer_second_card = random.sample(cards, 1)
         computer_second_card.append(computer_first_card)
         computer_score = sum(computer_second_card)
+        current_score = sum(your_cards)
+
         def print_result():
             print(f"Your final hand: {your_cards}, final score: {current_score}")
             print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
