@@ -38,6 +38,7 @@ while continue_game:
     print(f"Your cards: {your_cards}, Current score: {current_score}")
     print(f"Computer's first card: {computer_first_card}")
     computer_score = sum(computer_second_card)
+    print(computer_score)
     if computer_score < 17:
          computer_second_card.append(random.choice(cards))
     if computer_score > current_score:
