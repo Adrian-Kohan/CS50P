@@ -42,14 +42,21 @@ def blackjack():
             your_cards[your_cards.index(11)] = 1
             computer_second_card[computer_second_card.index(11)] = 1
 
-        if current_score == 21 or (computer_score > 21 and current_score <= 21) or (current_score < 21 and computer_score < current_score):
+        if computer_score == 21 and len(computer_second_card) == 2:
+            print_result()
+            print("Lose, opponent has Blackjack  😱")
+
+        elif current_score == 21 and len(your_cards) == 2:
+            print_result()
+            print("Win, with a Blackjack 😎")
+
+        elif (computer_score > 21 and current_score <= 21) or (current_score < 21 and computer_score < current_score):
             print_result()
             print("You win")
 
         elif current_score > 21 or (current_score < 21 and computer_score > current_score):
             print_result()
             print("You went over. You lose.")
-        elif computer_score == 21 and 
 
         else:
             print_result()
