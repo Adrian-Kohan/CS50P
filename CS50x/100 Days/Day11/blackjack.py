@@ -17,7 +17,6 @@ import random
 
 print(logo)
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-
 your_cards = random.sample(cards, 2)
 current_score = your_cards[0] + your_cards[1]
 print(f"Your cards: {your_cards}, Current score: {current_score}")
