@@ -25,7 +25,7 @@ computer_first_card = random.choice(cards)
 print(f"Computer's first card: {computer_first_card}")
 
 def winner():
-    
+
 
     if current_score == 21 or computer_score > 21 or (current_score < 21 and computer_score < current_score):
         print(f"Your final hand: {your_cards}, final score: {current_score}")
@@ -53,6 +53,9 @@ while continue_game:
     print(f"Computer's first card: {computer_first_card}")
     computer_score = sum(computer_second_card)
     print(computer_score)
+    if computer_score < 17:
+         computer_second_card.append(random.choice(cards))
+         computer_score = sum(computer_second_card)
     winner()
     continue_game = False
 
