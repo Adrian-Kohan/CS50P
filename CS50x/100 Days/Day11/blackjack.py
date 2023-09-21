@@ -26,8 +26,9 @@ def blackjack():
     print(f"Computer's first card: {computer_first_card}")
 
     def ace():
-        if current_score > 21:
+        if 11 in your_cards and current_score > 21:
             
+
 
     def winner():
         computer_second_card = random.sample(cards, 1)
