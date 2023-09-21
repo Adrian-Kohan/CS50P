@@ -52,8 +52,7 @@ while continue_game:
     computer_second_card.append(computer_score)
     print(f"Your cards: {your_cards}, Current score: {current_score}")
     print(f"Computer's first card: {computer_score}")
-    computer_score = sum(computer_second_card)
-    print(computer_score)
+    computer_scores = sum(computer_second_card)
     winner()
     continue_game = False
 
