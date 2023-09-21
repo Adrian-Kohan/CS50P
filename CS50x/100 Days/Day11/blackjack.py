@@ -24,13 +24,27 @@ print(f"Your cards: {your_cards}, Current score: {current_score}")
 computer_first_card = random.choice(cards)
 print(f"Computer's first card: {computer_first_card}")
 
+def winner():
+    if computer_score < 17:
+        computer_second_card.append(random.choice(cards))
+        computer_score = sum(computer_second_card)
 
+    if current_score == 21 or computer_score > 21 or (current_score < 21 and computer_score < current_score):
+        print(f"Your final hand: {your_cards}, final score: {current_score}")
+        print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
+        print("You win")
+
+    elif current_score > 21 or (current_score < 21 and computer_score > current_score):
+        print(f"Your final hand: {your_cards}, final score: {current_score}")
+        print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
+        print("You went over. You lose.")
 
 continue_game = True
 while continue_game:
     another_card = input("Type 'y' to get another card, type 'n' to pass: ")
     if another_card == "n":
         continue_game = False
+        winner()
 
     choice = random.choice(cards)
     your_cards.append(choice)
@@ -41,22 +55,11 @@ while continue_game:
     print(f"Computer's first card: {computer_first_card}")
     computer_score = sum(computer_second_card)
     print(computer_score)
+    winner()
+    continue_game = False
 
-    if computer_score < 17:
-        computer_second_card.append(random.choice(cards))
-        computer_score = sum(computer_second_card)
 
-    if current_score == 21 or computer_score > 21 or (current_score < 21 and computer_score < current_score):
-        continue_game = False
-        print(f"Your final hand: {your_cards}, final score: {current_score}")
-        print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
-        print("You win")
-        
-    elif current_score > 21 or (current_score < 21 and computer_score > current_score):
-        continue_game = False
-        print(f"Your final hand: {your_cards}, final score: {current_score}")
-        print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
-        print("You went over. You lose.")
+
 
 
 
