@@ -33,9 +33,18 @@ while continue_game:
     choice = random.choice(cards)
     your_cards.append(choice)
     current_score += choice
-    computer_second_card = random.choice(cards)
+    computer_second_card = random.sample(cards, 1)
+    computer_second_card.append(computer_first_card)
     print(f"Your cards: {your_cards}, Current score: {current_score}")
     print(f"Computer's first card: {computer_first_card}")
+    computer_score = sum(computer_second_card)
+    if computer_score < 17:
+         computer_second_card.append(random.choice(cards))
+    if computer_score > current_score:
+            print(f"Your final hand: {your_cards}, Current score: {current_score}")
+            print(f"Computer's final hand cards: {your_cards}, Current score: {current_score}")
+
+
 
 
 
