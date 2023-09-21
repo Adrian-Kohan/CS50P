@@ -27,7 +27,7 @@ def blackjack():
 
     def ace():
         if 11 in your_cards and current_score > 21:
-            
+            your_cards
 
 
     def winner():
