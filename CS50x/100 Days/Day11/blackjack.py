@@ -35,7 +35,7 @@ def blackjack():
         while computer_score < 17:
             computer_second_card.append(random.choice(cards))
             computer_score = sum(computer_second_card)
-            
+
         if (11 in your_cards and current_score > 21) or (11 in computer_second_card and computer_score > 21 ):
             your_cards[your_cards.index(11)] = 1
             computer_second_card[computer_second_card.index(11)] = 1
@@ -62,7 +62,7 @@ def blackjack():
             if answer == 'y':
                 clear()
                 blackjack()
-            else:
+            elif  answer == 'n':
                 continue_game = False
 
         elif another_card == "y":
