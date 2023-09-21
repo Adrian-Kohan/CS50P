@@ -23,7 +23,6 @@ current_score = your_cards[0] + your_cards[1]
 print(f"Your cards: {your_cards}, Current score: {current_score}")
 computer_first_card = random.choice(cards)
 print(f"Computer's first card: {computer_first_card}")
-global computer_score
 
 def winner():
     if computer_score < 17:
