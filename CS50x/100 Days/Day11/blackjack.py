@@ -42,11 +42,18 @@ while continue_game:
     if computer_score < 17:
          computer_second_card.append(random.choice(cards))
     if current_score == 21:
-         
-    if computer_score > current_score:
-            print(f"Your final hand: {your_cards}, final score: {current_score}")
-            print(f"Computer's final hand: {computer_second_card}, Current score: {computer_scor}")
-
+        print(f"Your final hand: {your_cards}, final score: {current_score}")
+        print(f"Computer's final hand: {computer_second_card}, Current score: {computer_score}")
+        print("You win")
+    
+    elif current_score < 21 and computer_score > current_score:
+        print(f"Your final hand: {your_cards}, final score: {current_score}")
+        print(f"Computer's final hand: {computer_second_card}, Current score: {computer_score}")
+        print("You went over. You lose.")
+    elif current_score < 21 and computer_score < current_score:
+        print(f"Your final hand: {your_cards}, final score: {current_score}")
+        print(f"Computer's final hand: {computer_second_card}, Current score: {computer_score}")
+        print("You win")
 
 
 
