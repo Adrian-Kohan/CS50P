@@ -63,11 +63,11 @@ def blackjack():
             print_result()
             print("You win 😃")
 
-        elif current_score > 21:
+        elif current_score > 21 and computer_score < 21:
             print_result()
             print("You went over. You lose.😭")
 
-        elif computer_score > 21:
+        elif computer_score > 21 and current_score < 21:
             print_result()
             print("opponent went over. You win.😁")
 
