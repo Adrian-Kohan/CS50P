@@ -50,9 +50,9 @@ while continue_game:
     your_cards.append(choice)
     current_score += choice
     computer_second_card = random.sample(cards, 1)
-    computer_second_card.append(computer_first_card)
+    computer_second_card.append(computer_score)
     print(f"Your cards: {your_cards}, Current score: {current_score}")
-    print(f"Computer's first card: {computer_first_card}")
+    print(f"Computer's first card: {computer_score}")
     computer_score = sum(computer_second_card)
     print(computer_score)
     winner()
