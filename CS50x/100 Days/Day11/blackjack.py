@@ -50,6 +50,9 @@ def blackjack():
             print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
             print("You went over. You lose.")
 
+        else:
+            print("Draw")
+
     continue_game = True
     while continue_game:
         another_card = input("Type 'y' to get another card, type 'n' to pass: ")
