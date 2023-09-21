@@ -29,5 +29,10 @@ while continue_game:
     another_card = input("Type 'y' to get another card, type 'n' to pass: ")
     if another_card == "n":
         continue_game = False
+    your_cards += random.choice(cards)
+    current_score += your_cards[2]
+    print(f"Your cards: {your_cards}, Current score: {current_score}")
+    print(f"Computer's first card: {computer_first_card}")
+
 
 
