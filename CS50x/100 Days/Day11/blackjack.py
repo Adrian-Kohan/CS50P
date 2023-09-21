@@ -17,11 +17,12 @@ import random
 
 print(logo)
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+
 your_cards = random.sample(cards, 2)
 current_score = your_cards[0] + your_cards[1]
 print(f"Your cards: {your_cards}, Current score: {current_score}")
-computer_score = random.choice(cards)
-print(f"Computer's first card: {computer_score}")
+computer_first_card = random.choice(cards)
+print(f"Computer's first card: {computer_first_card}")
 
 def winner():
     if computer_score < 17:
@@ -49,10 +50,11 @@ while continue_game:
     your_cards.append(choice)
     current_score += choice
     computer_second_card = random.sample(cards, 1)
-    computer_second_card.append(computer_score)
+    computer_second_card.append(computer_first_card)
     print(f"Your cards: {your_cards}, Current score: {current_score}")
-    print(f"Computer's first card: {computer_score}")
-    computer_scores = sum(computer_second_card)
+    print(f"Computer's first card: {computer_first_card}")
+    computer_score = sum(computer_second_card)
+    print(computer_score)
     winner()
     continue_game = False
 
