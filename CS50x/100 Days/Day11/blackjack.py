@@ -32,7 +32,7 @@ while continue_game:
         continue_game = False
     choice = str(random.choice(cards))
     your_cards += choice
-    current_score += your_cards[2]
+    current_score += int(your_cards[2])
     print(f"Your cards: {your_cards}, Current score: {current_score}")
     print(f"Computer's first card: {computer_first_card}")
 
