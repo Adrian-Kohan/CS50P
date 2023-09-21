@@ -16,12 +16,14 @@ from replit import clear
 import random
 
 print(logo)
-
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+def random_choice():
+    return random.choice(cards)
+
 your_cards = random.sample(cards, 2)
 current_score = your_cards[0] + your_cards[1]
 print(f"Your cards: {your_cards}, Current score: {current_score}")
-computer_first_card = random.choice(cards)
+computer_first_card = random_choice()
 print(f"Computer's first card: {computer_first_card}")
 
 
@@ -30,7 +32,7 @@ while continue_game:
     another_card = input("Type 'y' to get another card, type 'n' to pass: ")
     if another_card == "n":
         continue_game = False
-    your_cards += random.choice(cards)
+    your_cards += random_choice()
     current_score += your_cards[2]
     print(f"Your cards: {your_cards}, Current score: {current_score}")
     print(f"Computer's first card: {computer_first_card}")
