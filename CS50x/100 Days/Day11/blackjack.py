@@ -32,6 +32,7 @@ while continue_game:
     another_card = input("Type 'y' to get another card, type 'n' to pass: ")
     if another_card == "n":
         continue_game = False
+        
     choice = random.choice(cards)
     your_cards.append(choice)
     current_score += choice
