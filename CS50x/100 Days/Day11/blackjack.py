@@ -28,6 +28,7 @@ def winner():
     computer_second_card = random.sample(cards, 1)
     computer_second_card.append(computer_first_card)
     computer_score = sum(computer_second_card)
+    
     if computer_score < 17:
          computer_second_card.append(random.choice(cards))
          computer_score = sum(computer_second_card)
