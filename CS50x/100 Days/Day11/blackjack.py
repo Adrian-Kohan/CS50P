@@ -40,18 +40,19 @@ while continue_game:
     computer_score = sum(computer_second_card)
     print(computer_score)
     if computer_score < 17:
-         computer_second_card.append(random.choice(cards))
+        computer_second_card.append(random.choice(cards))
+        computer_score = sum(computer_second_card)
     if current_score == 21:
         print(f"Your final hand: {your_cards}, final score: {current_score}")
-        print(f"Computer's final hand: {computer_second_card}, Current score: {computer_score}")
+        print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
         print("You win")
     elif current_score > 21:
         print(f"Your final hand: {your_cards}, final score: {current_score}")
-        print(f"Computer's final hand: {computer_second_card}, Current score: {computer_score}")
+        print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
         print("You went over. You lose.")
     elif current_score < 21 and computer_score > current_score:
         print(f"Your final hand: {your_cards}, final score: {current_score}")
-        print(f"Computer's final hand: {computer_second_card}, Current score: {computer_score}")
+        print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
         print("You went over. You lose.")
     elif current_score < 21 and computer_score < current_score:
         print(f"Your final hand: {your_cards}, final score: {current_score}")
