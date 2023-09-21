@@ -36,7 +36,7 @@ def blackjack():
             your_cards[your_cards.index(11)] = 1
             computer_second_card[computer_second_card.index(11)] = 1
 
-        if computer_score < 17:
+        while computer_score < 17:
             computer_second_card.append(random.choice(cards))
             computer_score = sum(computer_second_card)
 
