@@ -27,7 +27,7 @@ def blackjack():
 
     def ace():
         if 11 in your_cards and current_score > 21:
-            your_cards.index(11) = 1
+            return your_cards.index(11) = 1
 
 
     def winner():
@@ -38,7 +38,8 @@ def blackjack():
         if computer_score < 17:
             computer_second_card.append(random.choice(cards))
             computer_score = sum(computer_second_card)
-
+            
+        ace()
         if current_score == 21 or (computer_score > 21 and current_score <= 21) or (current_score < 21 and computer_score < current_score):
             print(f"Your final hand: {your_cards}, final score: {current_score}")
             print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
