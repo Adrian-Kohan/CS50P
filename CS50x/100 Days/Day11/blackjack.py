@@ -76,7 +76,6 @@ def blackjack():
             print(" You lose 😤")
 
 
-
     continue_game = True
     while continue_game:
         another_card = input("Type 'y' to get another card, type 'n' to pass: ")
