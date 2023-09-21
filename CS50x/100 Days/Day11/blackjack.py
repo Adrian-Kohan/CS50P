@@ -31,7 +31,7 @@ while continue_game:
     if another_card == "n":
         continue_game = False
     choice = random.choice(cards)
-    your_cards = your_cards.append(choice)
+    your_cards.append(choice)
     current_score += choice
     print(f"Your cards: {your_cards}, Current score: {current_score}")
     print(f"Computer's first card: {computer_first_card}")
