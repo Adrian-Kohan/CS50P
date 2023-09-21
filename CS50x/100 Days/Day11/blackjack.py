@@ -24,7 +24,6 @@ print(f"Your cards: {your_cards}, Current score: {current_score}")
 computer_first_card = random.choice(cards)
 print(f"Computer's first card: {computer_first_card}")
 
-def winner():
 
 
 continue_game = True
@@ -32,7 +31,7 @@ while continue_game:
     another_card = input("Type 'y' to get another card, type 'n' to pass: ")
     if another_card == "n":
         continue_game = False
-        
+
     choice = random.choice(cards)
     your_cards.append(choice)
     current_score += choice
@@ -49,11 +48,11 @@ while continue_game:
         print(f"Your final hand: {your_cards}, final score: {current_score}")
         print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
         print("You win")
-    elif current_score > 21:
-        print(f"Your final hand: {your_cards}, final score: {current_score}")
-        print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
-        print("You went over. You lose.")
-    elif current_score < 21 and computer_score > current_score:
+    # elif current_score > 21:
+    #     print(f"Your final hand: {your_cards}, final score: {current_score}")
+    #     print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
+    #     print("You went over. You lose.")
+    elif current_score > 21 or (current_score < 21 and computer_score > current_score):
         print(f"Your final hand: {your_cards}, final score: {current_score}")
         print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
         print("You went over. You lose.")
