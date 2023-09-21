@@ -42,7 +42,7 @@ while continue_game:
          computer_second_card.append(random.choice(cards))
     if computer_score > current_score:
             print(f"Your final hand: {your_cards}, final score: {current_score}")
-            print(f"Computer's final hand cards: {your_cards}, Current score: {current_score}")
+            print(f"Computer's final hand: {computer_second_card}, Current score: {computer_scor}")
 
 
 
