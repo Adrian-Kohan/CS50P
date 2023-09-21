@@ -42,6 +42,7 @@ while continue_game:
     another_card = input("Type 'y' to get another card, type 'n' to pass: ")
     if another_card == "n":
         continue_game = False
+        computer_score = sum(computer_second_card)
         winner()
 
     choice = random.choice(cards)
@@ -53,6 +54,7 @@ while continue_game:
     print(f"Computer's first card: {computer_first_card}")
     computer_score = sum(computer_second_card)
     print(computer_score)
+
     if computer_score < 17:
          computer_second_card.append(random.choice(cards))
          computer_score = sum(computer_second_card)
