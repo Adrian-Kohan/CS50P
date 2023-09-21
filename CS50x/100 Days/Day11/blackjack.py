@@ -30,7 +30,9 @@ def blackjack():
         computer_second_card = random.sample(cards, 1)
         computer_second_card.append(computer_first_card)
         computer_score = sum(computer_second_card)
-
+        def print_result():
+            print(f"Your final hand: {your_cards}, final score: {current_score}")
+            print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
 
         while computer_score < 17:
             computer_second_card.append(random.choice(cards))
@@ -41,16 +43,15 @@ def blackjack():
         #     computer_second_card[computer_second_card.index(11)] = 1
 
         if current_score == 21 or (computer_score > 21 and current_score <= 21) or (current_score < 21 and computer_score < current_score):
-            print(f"Your final hand: {your_cards}, final score: {current_score}")
-            print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
+            print_result()
             print("You win")
 
         elif current_score > 21 or (current_score < 21 and computer_score > current_score):
-            print(f"Your final hand: {your_cards}, final score: {current_score}")
-            print(f"Computer's final hand: {computer_second_card}, final score: {computer_score}")
+            print_result()
             print("You went over. You lose.")
 
         else:
+            print_result()
             print("Draw")
 
     continue_game = True
