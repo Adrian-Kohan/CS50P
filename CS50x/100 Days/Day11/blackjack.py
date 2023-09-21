@@ -33,6 +33,7 @@ while continue_game:
     choice = random.choice(cards)
     your_cards.append(choice)
     current_score += choice
+    computer_second_card = random.choice(cards)
     print(f"Your cards: {your_cards}, Current score: {current_score}")
     print(f"Computer's first card: {computer_first_card}")
 
