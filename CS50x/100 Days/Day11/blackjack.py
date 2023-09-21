@@ -45,7 +45,10 @@ while continue_game:
         print(f"Your final hand: {your_cards}, final score: {current_score}")
         print(f"Computer's final hand: {computer_second_card}, Current score: {computer_score}")
         print("You win")
-    
+    elif current_score > 21:
+        print(f"Your final hand: {your_cards}, final score: {current_score}")
+        print(f"Computer's final hand: {computer_second_card}, Current score: {computer_score}")
+        print("You went over. You lose.")
     elif current_score < 21 and computer_score > current_score:
         print(f"Your final hand: {your_cards}, final score: {current_score}")
         print(f"Computer's final hand: {computer_second_card}, Current score: {computer_score}")
