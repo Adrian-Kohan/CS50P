@@ -25,6 +25,9 @@ def blackjack():
     computer_first_card = random.choice(cards)
     print(f"Computer's first card: {computer_first_card}")
 
+    def ace():
+        if 
+
     def winner():
         computer_second_card = random.sample(cards, 1)
         computer_second_card.append(computer_first_card)
