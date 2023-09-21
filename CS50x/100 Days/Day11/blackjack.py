@@ -47,9 +47,6 @@ while continue_game:
     another_card = input("Type 'y' to get another card, type 'n' to pass: ")
     if another_card == "n":
         continue_game = False
-        computer_second_card = random.sample(cards, 1)
-        computer_second_card.append(computer_first_card)
-        computer_score = sum(computer_second_card)
         winner()
 
     choice = random.choice(cards)
