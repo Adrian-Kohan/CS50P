@@ -39,6 +39,7 @@ def blackjack():
             computer_score = sum(computer_second_card)
 
         if (11 in your_cards and current_score > 21) or (11 in computer_second_card and computer_score > 21 ):
+            
             your_cards[your_cards.index(11)] = 1
             computer_second_card[computer_second_card.index(11)] = 1
 
