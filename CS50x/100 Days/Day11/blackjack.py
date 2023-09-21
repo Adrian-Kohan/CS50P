@@ -49,10 +49,11 @@ def blackjack():
         elif current_score > 21 or (current_score < 21 and computer_score > current_score):
             print_result()
             print("You went over. You lose.")
+        elif computer_score == 21 and 
 
         else:
             print_result()
-            print("Draw")
+            print("Draw 🙃")
 
     continue_game = True
     while continue_game:
