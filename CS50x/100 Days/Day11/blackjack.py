@@ -66,7 +66,9 @@ def blackjack():
             print_result()
             print("Draw 🙃")
 
-        else computer_score > current_score:
+        else:
+            print_result()
+            print(" You lose 😤")
 
 
 
