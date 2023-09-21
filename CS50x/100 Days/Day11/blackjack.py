@@ -41,6 +41,7 @@ def blackjack():
         if 11 in your_cards and current_score > 21:
             your_cards.remove(11)
             your_cards.append(1)
+            cuurent_score = sum(your_cards)
             #your_cards[your_cards.index(11)] = 1
 
 
