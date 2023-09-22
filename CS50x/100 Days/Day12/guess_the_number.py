@@ -16,12 +16,12 @@ def game(number_of_attempts):
     while not end_of_game or number_of_attempts != 0:
         guess = int(input("Make a guess: "))
         if guess > random_number:
-            return "Too high"
+            print("Too high")
         elif guess < random_number:
-            return "Too low"
+            print("Too low")
         else:
             end_of_game = True
-            return
+            print("You got it! The answer was {random_number}")
         remaining_attempts = number_of_attempts - 1
         print(f"You have {remaining_attempts} attempts remaining to guess the number.")
-    pr
+    print("You've run out of gusses. You lose")
