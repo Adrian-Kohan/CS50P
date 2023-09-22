@@ -32,6 +32,4 @@ def game(number_of_attempts):
             continue_the_game  = False
             print(f"You got it! The answer was {random_number}")
 
-
-
 game(number_of_attempts)
