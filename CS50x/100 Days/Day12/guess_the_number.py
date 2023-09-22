@@ -21,14 +21,14 @@ def game(number_of_attempts):
         guess = int(input("Make a guess: "))
         if number_of_attempts == 0:
             continue_the_game  = False
-            remaining()
+            remaining(number_of_attempts)
             print("You've run out of gusses. You lose")
         elif guess > random_number:
             print("Too high")
-            remaining()
+            remaining(number_of_attempts)
         elif guess < random_number:
             print("Too low")
-            remaining()
+            remaining(number_of_attempts)
         else:
             continue_the_game  = False
             print(f"You got it! The answer was {random_number}")
