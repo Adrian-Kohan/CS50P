@@ -12,16 +12,16 @@ elif user_choice == "easy":
     number_of_attempts = 10
 
 def game(number_of_attempts):
-    end_of_game = False
+    continue_the_game = True
     remaining_attempts = number_of_attempts
-    while not end_of_game or number_of_attempts != 0:
+    while continue_the_game  or number_of_attempts != 0:
         guess = int(input("Make a guess: "))
         if guess > random_number:
             print("Too high")
         elif guess < random_number:
             print("Too low")
         else:
-            end_of_game = True
+            continue_the_game  = False
             print(f"You got it! The answer was {random_number}")
         remaining_attempts = number_of_attempts - 1
         print(f"You have {remaining_attempts} attempts remaining to guess the number.")
