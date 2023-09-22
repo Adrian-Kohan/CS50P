@@ -22,7 +22,6 @@ def game(number_of_attempts):
         else:
             end_of_game = True
             return
-
         remaining_attempts = number_of_attempts - 1
         print(f"You have {remaining_attempts} attempts remaining to guess the number.")
-        
+    pr
