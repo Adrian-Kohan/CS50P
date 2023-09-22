@@ -13,7 +13,7 @@ elif user_choice == "easy":
 
 def game(number_of_attempts):
     continue_the_game = True
-    def remaining():
+    def remaining(number_of_attempts):
         remaining_attempts = number_of_attempts
         remaining_attempts -= 1
         print(f"You have {remaining_attempts} attempts remaining to guess the number.")
