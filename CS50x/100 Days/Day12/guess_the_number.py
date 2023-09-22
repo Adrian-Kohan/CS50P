@@ -22,7 +22,7 @@ def game(number_of_attempts):
             print("Too low")
         else:
             end_of_game = True
-            print("You got it! The answer was {random_number}")
+            print(f"You got it! The answer was {random_number}")
         remaining_attempts = number_of_attempts - 1
         print(f"You have {remaining_attempts} attempts remaining to guess the number.")
     print("You've run out of gusses. You lose")
