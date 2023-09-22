@@ -26,4 +26,4 @@ def game(number_of_attempts):
         print(f"You have {remaining_attempts} attempts remaining to guess the number.")
     print("You've run out of gusses. You lose")
 
-game()
+game(number_of_attempts)
