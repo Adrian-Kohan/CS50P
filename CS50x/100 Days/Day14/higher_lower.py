@@ -23,6 +23,7 @@ def game():
 
     def repeat():
         score = 0
+        B = random_A_and_B()
         while True:
             answer = input("Who has more followers? Type 'A' or 'B': ")
             if answer == 'A':
