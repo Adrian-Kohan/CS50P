@@ -20,25 +20,25 @@ comparation()
 
 score = 0
 
-def result():
+def check_answer():
         answer = input("Who has more followers? Type 'A' or 'B': ")
         if answer == 'A':
             if A['follower_count'] > B['follower_count']:
                 clear()
                 print(logo)
-                score += 1
-                print(f"You're right! Current score: {score}")
+                return score + 1
+                #print(f"You're right! Current score: {score}")
             else:
-                print(f"Sorry, that's wrong. Final score: {score}")
+                #print(f"Sorry, that's wrong. Final score: {score}")
                 return
         else:
             if A['follower_count'] < B['follower_count']:
                 clear()
                 print(logo)
-                score += 1
-                print(f"You're right! Current score: {score}")
+                return score + 1
+                #print(f"You're right! Current score: {score}")
             else:
-                print(f"Sorry, that's wrong. Final score: {score}")
+                #print(f"Sorry, that's wrong. Final score: {score}")
                 return
 
 def game():
