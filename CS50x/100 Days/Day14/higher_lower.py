@@ -26,7 +26,7 @@ def game():
 
         comparation()
         answer = input("Who has more followers? Type 'A' or 'B': ").lower()
-        if answer == 'A':
+        if answer == 'a':
             if A['follower_count'] > B['follower_count']:
                 logo_display()
                 score += 1
