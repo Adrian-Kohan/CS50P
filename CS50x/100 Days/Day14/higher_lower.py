@@ -13,6 +13,7 @@ def game():
     A = random_A_and_B()
     B = random_A_and_B()
     new_A = {}
+    new_B = {}
 
     def comparation(A, B):
         print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
@@ -50,7 +51,7 @@ def game():
                 else:
                     print(f"Sorry, that's wrong. Final score: {score}")
                     return
-    repeat(new_A, new_B)
+    repeat(A, B)
 
 
 game()
