@@ -27,6 +27,8 @@ def game():
                 print(logo)
                 score += 1
                 print(f"You're right! Current score: {score}")
+                A = A
+                B = random_A_and_B()
             else:
                 print(f"Sorry, that's wrong. Final score: {score}")
                 return
@@ -36,6 +38,8 @@ def game():
                 print(logo)
                 score += 1
                 print(f"You're right! Current score: {score}")
+                A = B
+                B = random_A_and_B()
             else:
                 print(f"Sorry, that's wrong. Final score: {score}")
                 return
