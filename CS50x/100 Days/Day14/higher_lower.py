@@ -11,12 +11,12 @@ def random_A_and_B():
 A = random_A_and_B()
 B = random_A_and_B()
 
-def comparation(A, B):
+def comparation():
     print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
     print(vs)
     print(f"Against B: {B['name']}, a {B['description']}, from {B['country']}.")
 
-comparation(A, B)
+comparation()
 
 score = 0
 
@@ -26,29 +26,24 @@ def check_answer():
             if A['follower_count'] > B['follower_count']:
                 clear()
                 print(logo)
-
-                return score + 1
-            print(f"You're right! Current score: {score}")
-            if A['follower_count'] < B['follower_count']:
+                score += 1
+                print(f"You're right! Current score: {score}")
+            else:
+                print(f"Sorry, that's wrong. Final score: {score}")
                 return
-            print(f"Sorry, that's wrong. Final score: {score}")
-
-        if answer == 'B':
-            if A['follower_count'] > B['follower_count']:
+        else:
+            if A['follower_count'] < B['follower_count']:
                 clear()
                 print(logo)
-                return score + 1
-            print(f"You're right! Current score: {score}")
-            if A['follower_count'] < B['follower_count']:
+                score += 1
+                print(f"You're right! Current score: {score}")
+            else:
+                print(f"Sorry, that's wrong. Final score: {score}")
                 return
-            print(f"Sorry, that's wrong. Final score: {score}")
-
-check_answer()
-
 
 def game():
+    score = 0
     while True:
-        comparation(A, B)
-        check_answer()
+
 
 game()
