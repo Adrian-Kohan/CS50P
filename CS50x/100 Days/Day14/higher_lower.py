@@ -26,26 +26,29 @@ def check_answer():
             if A['follower_count'] > B['follower_count']:
                 clear()
                 print(logo)
+
                 return score + 1
-                #print(f"You're right! Current score: {score}")
-            else:
-                #print(f"Sorry, that's wrong. Final score: {score}")
-                return
-        else:
+            print(f"You're right! Current score: {score}")
             if A['follower_count'] < B['follower_count']:
+                return
+            print(f"Sorry, that's wrong. Final score: {score}")
+
+        if answer == 'B':
+            if A['follower_count'] > B['follower_count']:
                 clear()
                 print(logo)
                 return score + 1
-                #print(f"You're right! Current score: {score}")
-            else:
-                #print(f"Sorry, that's wrong. Final score: {score}")
+            print(f"You're right! Current score: {score}")
+            if A['follower_count'] < B['follower_count']:
                 return
+            print(f"Sorry, that's wrong. Final score: {score}")
+
 check_answer()
-    
+
 
 def game():
     while True:
-
-
+        comparation(A, B)
+        check_answer()
 
 game()
