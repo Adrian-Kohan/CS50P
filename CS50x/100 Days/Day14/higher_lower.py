@@ -27,7 +27,9 @@ def game():
         comparation()
         answer = input("Who has more followers? Type 'A' or 'B': ")
         if answer == 'A':
-            if A['follower_count'] > B['follower_count']:
+            if A['follower_count'] == B['follower_count']:
+                B = random_A_and_B()
+            elif A['follower_count'] > B['follower_count']:
                 logo_display()
                 score += 1
                 print(f"You're right! Current score: {score}")
@@ -38,7 +40,9 @@ def game():
                 print(f"Sorry, that's wrong. Final score: {score}")
                 return
         else:
-            if A['follower_count'] < B['follower_count']:
+            if A['follower_count'] == B['follower_count']:
+                A = random_A_and_B()
+            elif A['follower_count'] < B['follower_count']:
                 logo_display()
                 score += 1
                 print(f"You're right! Current score: {score}")
