@@ -21,7 +21,7 @@ def game():
 
     comparation(A, B)
 
-    def repeat(A, B):
+    def repeat():
         score = 0
         while True:
             answer = input("Who has more followers? Type 'A' or 'B': ")
@@ -48,7 +48,7 @@ def game():
                 else:
                     print(f"Sorry, that's wrong. Final score: {score}")
                     return
-    repeat(A, B)
+    repeat()
 
 
 game()
