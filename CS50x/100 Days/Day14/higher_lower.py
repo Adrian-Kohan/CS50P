@@ -11,10 +11,9 @@ def random_A_and_B():
 
 def game():
     score = 0
+    A = random_A_and_B()
+    B = random_A_and_B()
     while True:
-        A = random_A_and_B()
-        B = random_A_and_B()
-
         def comparation():
             print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
             print(vs)
