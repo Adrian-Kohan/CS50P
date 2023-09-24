@@ -19,6 +19,8 @@ def comparation():
 comparation()
 
 score = 0
+def score_counter():
+    return score + 1
 
 def check_answer():
         answer = input("Who has more followers? Type 'A' or 'B': ")
@@ -26,7 +28,7 @@ def check_answer():
             if A['follower_count'] > B['follower_count']:
                 clear()
                 print(logo)
-                score += 1
+                score_counter()
                 print(f"You're right! Current score: {score}")
             else:
                 print(f"Sorry, that's wrong. Final score: {score}")
@@ -35,7 +37,7 @@ def check_answer():
             if A['follower_count'] < B['follower_count']:
                 clear()
                 print(logo)
-                score += 1
+                score_counter()
                 print(f"You're right! Current score: {score}")
             else:
                 print(f"Sorry, that's wrong. Final score: {score}")
