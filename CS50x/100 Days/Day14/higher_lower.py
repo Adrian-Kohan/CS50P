@@ -11,10 +11,22 @@ def game():
     print(vs)
     print(f"Against B: {B['name']}, a {B['description']}, from {B['country']}.")
 
-while True:
-answer = input("Who has more followers? Type 'A' or 'B': ")
 score = 0
-if answer == 'A':
-    if A['follower_count'] > B['follower_count']:
-
-        print("Sorry, that's wrong. Final score: {score}")
+while True:
+    answer = input("Who has more followers? Type 'A' or 'B': ")
+    if answer == 'A':
+        if A['follower_count'] > B['follower_count']:
+            print("You're right! Current score: {score}")
+            score += 1
+            game()
+        else:
+            print("Sorry, that's wrong. Final score: {score}")
+            return
+    else:
+        if A['follower_count'] < B['follower_count']:
+            print("You're right! Current score: {score}")
+            score += 1
+            game()
+        else:
+            print("Sorry, that's wrong. Final score: {score}")
+            return
