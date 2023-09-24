@@ -5,10 +5,13 @@ import random
 A = random.choice(data)
 B = random.choice(data)
 
-print(logo)
-print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
-print(vs)
-print(f"Against B: {B['name']}, a {B['description']}, from {B['country']}.")
+def game():
+    print(logo)
+    print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
+    print(vs)
+    print(f"Against B: {B['name']}, a {B['description']}, from {B['country']}.")
+
+while True:
 answer = input("Who has more followers? Type 'A' or 'B': ")
 score = 0
 if answer == 'A':
