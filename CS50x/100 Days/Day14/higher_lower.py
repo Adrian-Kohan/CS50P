@@ -26,8 +26,8 @@ def result():
             if A['follower_count'] > B['follower_count']:
                 clear()
                 print(logo)
-                return score + 1
-                return (f"You're right! Current score: {score}")
+                score += 1
+                print(f"You're right! Current score: {score}")
             else:
                 print(f"Sorry, that's wrong. Final score: {score}")
                 return
