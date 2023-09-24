@@ -21,7 +21,7 @@ def game():
 
     comparation(A, B)
 
-    def repeat():
+    def repeat(A, B):
         score = 0
         while True:
             answer = input("Who has more followers? Type 'A' or 'B': ")
@@ -32,8 +32,8 @@ def game():
                     score += 1
                     print(f"You're right! Current score: {score}")
                     new_A = A
-                    B = random_A_and_B()
-                    comparation(new_A, B)
+                    new_B = random_A_and_B()
+                    comparation(new_A, new_B)
                 else:
                     print(f"Sorry, that's wrong. Final score: {score}")
                     return
@@ -44,8 +44,8 @@ def game():
                     score += 1
                     print(f"You're right! Current score: {score}")
                     new_A = B
-                    B = random_A_and_B()
-                    comparation(new_A, B)
+                    new_B = random_A_and_B()
+                    comparation(new_A, new_B)
 
                 else:
                     print(f"Sorry, that's wrong. Final score: {score}")
