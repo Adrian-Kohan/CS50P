@@ -25,20 +25,18 @@ def score_calculator():
         if answer == 'A':
             if A['follower_count'] > B['follower_count']:
                 clear()
+                print(logo)
                 score += 1
                 print(f"You're right! Current score: {score}")
-                print(logo)
-                game()
             else:
                 print(f"Sorry, that's wrong. Final score: {score}")
                 return
         else:
             if A['follower_count'] < B['follower_count']:
                 clear()
+                print(logo)
                 score += 1
                 print(f"You're right! Current score: {score}")
-                print(logo)
-                game()
             else:
                 print(f"Sorry, that's wrong. Final score: {score}")
                 return
