@@ -45,6 +45,7 @@ def game():
                 else:
                     print(f"Sorry, that's wrong. Final score: {score}")
                     return
-        repeat(A, B)
+    repeat(A, B)
+    
 
 game()
