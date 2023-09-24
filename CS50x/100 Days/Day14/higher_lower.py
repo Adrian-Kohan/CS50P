@@ -8,11 +8,12 @@ print(logo)
 def random_A_and_B():
     return random.choice(data)
 
+A = random_A_and_B()
 
 def game():
     score = 0
     while True:
-        A = random_A_and_B()
+        A = {}
         B = random_A_and_B()
 
         def comparation():
@@ -28,6 +29,7 @@ def game():
                 print(logo)
                 score += 1
                 print(f"You're right! Current score: {score}")
+                A = A
             else:
                 print(f"Sorry, that's wrong. Final score: {score}")
                 return
@@ -37,6 +39,7 @@ def game():
                 print(logo)
                 score += 1
                 print(f"You're right! Current score: {score}")
+                A = B
             else:
                 print(f"Sorry, that's wrong. Final score: {score}")
                 return
