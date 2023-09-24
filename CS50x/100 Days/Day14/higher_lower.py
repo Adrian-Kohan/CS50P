@@ -50,7 +50,7 @@ def game():
                 else:
                     print(f"Sorry, that's wrong. Final score: {score}")
                     return
-    repeat()
+    repeat(new_A, new_B)
 
 
 game()
