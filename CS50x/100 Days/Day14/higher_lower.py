@@ -42,11 +42,10 @@ def check_answer():
                 print(f"Sorry, that's wrong. Final score: {score}")
                 return
 
+comparation()
+check_answer()
 def game():
     score = 0
     while True:
         comparation()
         check_answer()
-
-
-game()
