@@ -32,6 +32,7 @@ def game():
                     score += 1
                     print(f"You're right! Current score: {score}")
                     new_A = A
+                    B = random_A_and_B()
                     comparation(new_A, B)
                 else:
                     print(f"Sorry, that's wrong. Final score: {score}")
@@ -43,6 +44,7 @@ def game():
                     score += 1
                     print(f"You're right! Current score: {score}")
                     new_A = B
+                    B = random_A_and_B()
                     comparation(new_A, B)
 
                 else:
