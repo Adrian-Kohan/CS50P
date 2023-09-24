@@ -1,5 +1,6 @@
 from art import logo, vs
 from game_data import data
+from replit import clear()
 import random
 
 def random_A_and_B():
@@ -22,8 +23,8 @@ def score_calculator():
         answer = input("Who has more followers? Type 'A' or 'B': ")
         if answer == 'A':
             if A['follower_count'] > B['follower_count']:
-                print(f"You're right! Current score: {score}")
                 score += 1
+                print(f"You're right! Current score: {score}")
                 game()
             else:
                 print(f"Sorry, that's wrong. Final score: {score}")
