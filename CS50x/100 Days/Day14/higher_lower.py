@@ -18,8 +18,9 @@ def game():
     score = 0
     A = random_A_and_B()
     B = random_A_and_B()
-    while A == B:
-        B = random_A_and_B()
+    if A == B:
+        while A == B:
+            B = random_A_and_B()
     while True:
         def comparation():
             print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
