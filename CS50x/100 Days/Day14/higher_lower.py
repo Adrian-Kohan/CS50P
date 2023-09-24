@@ -12,8 +12,7 @@ def random_A_and_B():
 def game():
     A = random_A_and_B()
     B = random_A_and_B()
-    new_A = {}
-    new_B = {}
+    
 
     def comparation(A, B):
         print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
@@ -22,7 +21,7 @@ def game():
 
     comparation(A, B)
 
-    def repeat(A, B):
+    def repeat():
         score = 0
         while True:
             answer = input("Who has more followers? Type 'A' or 'B': ")
@@ -51,7 +50,7 @@ def game():
                 else:
                     print(f"Sorry, that's wrong. Final score: {score}")
                     return
-    repeat(A, B)
+    repeat()
 
 
 game()
