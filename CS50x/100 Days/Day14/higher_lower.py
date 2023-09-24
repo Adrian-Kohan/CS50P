@@ -6,9 +6,11 @@ import random
 print(logo)
 
 def random_A_and_B():
+    '''return a random person from list'''
     return random.choice(data)
 
 def logo_display():
+    '''clear the screnn and show the logo'''
     clear()
     print(logo)
 
