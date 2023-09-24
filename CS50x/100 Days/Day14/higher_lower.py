@@ -10,47 +10,35 @@ def random_A_and_B():
 
 
 def game():
-    A = random_A_and_B()
-    B = random_A_and_B()
-    
+    score = 0
+    while True:
+        A = random_A_and_B()
+        B = random_A_and_B()
 
-    def comparation(A, B):
-        print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
-        print(vs)
-        print(f"Against B: {B['name']}, a {B['description']}, from {B['country']}.")
+        def comparation():
+            print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
+            print(vs)
+            print(f"Against B: {B['name']}, a {B['description']}, from {B['country']}.")
 
-    comparation(A, B)
-
-    def repeat():
-        score = 0
-        while True:
-            answer = input("Who has more followers? Type 'A' or 'B': ")
-            if answer == 'A':
-                if A['follower_count'] > B['follower_count']:
-                    clear()
-                    print(logo)
-                    score += 1
-                    print(f"You're right! Current score: {score}")
-                    new_A = A
-                    new_B = random_A_and_B()
-                    comparation(new_A, new_B)
-                else:
-                    print(f"Sorry, that's wrong. Final score: {score}")
-                    return
+        comparation()
+        answer = input("Who has more followers? Type 'A' or 'B': ")
+        if answer == 'A':
+            if A['follower_count'] > B['follower_count']:
+                clear()
+                print(logo)
+                score += 1
+                print(f"You're right! Current score: {score}")
             else:
-                if A['follower_count'] < B['follower_count']:
-                    clear()
-                    print(logo)
-                    score += 1
-                    print(f"You're right! Current score: {score}")
-                    new_A = B
-                    new_B = random_A_and_B()
-                    comparation(new_A, new_B)
-
-                else:
-                    print(f"Sorry, that's wrong. Final score: {score}")
-                    return
-    repeat()
-
+                print(f"Sorry, that's wrong. Final score: {score}")
+                return
+        else:
+            if A['follower_count'] < B['follower_count']:
+                clear()
+                print(logo)
+                score += 1
+                print(f"You're right! Current score: {score}")
+            else:
+                print(f"Sorry, that's wrong. Final score: {score}")
+                return
 
 game()
