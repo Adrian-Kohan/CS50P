@@ -28,7 +28,7 @@ def game():
             print(f"Against B: {B['name']}, a {B['description']}, from {B['country']}.")
 
         comparation()
-        answer = input("Who has more followers? Type 'A' or 'B': ")
+        answer = input("Who has more followers? Type 'A' or 'B': ").lower()
         if answer == 'A':
             if A['follower_count'] > B['follower_count']:
                 logo_display()
