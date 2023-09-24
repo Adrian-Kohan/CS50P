@@ -5,17 +5,20 @@ import random
 def random_A_and_B():
     return random.choice(data)
 
-def game():
-    A = random_A_and_B()
-    B = random_A_and_B()
-    print(logo)
-    print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
-    print(vs)
-    print(f"Against B: {B['name']}, a {B['description']}, from {B['country']}.")
 
 def score_calculator():
     score = 0
     while True:
+        A = random_A_and_B()
+        B = random_A_and_B()
+
+        def game():
+            print(logo)
+            print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
+            print(vs)
+            print(f"Against B: {B['name']}, a {B['description']}, from {B['country']}.")
+
+        game()
         answer = input("Who has more followers? Type 'A' or 'B': ")
         if answer == 'A':
             if A['follower_count'] > B['follower_count']:
@@ -34,5 +37,4 @@ def score_calculator():
                 print(f"Sorry, that's wrong. Final score: {score}")
                 return
 
-game()
 score_calculator()
