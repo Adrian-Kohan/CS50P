@@ -8,7 +8,6 @@ print(logo)
 def random_A_and_B():
     return random.choice(data)
 
-
 def game():
     score = 0
     A = random_A_and_B()
