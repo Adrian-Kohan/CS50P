@@ -3,11 +3,11 @@ from game_data import data
 import random
 
 def random_A_and_B():
-    A = random.choice(data)
-    B = random.choice(data)
+    return random.choice(data)
 
 def game():
-    random_A_and_B()
+    A = random_A_and_B()
+    B = random_A_and_B()
     print(logo)
     print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
     print(vs)
@@ -16,7 +16,6 @@ def game():
 def score_calculator():
     score = 0
     while True:
-
         answer = input("Who has more followers? Type 'A' or 'B': ")
         if answer == 'A':
             if A['follower_count'] > B['follower_count']:
