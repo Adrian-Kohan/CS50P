@@ -18,7 +18,7 @@ def game():
     score = 0
     A = random_A_and_B()
     B = random_A_and_B()
-    if A['follower_count'] == B['follower_count']:
+    while A == B:
         B = random_A_and_B()
     while True:
         def comparation():
