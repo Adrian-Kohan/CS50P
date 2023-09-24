@@ -32,6 +32,7 @@ def game():
                     score += 1
                     print(f"You're right! Current score: {score}")
                     new_A = A
+                    comparation(new_A, B)
                 else:
                     print(f"Sorry, that's wrong. Final score: {score}")
                     return
@@ -42,10 +43,12 @@ def game():
                     score += 1
                     print(f"You're right! Current score: {score}")
                     new_A = B
+                    comparation(new_A, B)
+
                 else:
                     print(f"Sorry, that's wrong. Final score: {score}")
                     return
     repeat(A, B)
-    
+
 
 game()
