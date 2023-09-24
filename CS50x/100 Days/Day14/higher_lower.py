@@ -16,7 +16,6 @@ def comparation():
     print(vs)
     print(f"Against B: {B['name']}, a {B['description']}, from {B['country']}.")
 
-comparation()
 
 score = 0
 def score_counter():
