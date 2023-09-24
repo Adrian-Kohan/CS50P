@@ -46,6 +46,8 @@ def check_answer():
 def game():
     score = 0
     while True:
+        comparation()
+        check_answer()
 
 
 game()
