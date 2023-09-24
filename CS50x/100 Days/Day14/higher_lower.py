@@ -8,7 +8,7 @@ print(logo)
 def random_A_and_B():
     return random.choice(data)
 
-def logo():
+def logo_display():
     clear()
     print(logo)
 
@@ -26,24 +26,24 @@ def game():
         answer = input("Who has more followers? Type 'A' or 'B': ")
         if answer == 'A':
             if A['follower_count'] > B['follower_count']:
-                logo()
+                logo_display()
                 score += 1
                 print(f"You're right! Current score: {score}")
                 A = A
                 B = random_A_and_B()
             else:
-                logo()
+                logo_display()
                 print(f"Sorry, that's wrong. Final score: {score}")
                 return
         else:
             if A['follower_count'] < B['follower_count']:
-                logo()
+                logo_display()
                 score += 1
                 print(f"You're right! Current score: {score}")
                 A = B
                 B = random_A_and_B()
             else:
-                logo()
+                logo_display()
                 print(f"Sorry, that's wrong. Final score: {score}")
                 return
 
