@@ -11,12 +11,12 @@ def random_A_and_B():
 A = random_A_and_B()
 B = random_A_and_B()
 
-def comparation():
+def comparation(A, B):
     print(f"Compare A: {A['name']}, a {A['description']}, from {A['country']}.")
     print(vs)
     print(f"Against B: {B['name']}, a {B['description']}, from {B['country']}.")
 
-comparation()
+comparation(A, B)
 
 score = 0
 
@@ -40,10 +40,12 @@ def check_answer():
             else:
                 #print(f"Sorry, that's wrong. Final score: {score}")
                 return
+check_answer()
+    
 
 def game():
-    score = 0
     while True:
+
 
 
 game()
