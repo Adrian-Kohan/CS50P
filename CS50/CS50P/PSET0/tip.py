@@ -6,7 +6,9 @@ def main():
 
 
 def dollars_to_float(d):
-    d.replace("$", "")
+    d = d.replace("$", "")
+    print(d)
+    
     float("{:.1f}".format(int(d)))
     return d
 
