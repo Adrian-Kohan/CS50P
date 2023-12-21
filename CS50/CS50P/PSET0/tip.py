@@ -12,9 +12,9 @@ def dollars_to_float(d):
 
 
 def percent_to_float(p):
-    d.replace("$", "")
-    d  = int(d)
-    return d:.1f
+    d.replace("%", "")
+    d  = int(d) / 100
+    return d:.2f
 
 
 main()
