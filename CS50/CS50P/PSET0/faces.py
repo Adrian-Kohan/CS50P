@@ -1,7 +1,11 @@
 def convert(text):
-    if text == ":)":
-        return "🙂"
-    elif text == ":(":
-        return "🙁"
+    if ":)" in text:
+        return text.replace(":)" ,"🙂")
+    elif ":(" in text:
+        return text.replace(":(" ,"🙁")
     else:
-        
+        return text
+
+
+text = input()
+print(convert(text))
