@@ -6,11 +6,15 @@ def main():
 
 
 def dollars_to_float(d):
-    
+    d.replace("$", "")
+    d  = int(d)
+    return d:.1f
 
 
 def percent_to_float(p):
-    # TODO
+    d.replace("$", "")
+    d  = int(d)
+    return d:.1f
 
 
 main()
