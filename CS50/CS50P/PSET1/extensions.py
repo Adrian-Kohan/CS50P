@@ -11,8 +11,8 @@ elif ".png" in file_name:
 elif ".pdf" in file_name:
     print("application/pdf")
 elif ".txt" in file_name:
-    
-    print("text/txt")
+    file_name = file_name.replace(".txt", "")
+    print(f"text/{file_name}")
 elif ".zip" in file_name:
     print("application/zip")
 else:
