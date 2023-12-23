@@ -7,7 +7,9 @@ def main():
 
 
 def is_valid(s):
-    2 <= len(s) <= 8
+    if 2 <= len(s) <= 8:
+        return True
+    
 
 
 main()
