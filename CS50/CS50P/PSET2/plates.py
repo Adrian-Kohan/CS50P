@@ -7,10 +7,10 @@ def main():
 
 
 def is_valid(s):
-    symbols = ["!"]
+    symbols = "!?@#$%^&*()_-+={}[]"'"'
     if 2 <= len(s) <= 6 and s[0].isalpha() and s[1].isalpha():
         for i in s:
-            if i.isalpha() or i.isnumeric():
+            if i not in symbols:
                 if i.isnumeric() and s[-1].isnumeric():
                     index_i = s.index(i)
                     before_i = index_i - 1
