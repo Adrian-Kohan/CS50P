@@ -1,7 +1,7 @@
 coke = 50
 
 
-while coke != 0:
+while coke > 0:
     print(f"Amount Due: {coke}")
     coin = input("Inser Coin: ")
     coin = int(coin)
