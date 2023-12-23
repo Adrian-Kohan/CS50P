@@ -3,4 +3,4 @@ x = int(expression[0])
 y = expression[2]
 z = int(expression[4])
 
-print(f{xyz)
+print(1 + 1)
