@@ -1,6 +1,6 @@
 expression = input("Expression: ")
 exp_list = expression.split(" ")
-print(exp_list)
+
 x = int(exp_list[0])
 z = int(exp_list[2])
 
