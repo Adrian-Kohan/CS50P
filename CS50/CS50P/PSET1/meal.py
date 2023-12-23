@@ -16,7 +16,7 @@ def convert(time):
     time_list = time.split(":")
     hour = int(time_list[0])
     min = int(time_list[1]) / 60
-    return float(f"{hour}.{min}")
+    return float(hour+min)
 
 
 if __name__ == "__main__":
