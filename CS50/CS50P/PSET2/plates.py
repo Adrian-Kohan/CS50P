@@ -7,13 +7,12 @@ def main():
 
 
 def is_valid(s):
-    index = 0
     if 2 <= len(s) <= 6 and s[0].isalpha() and s[1].isalpha and s[-1].isnumeric:
         for i in s:
             if i.isnumeric:
-                index = index(i)
-                before_i = index - 1
-                if s[before_i].isalpha and s[index] !=0:
+                index_i = s.index(i)
+                before_i = index_i - 1
+                if s[before_i].isalpha and s[index_i] !=0:
                     return True
 
 
