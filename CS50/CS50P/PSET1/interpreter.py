@@ -1,6 +1,8 @@
 expression = input("Expression: ")
-x = int(expression[0])
-z = int(expression[4])
+exp_list = expression.split(" ")
+print(exp_list)
+x = int(exp_list[0])
+z = int(exp_list[2])
 
 if "+" in expression:
     result = float("{:.1f}".format(x+z))
