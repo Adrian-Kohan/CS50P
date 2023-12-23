@@ -18,7 +18,7 @@ def is_valid(s):
                         before_i = index_i - 1
                         if s[before_i].isalpha() and s[index_i] !=0:
                             is_true += 1
-                    elif i.isalpha():
+                    if i.isalpha():
                         is_true += 1
     elif is_true != 0:
         return True
