@@ -3,7 +3,7 @@ def main():
 
 
 def convert(time):
-    time
+    time_list = time.split(":")
 
 
 if __name__ == "__main__":
