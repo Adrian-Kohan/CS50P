@@ -8,9 +8,11 @@ while coke > 0:
 
 
     if coin == 5 or coin == 10 or coin == 25:
-        if coin <= coke:
-            coke = coke - coin
-        else:
-            coke = coin - coke
+        coke = coke - coin
 
-print(f"Change Owed: {coke}")
+if coke >= 0:
+    print(f"Change Owed: {coke}")
+else:
+    coke *= -1
+    print(f"Change Owed: {coke}")
+
