@@ -1,6 +1,12 @@
 expression = input("Expression: ")
 x = int(expression[0])
-y = int(expression[2])
 z = int(expression[4])
-result = f"{x}{y}{z}"
-print(result)
+
+if "+" in expression:
+    print(f"{x}+{z}")
+elif "-" in expression:
+    print(f"{x}-{z}")
+elif "*" in expression:
+    print(f"{x}*{z}")
+else:
+    print(f"{x}/{z}")
