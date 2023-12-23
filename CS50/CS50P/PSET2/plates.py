@@ -23,6 +23,8 @@ def is_valid(s):
 
     if is_true != 0:
         return True
+    else:
+        return False
 
 
 
