@@ -13,9 +13,15 @@ def is_valid(s):
         if s[0].isalpha() and s[1].isalpha():
             for i in s:
                 if i not in symbols:
+                    if i.isnumeric() and s[-1].isnumeric():
+                        index_i = s.index(i)
+                        before_i = index_i - 1
+                        if s[before_i].isalpha() and s[index_i] !=0:
+                            is_true += 1
+                elif i.isalpha():
                     is_true += 1
-        if is_true != 0:
-            return True
+    elif is_true != 0:
+        return True
 
 
 
