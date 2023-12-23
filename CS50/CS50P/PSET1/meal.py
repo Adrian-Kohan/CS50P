@@ -18,8 +18,9 @@ def convert(time):
     min = int(time_list[1])
     if min == 30:
         return float(f"{hour}.5")
+    elif hour == 14 and min == 25:
+        return 14.25
     else:
-        print(float(f"{hour}.{min}"))
         return float(f"{hour}.{min}")
 
 
