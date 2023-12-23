@@ -13,8 +13,8 @@ def is_valid(s):
         for i in s:
             if i not in symbols:
                 is_true += 1
-        if is_true != 0:
-            return True
+    if is_true != 0:
+        return True
 
 
 
