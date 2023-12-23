@@ -15,13 +15,8 @@ def main():
 def convert(time):
     time_list = time.split(":")
     hour = int(time_list[0])
-    min = int(time_list[1])
-    if min == 30:
-        return float(f"{hour}.5")
-    elif hour == 14 and min == 25:
-        return 14.25
-    else:
-        return float(f"{hour}.{min}")
+    min = int(time_list[1]) / 60
+    return float(f"{hour}.{min}")
 
 
 if __name__ == "__main__":
