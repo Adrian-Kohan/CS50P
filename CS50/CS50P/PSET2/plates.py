@@ -12,15 +12,15 @@ def is_valid(s):
         for i in s:
             if i in symbols:
                 return False
-            elif i.isnumeric() and s[-1].isnumeric():
+            if i.isnumeric() and s[-1].isnumeric():
                     index_i = s.index(i)
                     before_i = index_i - 1
                     print(index_i)
                     print(before_i)
                     if s[before_i].isalpha() and s[index_i] !=0:
                         return True
-            elif i.isalpha():
-                return True
+                    elif i.isalpha():
+                        return True
 
 
 
