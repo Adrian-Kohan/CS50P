@@ -8,6 +8,9 @@ while coke > 0:
 
 
     if coin == 5 or coin == 10 or coin == 25:
-        coke = coke - coin
+        if coin >= coke:
+            coke = coke - coin
+        else:
+            coke = coin - coke
 
 print(f"Change Owed: {coke}")
