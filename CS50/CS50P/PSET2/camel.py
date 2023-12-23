@@ -1,6 +1,6 @@
 camelCase = input("camelCase: ")
 
 for ch in camelCase:
-    if ch is upper:
-        snake_case = 
-print("snake_case: ")
+    if ch.isupper():
+        snake_case = camelCase.replace(ch, f"_{ch.lower()}")
+        print(f"snake_case: {snake_case}")
