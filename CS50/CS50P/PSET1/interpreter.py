@@ -3,11 +3,14 @@ x = int(expression[0])
 z = int(expression[4])
 
 if "+" in expression:
-    result = float.x - z
-    print(f"{x}+{z}")
+    result = float("{:.1f}".format(x+z))
+    print(result)
 elif "-" in expression:
-    print(f"{x}-{z}")
+    result = float("{:.1f}".format(x-z))
+    print(result)
 elif "*" in expression:
-    print(f"{x}*{z}")
+    result = float("{:.1f}".format(x*z))
+    print(result)
 else:
-    print(f"{x}/{z}")
+    result = float("{:.1f}".format(x/z))
+    print(result)
