@@ -8,6 +8,7 @@ def main():
 
 def is_valid(s):
     symbols = "'!?@#$%^&*()/\_-+=}{[]"'"'
+    is_true = 0
     if 2 <= len(s) <= 6 and s[0].isalpha() and s[1].isalpha():
         for i in s:
             if i not in symbols:
@@ -15,9 +16,12 @@ def is_valid(s):
                         index_i = s.index(i)
                         before_i = index_i - 1
                         if s[before_i].isalpha() and s[index_i] !=0:
-                            
+                            is_true += 1
                 elif i.isalpha():
-                    return True
+                    is_true +=1
+    if is_true != 0:
+        return True
+
 
 
 
