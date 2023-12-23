@@ -12,7 +12,7 @@ def is_valid(s):
         for i in s:
             if i in symbols:
                 return False
-            if i.isnumeric() and s[-1].isnumeric():
+            elif i.isnumeric() and s[-1].isnumeric():
                     index_i = s.index(i)
                     before_i = index_i - 1
                     print(index_i)
