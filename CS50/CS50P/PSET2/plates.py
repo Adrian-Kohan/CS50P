@@ -12,12 +12,15 @@ def is_valid(s):
 
     if 2 <= len(s) <= 6:
         for i in s:
+            # check if any character is symbol
             if i not in symbols:
+                # check if the first two characters are alphabet
                 if s[0].isalpha() and s[1].isalpha():
                     for i in s:
                         if i.isalpha():
                             is_true = True
-                        elif i.isnumeric() and s[-1].isnumeric():
+                            
+                        elif i.isnumeric():
                             index_i = s.index(i)
                             before_i = index_i - 1
                             after_i = index_i + 1
