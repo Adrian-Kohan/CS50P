@@ -22,13 +22,14 @@ def is_valid(s):
                             before_i = index_i - 1
                             after_i = index_i + 1
 
-                            # check if number is not the last character and not between letters
+                            # check if the number is not the last character and there is not a letter after that
                             if s.index(i) != s.index(s[-1]):
-                                if s[before_i].isnumeric() and s[after_i].isnumeric():
+                                if s[after_i].isnumeric():
                                     is_true = True
                                 else:
                                     is_true = False
                                     break
+
                             # check if first digit is 0 or not
                             if i == "0":
                                 if s[before_i].isalpha():
@@ -37,8 +38,7 @@ def is_valid(s):
                                 else:
                                     is_true = True
                             else:
-
-                                elif s[before_i].isnumeric() and s[index_i] == "0":
+                                if s[before_i].isnumeric() and s[index_i] == "0":
                                     is_true = True
                                 else:
                                     is_true = False
