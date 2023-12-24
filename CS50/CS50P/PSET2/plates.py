@@ -23,8 +23,14 @@ def is_valid(s):
                             after_i = index_i + 1
                             if s[before_i].isalpha() and s[index_i] != "0":
                                 is_true = True
-                            elif s[before_i].isnumeric() and s[index_i] == "0" and s[after_i].isnumeric():
-                                is_true = True
+                            elif i != s[-1]:
+                                if s[before_i].isnumeric() and s[index_i] == "0" and s[after_i].isnumeric():
+                                    is_true = True
+                                elif s[before_i].isnumeric() and s[index_i] == "0":
+                                    is_true = True
+                                else:
+                                    is_true = False
+                                    break
                             else:
                                 is_true = False
                                 break
