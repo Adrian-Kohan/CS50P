@@ -21,6 +21,14 @@ def is_valid(s):
                             index_i = s.index(i)
                             before_i = index_i - 1
                             after_i = index_i + 1
+
+                            # check if number is not the last character and not between letters
+                            if s.index(i) != s.index(s[-1]):
+                                if s[before_i].isnumeric() and s[after_i].isnumeric():
+                                    is_true = True
+                                else:
+                                    is_true = False
+                                    break
                             # check if first digit is 0 or not
                             if i == "0":
                                 if s[before_i].isalpha():
@@ -29,9 +37,7 @@ def is_valid(s):
                                 else:
                                     is_true = True
                             else:
-                                if s.index(i) != s.index(s[-1]):
-                                    if s[before_i].isnumeric() and s[after_i].isnumeric():
-                                    is_true = True
+
                                 elif s[before_i].isnumeric() and s[index_i] == "0":
                                     is_true = True
                                 else:
