@@ -11,39 +11,34 @@ def is_valid(s):
     is_true = False
 
     if 2 <= len(s) <= 6:
-        is_true = True
-    else:
-        is_true = False
-
-
-    for i in s:
-        if i not in symbols:
-             is_true = True
-        else:
-            is_true = False
-
-
-    if s[0].isalpha() and s[1].isalpha():
-        is_true = True
-    else:
-        is_true = False
-        
-
-    for i in s:
-        if i.isalpha():
-            is_true = True
-
-        elif i.isnumeric() and s[-1].isnumeric():
-            index_i = s.index(i)
-            before_i = index_i - 1
-            if s[before_i].isalpha() and s[index_i] !=0:
-                is_true = True
+        for i in s:
+            if i not in symbols:
+                if s[0].isalpha() and s[1].isalpha():
+                    for i in s:
+                        if i.isalpha():
+                            is_true = True
+                        elif i.isnumeric() and s[-1].isnumeric():
+                            index_i = s.index(i)
+                            before_i = index_i - 1
+                            if s[before_i].isalpha() and s[index_i] !=0:
+                                is_true = True
+                            else:
+                                is_true = False
+                                break
+                        else:
+                            is_true = False
+                            break
+                else:
+                    is_true = False
             else:
                 is_true = False
-                break
-        else:
-            is_true = False
-            break
+    else:
+        is_true = False
+
+
+
+
+
 
     if is_true:
         return True
