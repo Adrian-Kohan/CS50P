@@ -30,7 +30,7 @@ def is_valid(s):
                                     is_true = True
                             else:
                                 if s.index(i) != s.index(s[-1]):
-                                    if s[before_i].isnumeric() and s[index_i] == "0" and s[after_i].isnumeric():
+                                    if s[before_i].isnumeric() and s[after_i].isnumeric():
                                     is_true = True
                                 elif s[before_i].isnumeric() and s[index_i] == "0":
                                     is_true = True
