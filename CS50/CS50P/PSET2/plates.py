@@ -14,20 +14,20 @@ def is_valid(s):
         is_true = True
     else:
         is_true = False
-        break
+
 
     for i in s:
         if i not in symbols:
              is_true = True
         else:
             is_true = False
-            break
+
 
     if s[0].isalpha() and s[1].isalpha():
         is_true = True
     else:
         is_true = False
-        break
+        
 
     for i in s:
         if i.isalpha():
