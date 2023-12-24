@@ -6,4 +6,4 @@ fruits = {"apple" : 130, "avocado" : 50, "banana" : 110, "cantaloupe" : 50, "gra
 fruit = input("Item: ").lower()
 
 if fruit in fruits:
-    print(f"Calories: {fruits[fruit]}))
+    print(f"Calories: {fruits[fruit]}")
