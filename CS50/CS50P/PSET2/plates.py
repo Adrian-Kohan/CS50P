@@ -38,14 +38,8 @@ def is_valid(s):
                                 else:
                                     is_true = True
                             else:
-                                if s[before_i].isnumeric() and s[index_i] == "0":
                                     is_true = True
-                                else:
-                                    is_true = False
-                                    break
-                            else:
-                                is_true = False
-                                break
+
                         else:
                             is_true = False
                             break
