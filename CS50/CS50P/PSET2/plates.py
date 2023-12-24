@@ -41,6 +41,9 @@ def is_valid(s):
             else:
                 is_true = False
                 break
+        else:
+            is_true = False
+            break
 
     if is_true:
         return True
