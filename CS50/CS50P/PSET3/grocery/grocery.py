@@ -1,6 +1,6 @@
 shopping_list = []
 while True:
-    item = input("").lower()
+    item = input()
     try:
         shopping_list.append(item.upper())
     except EOFError:
