@@ -46,5 +46,5 @@ while True:
                 break
             else:
                 continue
-    except :
+    except:
         continue
