@@ -6,9 +6,11 @@ while True:
         if x <= y:
             fuel = (x / y) * 100
             if fuel <= 1:
+                print(fuel)
                 print("E")
                 break
             elif fuel >= 99:
+                print(fuel)
                 print("F")
                 break
             else:
