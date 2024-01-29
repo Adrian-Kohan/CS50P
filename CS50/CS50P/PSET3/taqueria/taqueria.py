@@ -12,8 +12,11 @@ menu = {
 
 while True:
     order = input("Item: ").lower()
+    prices = 0
     try:
-        prices = 0
         price = menu[order.title()]
+    except:
+        continue
+    finally:
         prices += price
         print(f"Total: ${prices}")
