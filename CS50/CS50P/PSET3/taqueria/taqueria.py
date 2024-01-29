@@ -11,4 +11,6 @@ menue = {
 }
 
 while True:
-    order = input("Item: ")
+    order = input("Item: ").lower()
+    try:
+        
