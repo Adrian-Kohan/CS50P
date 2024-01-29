@@ -1,16 +1,14 @@
 while True:
-    fraction = input("Fraction: ")
+    fraction = input("Fraction: ").split("/")
     try:
         x = int(fraction[0])
-        y = int(fraction[2])
+        y = int(fraction[1])
         if x <= y:
-            fuel = (x / y)
+            fuel = (x / y) * 100
             if fuel <= 1:
-                print(fuel)
                 print("E")
                 break
             elif fuel >= 99:
-                print(fuel)
                 print("F")
                 break
             else:
