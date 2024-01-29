@@ -1,4 +1,4 @@
-menue = {
+menu = {
     "Baja Taco": 4.25,
     "Burrito": 7.50,
     "Bowl": 8.50,
@@ -13,4 +13,7 @@ menue = {
 while True:
     order = input("Item: ").lower()
     try:
-        
+        prices = 0
+        price = menu[order.title()]
+        prices += price
+        print(f"Total: ${prices}")
