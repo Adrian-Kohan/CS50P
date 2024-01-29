@@ -5,6 +5,12 @@ while True:
         shopping_list.append(item.upper())
     except EOFError:
         shopping_list.sort()
+        final_list = []
         for item in shopping_list:
-            print(f"{shopping_list.count(item)} {item}")
+            item_count = f"{shopping_list.count(item)} {item}"
+            if item_count not in final_list:
+                final_list.append(item_count)
+        for item in final_list:
+            print(item)
+
         break
