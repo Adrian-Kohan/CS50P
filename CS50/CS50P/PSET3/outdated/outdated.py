@@ -25,9 +25,12 @@ while True:
             if int(day) <= 31:
                 if 0 < int(day) < 10:
                     day = 0 + day
+                else:
+                    day = day
                 if 0 < int(month) < 10:
                     month = 0 + month
-
+                else:
+                    month = month
                 print(f"{year}-{month}-{day}")
                 break
             else:
