@@ -4,7 +4,7 @@ try:
     x = int(fraction[0])
     y = int(fraction[2])
     fuel = (x / y) * 100
-except ValueError or ZeroDivisionError:
+except ValueError and ZeroDivisionError:
     fraction = input("Fraction: ")
     x = int(fraction[0])
     y = int(fraction[2])
