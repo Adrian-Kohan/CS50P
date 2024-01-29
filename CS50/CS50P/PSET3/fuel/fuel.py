@@ -2,14 +2,12 @@ def fun():
     fraction = input("Fraction: ")
     x = int(fraction[0])
     y = int(fraction[2])
+    return x, y
 
-    try:
-        fuel = (x / y) * 100
-    except (ValueError, ZeroDivisionError):
-        fraction = input("Fraction: ")
-        x = int(fraction[0])
-        y = int(fraction[2])
-        fuel = (x / y) * 100
+try:
+    fuel = (x / y) * 100
+except (ValueError, ZeroDivisionError):
+    fun()
     finally:
         if fuel <= 1:
             print("E")
