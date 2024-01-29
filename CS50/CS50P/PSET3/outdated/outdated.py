@@ -31,7 +31,7 @@ while True:
 
                 print(f"{year}-{month}-{day}")
                 break
-            
+
         elif "," in date:
             new_date = date.split(" ")
             month = new_date[0]
@@ -40,7 +40,7 @@ while True:
             year = new_date[2]
 
             if month.title() in months and int(new_day) <= 31:
-                if 0 < new_day < 10:
+                if 0 < int(new_day) < 10:
                     new_day = 0 + new_day
 
                 if 1 <= months.index(month.title()) < 10:
