@@ -10,7 +10,6 @@ while True:
             item_count = f"{shopping_list.count(item)} {item}"
             if item_count not in final_list:
                 final_list.append(item_count)
-        for item in final_list:
-            print(item)
+                print(item_count)
 
         break
