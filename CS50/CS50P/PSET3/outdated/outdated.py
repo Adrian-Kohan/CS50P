@@ -30,7 +30,7 @@ while True:
             new_day = day[0]
             year = new_date[2]
             if month.title() in months:
-                print(f"{year}/{months.index(month) + 1}/{new_day}")
+                print(f"{year}/{months.index(month.title()) + 1}/{new_day}")
                 break
             else:
                 continue
