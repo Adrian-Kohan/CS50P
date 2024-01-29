@@ -15,8 +15,7 @@ while True:
     try:
         order = input("Item: ").lower()
         price = menu[order.title()]
-    except EOFError:
-        break
-    finally:
         prices += price
         print(f"Total: ${prices}")
+    except EOFError:
+        break
