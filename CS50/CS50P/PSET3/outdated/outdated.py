@@ -12,3 +12,6 @@ months = [
     "November",
     "December"
 ]
+
+while True:
+    date = input()
