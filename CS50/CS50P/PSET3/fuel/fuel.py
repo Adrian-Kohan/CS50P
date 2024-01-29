@@ -1,6 +1,7 @@
-fraction = input("Fraction: ")
-x = int(fraction[0])
-y = int(fraction[2])
+def fun():
+    fraction = input("Fraction: ")
+    x = int(fraction[0])
+    y = int(fraction[2])
 
 if x <= y:
     try:
