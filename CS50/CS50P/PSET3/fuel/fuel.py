@@ -11,5 +11,9 @@ except (ValueError, ZeroDivisionError):
     fuel = (x / y) * 100
 
 
-
-print(f'{round(fuel)}%')
+if fuel <= 1:
+    print("E")
+elif fuel >= 99:
+    print("F")
+else:
+    print(f'{round(fuel)}%')
