@@ -14,7 +14,7 @@ months = [
 ]
 
 while True:
-    date = input("Date: ")
+    date = input("Date: ").lower()
     try:
         if "/" in date:
             new_date = date.split("/")
@@ -34,17 +34,17 @@ while True:
 
         elif "," in date:
             new_date = date.split(" ")
-            month = new_date[0]
+            month = new_date[0].title()
             day = new_date[1].split(",")
             new_day = day[0]
             year = new_date[2]
 
-            if month.title() in months and int(new_day) <= 31:
+            if month in months and int(new_day) <= 31:
                 if 0 < int(new_day) < 10:
                     new_day = 0 + new_day
 
-                if 1 <= months.index(month.title()) < 10:
-                    month = 0 + str(months.index(month.title()) + 1)
+                if 1 <= months.index(month) < 10:
+                    month = 0 + str(months.index(month) + 1)
 
                 print(f"{year}-{month}-{new_day}")
                 break
