@@ -5,20 +5,15 @@ while True:
         y = int(fraction[2])
         if x <= y:
             fuel = (x / y) * 100
-        except (ValueError, ZeroDivisionError):
-            fraction = input("Fraction: ")
-            x = int(fraction[0])
-            y = int(fraction[2])
-            fuel = (x / y) * 100
-        finally:
             if fuel <= 1:
                 print("E")
+                break
             elif fuel >= 99:
                 print("F")
+                break
             else:
                 print(f'{round(fuel)}%')
+                break
 
-    else:
-        fraction = input("Fraction: ")
-        x = int(fraction[0])
-        y = int(fraction[2])
+    except (ValueError, ZeroDivisionError):
+            continue
