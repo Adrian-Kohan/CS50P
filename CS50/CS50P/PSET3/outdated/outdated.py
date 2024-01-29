@@ -32,7 +32,7 @@ while True:
             day = new_date[1].split(",")
             new_day = day[0]
             year = new_date[2]
-            if month.title() in months and day <= 31:
+            if month.title() in months and int(new_day) <= 31:
                 print(f"{year}-{months.index(month.title()) + 1}-{new_day}")
                 break
             else:
