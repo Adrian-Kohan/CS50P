@@ -1,15 +1,14 @@
-def fun():
-    fraction = input("Fraction: ")
-    x = int(fraction[0])
-    y = int(fraction[2])
-    return x, y
+fraction = input("Fraction: ")
+x = int(fraction[0])
+y = int(fraction[2])
 
-fun()
 if x <= y:
     try:
         fuel = (x / y) * 100
     except (ValueError, ZeroDivisionError):
-        fun()
+        fraction = input("Fraction: ")
+        x = int(fraction[0])
+        y = int(fraction[2])
         fuel = (x / y) * 100
     finally:
         if fuel <= 1:
@@ -20,4 +19,6 @@ if x <= y:
             print(f'{round(fuel)}%')
 
 else:
-    fun()
+    fraction = input("Fraction: ")
+    x = int(fraction[0])
+    y = int(fraction[2])
