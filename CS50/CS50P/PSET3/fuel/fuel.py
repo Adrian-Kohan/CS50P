@@ -4,7 +4,7 @@ while True:
         x = int(fraction[0])
         y = int(fraction[2])
         if x <= y:
-            fuel = (x / y) * 100
+            fuel = (x / y)
             if fuel <= 1:
                 print(fuel)
                 print("E")
