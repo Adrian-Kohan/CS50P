@@ -4,17 +4,18 @@ def fun():
     y = int(fraction[2])
     return x, y
 
-try:
-    fuel = (x / y) * 100
-except (ValueError, ZeroDivisionError):
-    fun()
-    finally:
-        if fuel <= 1:
-            print("E")
-        elif fuel >= 99:
-            print("F")
-        else:
-            print(f'{round(fuel)}%')
+def exeption():
+    try:
+        fuel = (x / y) * 100
+    except (ValueError, ZeroDivisionError):
+        fun()
+finally:
+    if fuel <= 1:
+        print("E")
+    elif fuel >= 99:
+        print("F")
+    else:
+        print(f'{round(fuel)}%')
 
 else:
     fraction = input("Fraction: ")
