@@ -1,7 +1,7 @@
 shopping_list = []
 while True:
-    item = input()
     try:
+        item = input()
         shopping_list.append(item.upper())
     except EOFError:
         shopping_list.sort()
