@@ -21,6 +21,7 @@ while True:
             month = new_date[0]
             day = new_date[1]
             year = new_date[2]
+            if 
             print(f"{year}/{month}/{day}")
             break
         elif "," in date:
