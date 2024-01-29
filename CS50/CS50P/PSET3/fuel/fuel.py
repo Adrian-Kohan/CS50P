@@ -9,11 +9,10 @@ except (ValueError, ZeroDivisionError):
     x = int(fraction[0])
     y = int(fraction[2])
     fuel = (x / y) * 100
-
-
-if fuel <= 1:
-    print("E")
-elif fuel >= 99:
-    print("F")
-else:
-    print(f'{round(fuel)}%')
+finally:
+    if fuel <= 1:
+        print("E")
+    elif fuel >= 99:
+        print("F")
+    else:
+        print(f'{round(fuel)}%')
