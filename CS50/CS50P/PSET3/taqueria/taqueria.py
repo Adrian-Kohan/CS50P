@@ -10,13 +10,13 @@ menu = {
     "Tortilla Salad": 8.00
 }
 
+prices = 0
 while True:
-    order = input("Item: ").lower()
-    prices = 0
     try:
+        order = input("Item: ").lower()
         price = menu[order.title()]
-    except:
-        continue
+    except EOFError:
+        break
     finally:
         prices += price
         print(f"Total: ${prices}")
