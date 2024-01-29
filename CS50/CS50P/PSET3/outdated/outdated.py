@@ -14,4 +14,5 @@ months = [
 ]
 
 while True:
-    date = input()
+    date = input("Date: ")
+    
