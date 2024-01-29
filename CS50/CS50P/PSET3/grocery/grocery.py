@@ -1,4 +1,5 @@
 shopping_list = []
+
 while True:
     try:
         item = input()
@@ -11,5 +12,4 @@ while True:
             if item_count not in final_list:
                 final_list.append(item_count)
                 print(item_count)
-
         break
