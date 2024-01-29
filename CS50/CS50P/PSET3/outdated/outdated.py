@@ -21,11 +21,12 @@ while True:
             month = int(new_date[0])
             day = int(new_date[1])
             year = int(new_date[2])
-            if 10 <= day <= 31 and 10 <= month <= 12:
+            if 0 < day < 10:
+                day = 0 + str(day)
+            if 0 < month < 10:
+                month = 0 + str(month)
+            if 10 <= day <= 31:
                 print(f"{year}-{month}-{day}")
-                break
-            elif 0 < day < 10 and 0 < month < 10:
-                print(f"{year}-0{month}-0{day}")
                 break
             else:
                 continue
