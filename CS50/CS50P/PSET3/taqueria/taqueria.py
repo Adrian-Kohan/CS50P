@@ -17,5 +17,7 @@ while True:
         price = menu[order.title()]
         prices += price
         print(f"Total: ${'{:,.2f}'.format(prices)}")
+    except KeyError:
+        continue
     except EOFError:
         break
