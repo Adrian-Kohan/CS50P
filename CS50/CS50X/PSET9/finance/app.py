@@ -133,10 +133,9 @@ def register():
         # Redirect user to home page
         return redirect("/")
 
-        # User reached route via GET (as by clicking a link or via redirect)
-        else:
-            return render_template("login.html")
-        return apology("TODO")
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("login.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
