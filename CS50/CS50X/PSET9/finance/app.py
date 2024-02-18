@@ -83,7 +83,7 @@ def buy():
             # Add purchase data to a new tabel
             db.execute(
             "INSERT INTO purchase",
-            user_id = session.get("user_id"),
+            user_id = session.get("user_id")(db.Integer, primary_key=True),
             symbol = request.form.get("symbol"),
             price = status["price"],
             date = datetime.datetime.now(pytz.timezone("US/Eastern"))
