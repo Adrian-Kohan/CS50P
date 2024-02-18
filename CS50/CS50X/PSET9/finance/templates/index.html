@@ -6,6 +6,15 @@
 
 {% block main %}
     <table>
-        
+        <th>
+            <td>Symbol</td>
+            <td>Shares</td>
+            <td>Price</td>
+            <td>Total</td>
+        </th>
+        {{% for stack in stacks %}}
+        <tr>
+            <td>{{stack.}}</td>
+        </tr>
     </table>
 {% endblock %}
