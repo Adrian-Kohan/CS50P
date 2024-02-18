@@ -129,12 +129,12 @@ def register():
 
         # Ensure password and confirmation are the same
         elif request.form.get("password") != request.form.get("confirmation"):
-            return apology("password de not match", 403)
+            return apology("password do not match", 403)
 
         db.execute(
             "INSERT INTO users (name, hash) VALUES (?, ?)",
             request.form.get("name"),
-            generate_password_hash(form.data["password"], method='pbkdf2:sha256',salt_length=8),
+            generate_password_hash(request.form.get("password"), method='pbkdf2:sha256',salt_length=8),
         )
 
         # Remember which user has register
