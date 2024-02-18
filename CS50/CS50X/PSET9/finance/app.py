@@ -128,13 +128,11 @@ def register():
         elif request.form.get("password") != request.form.get("confirmation"):
             return apology("password de not match", 403)
 
-        new_user = users(
-            name=form.username.data,
-            password=generate_password_hash(form.data["password"], method='pbkdf2:sha256',salt_length=8)
+        db.execute(
+            "INSERT INTO users (name, hash) VALUES (?, ?)",
+            request.form.get("name"),
+            request.form.get("password"),
         )
-
-        db.session.add(new_user)
-        db.session.commit()
 
         # Remember which user has register
         session["user_id"] = rows[0]["id"]
