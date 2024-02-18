@@ -133,6 +133,13 @@ def register():
             request.form.get("name"),
             request.form.get("password"),
         )
+        new_user = users(
+            name=form.username.data,
+            password=generate_password_hash(form.data["password"], method='pbkdf2:sha256',salt_length=8)
+        )
+
+        db.session.add(new_user)
+        db.session.commit()
 
         # Remember which user has register
         session["user_id"] = rows[0]["id"]
