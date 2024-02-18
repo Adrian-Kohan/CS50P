@@ -117,7 +117,7 @@ def register():
             return apology("must provide username", 403)
 
         # Ensure username is not already exists
-        elif 
+        elif request.form.get("username") in db
 
         # Ensure password was submitted
         elif not request.form.get("password"):
