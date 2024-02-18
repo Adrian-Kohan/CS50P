@@ -64,6 +64,12 @@ def buy():
         # Redirect user to home page
         return redirect("/")
 
+        # Look up stock price
+        price = status["price"]
+
+        # Amount of cash that user has
+        cash = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("buy.html")
