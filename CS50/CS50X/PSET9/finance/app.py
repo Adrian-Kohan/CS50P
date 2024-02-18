@@ -112,13 +112,21 @@ def register():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
-        # Ensure username was submitted
+        # Ensure username is not empty submitted
         if not request.form.get("username"):
             return apology("must provide username", 403)
 
         # Ensure username is not already exists
         elif users.query.filter_by(username=request.form.get('username')).first():
             return apology("username is already exists", 403)
+
+        # Ensure password is not empty
+        elif not request.form.get("password") or not request.form.get("confirmation"):
+            return apology("must provide password", 403)
+
+        # Ensure password and confirmation are the same
+        elif request.form.get("password") != request.form.get("confirmation"):
+            return apology("password de not match", 403)
 
 
         new_user = Users(
