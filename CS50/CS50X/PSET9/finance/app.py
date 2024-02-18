@@ -66,8 +66,7 @@ def buy():
         price = status["price"]
 
         # Amount of cash that user has
-        user = db.execute("SELECT * FROM users WHERE id = ?", session.get("user_id"))
-        cash = user[0]["cash"]
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
 
         # Redirect user to home page
         return redirect("/")
