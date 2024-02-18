@@ -65,11 +65,25 @@ def buy():
         # Look up stock price
         price = status["price"]
 
+        # Calculate the total price of the purchase
+        total = price * int(request.form.get("shares"))
+
         # Amount of cash that user has
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
 
-        # Redirect user to home page
-        return redirect("/")
+        # Check if the purchase is successful or not
+        if total > cash:
+            return apology("you cannot afford the number of shares at the current price", 403)
+
+        else:
+            db.execute(
+            "INSERT INTO purchase (username, hash) VALUES (?, ?)",
+            request.form.get("username"),
+            generate_password_hash(request.form.get("password"), method='pbkdf2:sha256',salt_length=8),
+            )
+
+            # Redirect user to home page
+            return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
