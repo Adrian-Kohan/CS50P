@@ -137,9 +137,6 @@ def register():
             generate_password_hash(request.form.get("password"), method='pbkdf2:sha256',salt_length=8),
         )
 
-        # Remember which user has register
-        session["user_id"] = rows[0]["id"]
-
         # Redirect user to home page
         return redirect("/")
 
