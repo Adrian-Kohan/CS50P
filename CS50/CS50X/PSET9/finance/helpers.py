@@ -76,3 +76,8 @@ def lookup(symbol):
 def usd(value):
     """Format value as USD."""
     return f"${value:,.2f}"
+
+
+def current_date():
+    """Return current date"""
+    return datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
