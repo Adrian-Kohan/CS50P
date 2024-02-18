@@ -88,11 +88,11 @@ def buy():
             # Add purchase data to a new tabel
             db.execute(
             "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?)",
-            user_id = session.get("user_id")(db.Integer, primary_key=True),
-            symbol = request.form.get("symbol"),
-            price = status["price"],
-            share = request.form.get("shares"),
-            date = datetime.datetime.now(pytz.timezone("US/Eastern"))
+            session.get("user_id")(db.Integer, primary_key=True),
+            request.form.get("symbol"),
+            status["price"],
+            request.form.get("shares"),
+            datetime.datetime.now(pytz.timezone("US/Eastern"))
             )
 
             # Update remained user cash
@@ -100,6 +100,8 @@ def buy():
             "INSERT INTO users (cash) VALUES (?)",
             remained
             )
+
+            flash("Bougth!")
             # Redirect user to home page
             return redirect("/")
 
