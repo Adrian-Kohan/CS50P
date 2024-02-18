@@ -61,14 +61,16 @@ def buy():
         if int(request.form.get("shares")) < 0:
             return apology("number of shares must be positive", 403)
 
-        # Redirect user to home page
-        return redirect("/")
 
         # Look up stock price
         price = status["price"]
 
         # Amount of cash that user has
-        cash = db.execute("SELECT * FROM users WHERE cash = ?", request.form.get("username"))
+        user = db.execute("SELECT * FROM users WHERE id = ?", session.get("user_id"))
+        cash = user[0]["cash"]
+
+        # Redirect user to home page
+        return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
