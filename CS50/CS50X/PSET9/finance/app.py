@@ -75,7 +75,7 @@ def buy():
         total = price * int(request.form.get("shares"))
 
         # Amount of cash that user has
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
         # Check if the purchase is successful or not
         if total > cash:
@@ -88,7 +88,7 @@ def buy():
             # Add purchase data to a new tabel
             db.execute(
             "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?)",
-            session.get("user_id")(db.Integer, primary_key=True),
+            session["user_id"],
             request.form.get("symbol"),
             status["price"],
             request.form.get("shares"),
