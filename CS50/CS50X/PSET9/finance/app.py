@@ -129,7 +129,7 @@ def register():
             return apology("password de not match", 403)
 
         new_user = users(
-            name=form.name.data,
+            name=form.username.data,
             email=form.email.data,
             password=generate_password_hash(form.data["password"], method='pbkdf2:sha256',salt_length=8)
         )
