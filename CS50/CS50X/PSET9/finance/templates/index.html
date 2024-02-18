@@ -14,7 +14,23 @@
         </th>
         {{% for stack in stacks %}}
         <tr>
-            <td>{{stack.}}</td>
+            <td>{{stack.["symbol"]}}</td>
+            <td>{{stack.["shares"]}}</td>
+            <td>{{stack.["price"]}}</td>
+            <td>{{stack.["shares"] * stack.["price"]}}</td>
+        </tr>
+        {{% endfor %}}
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Cash</td>
+            <td>{{cash}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>Total</td>
+            <td>10,0000</td>
         </tr>
     </table>
 {% endblock %}

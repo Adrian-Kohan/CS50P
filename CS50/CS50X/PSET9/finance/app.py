@@ -91,6 +91,7 @@ def buy():
             user_id = session.get("user_id")(db.Integer, primary_key=True),
             symbol = request.form.get("symbol"),
             price = status["price"],
+            share = request.form.get("shares"),
             date = datetime.datetime.now(pytz.timezone("US/Eastern"))
             )
 
