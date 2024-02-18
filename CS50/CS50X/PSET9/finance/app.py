@@ -22,14 +22,6 @@ Session(app)
 db = SQL("sqlite:///finance.db")
 
 
-# Defien a register form
-class RegisterForm(FlaskForm):
-    email = StringField("Email", validators=[DataRequired(), Email()])
-    password = StringField("Password", validators=[DataRequired()])
-    name = StringField("Name", validators=[DataRequired()])
-    submit = SubmitField("SIGN ME UP!")
-    
-
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
