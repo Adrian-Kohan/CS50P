@@ -61,9 +61,6 @@ def buy():
         if int(request.form.get("shares")) < 0:
             return apology("number of shares must be positive", 403)
 
-
-
-        return render_template("quoted.html", status=status)
         # Redirect user to home page
         return redirect("/")
 
