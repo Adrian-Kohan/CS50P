@@ -68,7 +68,7 @@ def buy():
         price = status["price"]
 
         # Amount of cash that user has
-        cash = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        cash = db.execute("SELECT * FROM users WHERE cash = ?", request.form.get("username"))
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
