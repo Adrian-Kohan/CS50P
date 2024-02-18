@@ -12,12 +12,12 @@
             <td>Price</td>
             <td>Total</td>
         </th>
-        {{% for stack in stacks %}}
+        {{% for stock in stocks %}}
         <tr>
-            <td>{{stack.["symbol"]}}</td>
-            <td>{{stack.["shares"]}}</td>
-            <td>{{stack.["price"]}}</td>
-            <td>{{stack.["shares"] * stack.["price"]}}</td>
+            <td>{{stock.["symbol"]}}</td>
+            <td>{{stock.["shares"]}}</td>
+            <td>{{stock.["price"]}}</td>
+            <td>{{stock.["shares"] * stock.["price"]}}</td>
         </tr>
         {{% endfor %}}
         <tr>
