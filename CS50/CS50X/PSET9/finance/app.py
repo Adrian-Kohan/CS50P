@@ -117,7 +117,28 @@ def register():
             return apology("must provide username", 403)
 
         # Ensure username is not already exists
-        elif request.form.get("username") in db
+        elif users.query.filter_by(username=request.form.get('username')).first():
+            flash("You've already signed up with that email, log in instead!")
+            return redirect(url_for("login"))
+
+        new_user = Users(
+            name=form.name.data,
+            email=form.email.data,
+            password=generate_password_hash(form.data["password"], method='pbkdf2:sha256',salt_length=8)
+        )
+
+        db.session.add(new_user)
+        db.session.commit()
+        login_user(new_user)
+        return redirect(url_for("get_all_posts"))
+    return render_template("register.html", form=form, logged_in=current_user)
+
+
+
+
+
+
+
 
         # Ensure password was submitted
         elif not request.form.get("password"):
