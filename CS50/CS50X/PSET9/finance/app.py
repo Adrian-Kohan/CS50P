@@ -38,8 +38,7 @@ def index():
     """Show portfolio of stocks"""
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
-    symbol = db.execute("SELECT symbol FROM users WHERE id = ?", session.get("user_id"))
-    price = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
+    portfolio = db.execute("SELECT * FROM purchase WHERE id = ?", session.get("user_id"))
 
 
     return apology("TODO")
