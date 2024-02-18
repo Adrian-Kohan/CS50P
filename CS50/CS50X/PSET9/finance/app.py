@@ -128,7 +128,6 @@ def register():
         elif request.form.get("password") != request.form.get("confirmation"):
             return apology("password de not match", 403)
 
-
         new_user = users(
             name=form.name.data,
             email=form.email.data,
@@ -137,23 +136,16 @@ def register():
 
         db.session.add(new_user)
         db.session.commit()
-        # Remember which user has logged in
+
+        # Remember which user has register
         session["user_id"] = rows[0]["id"]
 
         # Redirect user to home page
         return redirect("/")
+
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("register.html")
-
-
-
-
-
-
-
-
-
 
 
 @app.route("/sell", methods=["GET", "POST"])
