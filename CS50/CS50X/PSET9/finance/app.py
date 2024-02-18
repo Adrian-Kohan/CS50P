@@ -87,7 +87,7 @@ def buy():
 
             # Add purchase data to a new tabel
             db.execute(
-            "INSERT INTO purchase",
+            "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?)",
             user_id = session.get("user_id")(db.Integer, primary_key=True),
             symbol = request.form.get("symbol"),
             price = status["price"],
