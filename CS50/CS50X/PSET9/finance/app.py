@@ -103,12 +103,21 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+
+    # User reached route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+
+         # Ensure username is not empty submitted
+        if not request.form.get("symbol"):
+            return apology("must provide symbol", 403)
+
     return apology("TODO")
 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+    
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
