@@ -118,8 +118,8 @@ def register():
 
         # Ensure username is not already exists
         elif users.query.filter_by(username=request.form.get('username')).first():
-            flash("You've already signed up with that email, log in instead!")
-            return redirect(url_for("login"))
+            return apology("username is already exists", 403)
+
 
         new_user = Users(
             name=form.name.data,
