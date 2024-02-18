@@ -107,17 +107,19 @@ def quote():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
-         # Ensure username is not empty submitted
+         # Ensure symbol is not empty submitted
         if not request.form.get("symbol"):
             return apology("must provide symbol", 403)
 
-    return apology("TODO")
+        return render_template("quoted.html")
+    else:
+        return render_template("quote.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-    
+
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
