@@ -1,4 +1,5 @@
 import os
+import datetime
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -85,7 +86,7 @@ def buy():
             user_id = session.get("user_id"),
             symbol = request.form.get("symbol"),
             price = status["price"],
-            date = 
+            date = datetime.datetime.now(pytz.timezone("US/Eastern"))
 
             )
 
