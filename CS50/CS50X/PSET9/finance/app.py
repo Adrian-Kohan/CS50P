@@ -76,12 +76,24 @@ def buy():
             return apology("you cannot afford the number of shares at the current price", 403)
 
         else:
+            # Calculate the remained user cash
+            remained = cash - total
+
+            # Add purchase data to a new tabel
             db.execute(
-            "INSERT INTO purchase (username, hash) VALUES (?, ?)",
-            request.form.get("username"),
-            generate_password_hash(request.form.get("password"), method='pbkdf2:sha256',salt_length=8),
+            "INSERT INTO purchase (user_id, symbol, price, date) VALUES (?, ?, ?, ?)",
+            user_id = session.get("user_id"),
+            symbol = request.form.get("symbol"),
+            price = status["price"],
+            date = 
+
             )
 
+            # Update remained user cash
+            db.execute(
+            "INSERT INTO users (cash) VALUES (?)",
+            remained
+            )
             # Redirect user to home page
             return redirect("/")
 
