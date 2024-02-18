@@ -76,7 +76,7 @@ def buy():
 
         # Amount of cash that user has
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-
+        cash = cash[0]["cash"]
         # Check if the purchase is successful or not
         if total > cash:
             return apology("you cannot afford the number of shares at the current price", 403)
