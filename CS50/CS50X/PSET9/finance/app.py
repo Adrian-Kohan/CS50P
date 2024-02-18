@@ -41,7 +41,7 @@ def index():
     portfolio = db.execute("SELECT * FROM purchase WHERE id = ?", session.get("user_id"))
 
 
-    return apology("TODO")
+    return render_template("index.html", portfolio=portfolio, cash=cash)
 
 
 @app.route("/buy", methods=["GET", "POST"])
