@@ -42,7 +42,34 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    return apology("TODO")
+
+    # User reached route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+
+        # Ensure symbol is not empty submitted
+        if not request.form.get("symbol"):
+            return apology("must provide symbol", 403)
+
+        # Look for symbol status
+        status = lookup(request.form.get("symbol"))
+
+        # Ensure symbol existx
+        if status is None:
+            return apology("symbol does not exist", 403)
+
+        # Ensure number of shares is a positive number
+        if int(request.form.get("shares")) < 0:
+            return apology("number of shares must be positive", 403)
+
+
+
+        return render_template("quoted.html", status=status)
+        # Redirect user to home page
+        return redirect("/")
+
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("buy.html")
 
 
 @app.route("/history")
