@@ -97,8 +97,7 @@ def buy():
 
             # Update remained user cash
             db.execute(
-            "INSERT INTO users (cash) VALUES (?)",
-            remained
+            "UPDATE users SET cash = ? WHERE id = ?", remained, session["user_id"]
             )
 
             flash("Bougth!")
