@@ -94,7 +94,7 @@ def buy():
 
             # Add purchase table to the database
             db.execute("""
-                                UPDATE TABLE purchase (
+                                CREATE TABLE purchase (
                                     user_id INTEGER,
                                     symbol TEXT,
                                     price FLOAT,
