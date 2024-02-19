@@ -41,7 +41,8 @@ def index():
     all = db.execute("SELECT * FROM purchase WHERE user_id = ?", session.get("user_id"))
 
     stocks = db.execute("""
-                        SELECT )
+                        SELECT symbol, SUM(shares)
+                        FROM purchase)
 
     return render_template("index.html", stocks=stocks, cash=cash)
 
