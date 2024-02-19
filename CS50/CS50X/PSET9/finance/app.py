@@ -85,6 +85,13 @@ def buy():
             # Calculate the remained user cash
             remained = cash - total
 
+            db.execute("""
+                        CREATE TABLE purchase (
+                            user_id INTEGER,
+                            symbol TEXT,
+                            price FLOUT,
+                        )
+                    """)
             # Add purchase data to a new tabel
             db.execute(
             "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?)",
