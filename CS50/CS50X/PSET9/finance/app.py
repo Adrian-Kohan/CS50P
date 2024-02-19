@@ -40,7 +40,7 @@ def index():
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
     stocks = db.execute("SELECT * FROM purchase WHERE user_id = ?", session.get("user_id"))
 
-    
+    shares
 
     return render_template("index.html", stocks=stocks, cash=cash)
 
