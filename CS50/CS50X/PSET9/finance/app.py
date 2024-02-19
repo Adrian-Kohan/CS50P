@@ -37,7 +37,7 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
-    cash = db.execute("SELECT cash FROM users WHERE user_id = ?", session.get("user_id"))
+    cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
     stocks = db.execute("SELECT * FROM purchase WHERE user_id = ?", session.get("user_id"))
 
 
