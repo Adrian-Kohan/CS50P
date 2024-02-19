@@ -250,17 +250,14 @@ def sell():
         if not request.form.get("symbol"):
             return apology("must provide symbol", 403)
 
-        # Look for symbol status
-        status = lookup(request.form.get("symbol"))
-
-        # Ensure symbol existx
-        if status is None:
-            return apology("symbol does not exist", 403)
 
         # Ensure number of shares is a positive number
         if int(request.form.get("shares")) < 0:
             return apology("number of shares must be positive", 403)
 
+        # ENSURE the user own that many shares of the stock
+        if request.form.get("shares") > share:
+            return apology("you not own that many shares of the stocke", 403)
 
         # Look up stock price
         price = status["price"]
@@ -279,7 +276,7 @@ def sell():
             # Calculate the remained user cash
             remained = cash - total
 
-        
+
             # Add purchase data to a new tabel
             db.execute(
             "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?)",
