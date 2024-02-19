@@ -249,10 +249,15 @@ def sell():
      # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
+        share = db.execute("SELECT share FROM purchase WHERE user_id = ? AND symbol = ?", session.get("user_id"), request.form.get("symbol"))
+        share = int(share[0]["share"])
         # Ensure symbol is not empty submitted
         if not request.form.get("symbol"):
             return apology("must provide symbol", 403)
 
+        # Ensure user have share of the selected stock
+        if share == 0:
+            return apology("you don't have any share of this stock", 403)
 
         # Ensure number of shares is a positive number
         if int(request.form.get("shares")) < 0:
@@ -263,6 +268,7 @@ def sell():
             return apology("you not own that many shares of the stocke", 403)
 
         # Look up stock price
+        status = lookup(request.form.get("symbol"))
         price = status["price"]
 
         # Calculate the total price of the purchase
@@ -271,17 +277,12 @@ def sell():
         # Amount of cash that user has
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         cash = cash[0]["cash"]
-        # Check if the purchase is successful or not
-        if total > cash:
-            return apology("you cannot afford the number of shares at the current price", 403)
 
-        else:
-            # Calculate the remained user cash
-            remained = cash - total
+        # Calculate the remained user cash
+        remained = cash + total
 
-
-            # Add purchase data to a new tabel
-            db.execute(
+        # Add purchase data to a new tabel
+        db.execute(
             "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?)",
             session["user_id"],
             request.form.get("symbol"),
@@ -290,15 +291,15 @@ def sell():
             current_date()
             )
 
-            # Update remained user cash
-            db.execute(
+        # Update remained user cash
+        db.execute(
             "UPDATE users SET cash = ? WHERE user_id = ?", remained, session["user_id"]
             )
 
-            flash("Bougth!")
-            # Redirect user to home page
-            return redirect("/")
+        flash("Sold!")
+        # Redirect user to home page
+        return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("buy.html")
+        return render_template("sell.html", stocks=stocks)
