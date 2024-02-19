@@ -243,4 +243,62 @@ def register():
 @login_required
 def sell():
     """Sell shares of stock"""
-    return apology("TODO")
+     # User reached route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+
+        # Ensure symbol is not empty submitted
+        if not request.form.get("symbol"):
+            return apology("must provide symbol", 403)
+
+        # Look for symbol status
+        status = lookup(request.form.get("symbol"))
+
+        # Ensure symbol existx
+        if status is None:
+            return apology("symbol does not exist", 403)
+
+        # Ensure number of shares is a positive number
+        if int(request.form.get("shares")) < 0:
+            return apology("number of shares must be positive", 403)
+
+
+        # Look up stock price
+        price = status["price"]
+
+        # Calculate the total price of the purchase
+        total = price * int(request.form.get("shares"))
+
+        # Amount of cash that user has
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        cash = cash[0]["cash"]
+        # Check if the purchase is successful or not
+        if total > cash:
+            return apology("you cannot afford the number of shares at the current price", 403)
+
+        else:
+            # Calculate the remained user cash
+            remained = cash - total
+
+        
+            # Add purchase data to a new tabel
+            db.execute(
+            "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?)",
+            session["user_id"],
+            request.form.get("symbol"),
+            status["price"],
+            request.form.get("shares"),
+            current_date()
+            )
+
+            # Update remained user cash
+            db.execute(
+            "UPDATE users SET cash = ? WHERE user_id = ?", remained, session["user_id"]
+            )
+
+            flash("Bougth!")
+            # Redirect user to home page
+            return redirect("/")
+
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("buy.html")
