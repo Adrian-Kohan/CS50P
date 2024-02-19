@@ -40,9 +40,9 @@ def index():
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
     all = db.execute("SELECT * FROM purchase WHERE user_id = ?", session.get("user_id"))
 
-    stocks = db.execute("""
-                        SELECT symbol, SUM(shares)
-                        FROM purchase)
+    stocks = db.execute("""FROM all
+                        GROUP BY symbol
+                        HAVING SUM(shares)""")
 
     return render_template("index.html", stocks=stocks, cash=cash)
 
