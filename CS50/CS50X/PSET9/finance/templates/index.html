@@ -5,32 +5,41 @@
 {% endblock %}
 
 {% block main %}
-    <table>
-        <th>
-            <td>Symbol</td>
-            <td>Shares</td>
-            <td>Price</td>
-            <td>Total</td>
-        </th>
-        {% for stock in stocks %}
-        <tr>
-            <td>{{stock["symbol"]}}</td>
-            <td>{{stock["shares"]}}</td>
-            <td>{{stock["price"]}}</td>
-            <td>{{stock["share"] * stock["price"]}}</td>
-        </tr>
-        {% endfor %}
-        <tr>
-            <td></td>
-            <td></td>
-            <td>Cash</td>
-            <td>{{cash}}</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td>Total</td>
-            <td>$10,0000.00</td>
-        </tr>
+<div class="table-responsive-md">
+    <table class="table mx-auto w-50">
+        <thead>
+            <th>
+                <td>Symbol</td>
+                <td>Shares</td>
+                <td>Price</td>
+                <td>Total</td>
+            </th>
+        </thead>
+
+        <tbody>
+            {% for stock in stocks %}
+            <tr>
+                <td>{{stock["symbol"]}}</td>
+                <td>{{stock["shares"]}}</td>
+                <td>{{stock["price"]}}</td>
+                <td>{{stock["share"] * stock["price"]}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Cash</td>
+                <td>{{cash}}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>Total</td>
+                <td>$10,0000.00</td>
+            </tr>
+        </tfoot>
     </table>
+</div>
 {% endblock %}
