@@ -38,11 +38,11 @@ def index():
     """Show portfolio of stocks"""
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
-    all = db.execute("SELECT * FROM purchase WHERE user_id = ?", session.get("user_id"))
+    stocks = db.execute("SELECT * FROM purchase WHERE user_id = ?", session.get("user_id"))
 
-    stocks = db.execute("""FROM all
-                        GROUP BY symbol
-                        HAVING SUM(shares)""")
+    for stock in stocks:
+        symbol = stock["symbol"]
+        
 
     return render_template("index.html", stocks=stocks, cash=cash)
 
