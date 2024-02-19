@@ -40,7 +40,7 @@ def index():
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
     stocks = db.execute("SELECT * FROM purchase WHERE user_id = ?", session.get("user_id"))
 
-    #
+    # show the current price of each stock
     for stock in stocks:
         symbol = stock["symbol"]
         info = lookup(symbol)
