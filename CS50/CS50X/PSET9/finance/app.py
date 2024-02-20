@@ -82,7 +82,7 @@ def buy():
         total = price * int(request.form.get("shares"))
 
         # Amount of cash that user has
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id")
         cash = cash[0]["cash"]
         # Check if the purchase is successful or not
         if total > cash:
