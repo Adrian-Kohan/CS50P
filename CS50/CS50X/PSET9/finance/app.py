@@ -282,11 +282,12 @@ def sell():
         # Calculate the remained user cash
         remained = cash + total
 
-        # Add purchase data to a new tabel
+        # Calculate the remained share
+        remained_share = share - int(request.form.get("shares"))
+
+        # Update purchase data 
         db.execute(
-            "UPDATE purchase SET share = ? WHERE id = ?", remained, session["user_id"]
-            "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?)",
-            
+            "UPDATE purchase SET share = ? WHERE id = ?", remained_share, session["user_id"]
             )
 
         # Update remained user cash
