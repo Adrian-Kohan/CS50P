@@ -115,7 +115,7 @@ def buy():
 
             # Update remained user cash
             db.execute(
-            "UPDATE users SET cash = ? WHERE user_id = ?", remained, session["user_id"]
+            "UPDATE users SET cash = ? WHERE id = ?", remained, session["user_id"]
             )
 
             flash("Bougth!")
