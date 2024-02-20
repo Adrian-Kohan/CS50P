@@ -250,7 +250,8 @@ def sell():
      # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
-        share = int(stocks[0]["share"])
+        share = db.execute("SELECT share FROM purchase WHERE user_id = ? AND symbol = ?", session.get("user_id"), request.form.get("symbol"))
+        share = int(share[0]["share"])
         # Ensure symbol is not empty submitted
         if not request.form.get("symbol"):
             return apology("must provide symbol", 403)
