@@ -83,11 +83,11 @@ def buy():
         price = status["price"]
 
         # Calculate the total price of the purchase
-        total = price * int(request.form.get("shares"))
+        total = float(price * int(request.form.get("shares")))
 
         # Amount of cash that user has
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
-        cash = cash[0]["cash"]
+        cash = float(cash[0]["cash"])
 
         # Check if the purchase is successful or not
         if total > cash:
@@ -95,7 +95,7 @@ def buy():
 
         else:
             # Calculate the remained user cash
-            remained = round(cash - total, 2)
+            remained = round(float(cash - total), 2)
 
             # Add purchase table to the database
             #db.execute("""
