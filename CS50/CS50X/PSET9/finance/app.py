@@ -245,7 +245,7 @@ def register():
 def sell():
     """Sell shares of stock"""
 
-    stocks = db.execute("SELECT symbol, SUM(share) FROM purchase WHERE user_id = ? GROUP BY symbol", session.get("user_id"))
+    stocks = db.execute("SELECT symbol, SUM(share) AS share FROM purchase WHERE user_id = ? GROUP BY symbol", session.get("user_id"))
 
      # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
