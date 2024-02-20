@@ -246,7 +246,6 @@ def register():
         elif not request.form.get("password") or not request.form.get("confirmation"):
             return apology("must provide password", 403)
 
-        
 
         # Ensure password and confirmation are the same
         elif request.form.get("password") != request.form.get("confirmation"):
@@ -342,3 +341,38 @@ def sell():
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("sell.html", stocks=stocks)
+
+
+
+
+@app.route("/add", methods=["GET", "POST"])
+@login_required
+def add():
+    """Add additional cash to their account."""
+
+     # User reached route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+
+        cash = request.form.get("cash")
+        # Ensure cash is not empty submitted
+        if not cash:
+            return apology("must enter some cash", 403)
+
+        # Ensure amount of cash is a positive number
+        if int(cash) < 0:
+            return apology("amount of cash must be positive", 403)
+
+
+        # Update user cash
+        db.execute(
+            "UPDATE users SET cash = ? WHERE id = ?", final_cash, session.get("user_id")
+            )
+
+
+        flash("added!")
+        # Redirect user to home page
+        return redirect("/")
+
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("add.html")
