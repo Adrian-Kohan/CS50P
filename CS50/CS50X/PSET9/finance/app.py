@@ -131,7 +131,7 @@ def buy():
             "INSERT INTO history (user_id, symbol, price, share, date, transaction_type) VALUES (?, ?, ?, ?, ?,?)",
             session["user_id"],
             request.form.get("symbol"),
-            status["price"] * -1,
+            status["price"],
             request.form.get("shares"),
             current_date(),
             "Buy"
