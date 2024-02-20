@@ -90,7 +90,7 @@ def buy():
 
         else:
             # Calculate the remained user cash
-            remained = cash - total
+            remained = round(cash - total, 2)
 
             # Add purchase table to the database
             #db.execute("""
@@ -280,7 +280,7 @@ def sell():
         cash = cash[0]["cash"]
 
         # Calculate the final user cash
-        final_cash = float(cash + total, 2)
+        final_cash = round(cash + total, 2)
 
         # Calculate the remained share
         remained_share = share - int(request.form.get("shares"))
