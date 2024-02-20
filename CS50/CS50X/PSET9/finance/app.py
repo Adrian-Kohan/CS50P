@@ -276,7 +276,7 @@ def sell():
         total = price * int(request.form.get("shares"))
 
         # Amount of cash that user has
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
         cash = cash[0]["cash"]
 
         # Calculate the final user cash
