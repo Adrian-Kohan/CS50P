@@ -281,20 +281,22 @@ def sell():
     if request.method == "POST":
 
         share = db.execute("SELECT symbol, SUM(share) AS share FROM purchase WHERE user_id = ? AND symbol = ? GROUP BY symbol", session.get("user_id"), request.form.get("symbol"))
-        share = int(share[0]["share"])
-        # Ensure symbol is not empty submitted
-        if not request.form.get("symbol"):
-            return apology("must provide symbol", 403)
-
-        # Ensure user have share of the selected stock
-        if share == 0:
-            return apology("you don't have any share of this stock", 403)
 
         try:
+            share = int(share[0]["share"])
+            
+            # Ensure symbol is not empty submitted
+            if not request.form.get("symbol"):
+                return apology("must provide symbol", 403)
+
+            # Ensure user have share of the selected stock
+            if share == 0:
+                return apology("you don't have any share of this stock", 403)
+
             # Ensure number of shares is a positive number
             if int(request.form.get("shares")) < 0:
                 return apology("number of shares must be positive", 403)
-        except(ValueError):
+        except(ValueError, IndexError):
                 return apology("amount of cash must be a simple number", 403)
 
 
@@ -372,7 +374,7 @@ def add():
             # Ensure additional cash is not empty submitted
             if not additional_cash:
                 return apology("must enter some cash", 403)
-            
+
              # Ensure amount of cash is a positive number
             if additional_cash < 0:
                 return apology("amount of cash must be positive", 403)
