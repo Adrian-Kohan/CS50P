@@ -48,7 +48,7 @@ def index():
         info = lookup(symbol)
         current_price = info["price"]
         stock.update({"price":current_price})
-        total += current_price
+        total += stock["share"] * stock["price"
 
     return render_template("index.html", stocks=stocks, cash=cash, total=total)
 
