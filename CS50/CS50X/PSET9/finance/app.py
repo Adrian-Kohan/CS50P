@@ -48,7 +48,7 @@ def index():
         current_price = info["price"]
         stock.update({"price":current_price})
 
-    return render_template("index.html", stocks=stocks, cash=cash)
+    return render_template("index.html", stocks=stocks, cash=cash, total=total)
 
 
 @app.route("/buy", methods=["GET", "POST"])
