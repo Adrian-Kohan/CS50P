@@ -38,7 +38,10 @@ def index():
     """Show portfolio of stocks"""
 
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
-    stocks = db.execute("SELECT symbol, SUM(share) AS share FROM purchase WHERE user_id = ? GROUP BY symbol", session.get("user_id"))
+    stocks = db.execute(
+        "SELECT symbol, SUM(share) AS share FROM purchase WHERE user_id = ? GROUP BY symbol",
+        session.get("user_id"),
+    )
     cash = cash[0]["cash"]
     total = round(float(cash), 2)
 
@@ -47,7 +50,7 @@ def index():
         symbol = stock["symbol"]
         info = lookup(symbol)
         current_price = info["price"]
-        stock.update({"price":current_price})
+        stock.update({"price": current_price})
         total += round(float(stock["share"] * stock["price"]), 2)
 
     return render_template("index.html", stocks=stocks, cash=cash, total=total)
@@ -60,7 +63,6 @@ def buy():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-
         # Ensure symbol is not empty submitted
         if not request.form.get("symbol"):
             return apology("must provide symbol", 403)
@@ -74,10 +76,13 @@ def buy():
 
         try:
             # Ensure number of shares is a positive number
-            if int(request.form.get("shares")) < 0 and float(request.form.get("shares")) < 0:
+            if (
+                int(request.form.get("shares")) < 0
+                and float(request.form.get("shares")) < 0
+            ):
                 return apology("number of shares must be positive", 400)
-        except(ValueError):
-                return apology("number of shares must be a simple number", 400)
+        except ValueError:
+            return apology("number of shares must be a simple number", 400)
 
         # Look up stock price
         price = status["price"]
@@ -91,14 +96,16 @@ def buy():
 
         # Check if the purchase is successful or not
         if total > cash:
-            return apology("you cannot afford the number of shares at the current price", 403)
+            return apology(
+                "you cannot afford the number of shares at the current price", 403
+            )
 
         else:
             # Calculate the remained user cash
             remained = round(float(cash - total), 2)
 
             # Add purchase table to the database
-            #db.execute("""
+            # db.execute("""
 
             #                   CREATE TABLE purchase (
             #                       user_id INTEGER,
@@ -122,27 +129,29 @@ def buy():
 
             # Add purchase data to a new tabel
             db.execute(
-            "INSERT INTO purchase (user_id, symbol, price, share) VALUES (?, ?, ?, ?)",
-            session["user_id"],
-            request.form.get("symbol"),
-            status["price"],
-            request.form.get("shares"),
+                "INSERT INTO purchase (user_id, symbol, price, share) VALUES (?, ?, ?, ?)",
+                session["user_id"],
+                request.form.get("symbol"),
+                status["price"],
+                request.form.get("shares"),
             )
 
             # Add history data to a new tabel
             db.execute(
-            "INSERT INTO history (user_id, symbol, price, share, date, transaction_type) VALUES (?, ?, ?, ?, ?,?)",
-            session["user_id"],
-            request.form.get("symbol"),
-            status["price"],
-            request.form.get("shares"),
-            current_date(),
-            "Buy"
+                "INSERT INTO history (user_id, symbol, price, share, date, transaction_type) VALUES (?, ?, ?, ?, ?,?)",
+                session["user_id"],
+                request.form.get("symbol"),
+                status["price"],
+                request.form.get("shares"),
+                current_date(),
+                "Buy",
             )
 
             # Update remained user cash
             db.execute(
-            "UPDATE users SET cash = ? WHERE id = ?", remained, session.get("user_id")
+                "UPDATE users SET cash = ? WHERE id = ?",
+                remained,
+                session.get("user_id"),
             )
 
             flash("Bougth!")
@@ -158,7 +167,9 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
-    stocks = db.execute("SELECT * FROM history WHERE user_id = ?", session.get("user_id"))
+    stocks = db.execute(
+        "SELECT * FROM history WHERE user_id = ?", session.get("user_id")
+    )
 
     return render_template("history.html", stocks=stocks)
 
@@ -172,7 +183,6 @@ def login():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-
         # Ensure username was submitted
         if not request.form.get("username"):
             return apology("must provide username", 403)
@@ -182,10 +192,14 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        )
 
         # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
+        if len(rows) != 1 or not check_password_hash(
+            rows[0]["hash"], request.form.get("password")
+        ):
             return apology("invalid username and/or password", 403)
 
         # Remember which user has logged in
@@ -217,15 +231,13 @@ def quote():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-
-         # Ensure symbol is not empty submitted
+        # Ensure symbol is not empty submitted
         if not request.form.get("symbol"):
             return apology("must provide symbol", 400)
 
-         # Ensure symbol is valid
+        # Ensure symbol is valid
         if lookup(request.form.get("symbol")) is None:
             return apology("must provide a valid symbol", 400)
-
 
         # Look for symbol status
         status = lookup(request.form.get("symbol"))
@@ -240,13 +252,14 @@ def register():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-
         # Ensure username is not empty submitted
         if not request.form.get("username"):
             return apology("must provide username", 400)
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute(
+            "SELECT * FROM users WHERE username = ?", request.form.get("username")
+        )
 
         # Ensure username is not already exists
         if len(rows) != 0:
@@ -256,7 +269,6 @@ def register():
         elif not request.form.get("password") or not request.form.get("confirmation"):
             return apology("must provide password", 400)
 
-
         # Ensure password and confirmation are the same
         elif request.form.get("password") != request.form.get("confirmation"):
             return apology("password do not match", 400)
@@ -264,7 +276,9 @@ def register():
         db.execute(
             "INSERT INTO users (username, hash) VALUES (?, ?)",
             request.form.get("username"),
-            generate_password_hash(request.form.get("password"), method='pbkdf2:sha256',salt_length=8),
+            generate_password_hash(
+                request.form.get("password"), method="pbkdf2:sha256", salt_length=8
+            ),
         )
 
         # Redirect user to home page
@@ -280,12 +294,18 @@ def register():
 def sell():
     """Sell shares of stock"""
 
-    stocks = db.execute("SELECT symbol, SUM(share) AS share FROM purchase WHERE user_id = ? GROUP BY symbol", session.get("user_id"))
+    stocks = db.execute(
+        "SELECT symbol, SUM(share) AS share FROM purchase WHERE user_id = ? GROUP BY symbol",
+        session.get("user_id"),
+    )
 
-     # User reached route via POST (as by submitting a form via POST)
+    # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-
-        share = db.execute("SELECT symbol, SUM(share) AS share FROM purchase WHERE user_id = ? AND symbol = ? GROUP BY symbol", session.get("user_id"), request.form.get("symbol"))
+        share = db.execute(
+            "SELECT symbol, SUM(share) AS share FROM purchase WHERE user_id = ? AND symbol = ? GROUP BY symbol",
+            session.get("user_id"),
+            request.form.get("symbol"),
+        )
 
         try:
             share = int(share[0]["share"])
@@ -301,10 +321,8 @@ def sell():
             # Ensure number of shares is a positive number
             if int(request.form.get("shares")) < 0:
                 return apology("number of shares must be positive", 400)
-        except(ValueError, IndexError):
-                return apology("amount of cash must be a simple number", 400)
-
-
+        except (ValueError, IndexError):
+            return apology("amount of cash must be a simple number", 400)
 
         # ENSURE the user own that many shares of the stock
         if int(request.form.get("shares")) > share:
@@ -327,18 +345,22 @@ def sell():
         # Calculate the remained share
         remained_share = share - int(request.form.get("shares"))
 
-         # Calculate the price of remained share
+        # Calculate the price of remained share
         price_r_share = float(remained_share * price)
 
         # Update purchase data
         db.execute(
-                    "UPDATE purchase SET share = ?, price = ? WHERE symbol = ? AND user_id = ?", remained_share, price_r_share, request.form.get("symbol"), session.get("user_id")
-                )
+            "UPDATE purchase SET share = ?, price = ? WHERE symbol = ? AND user_id = ?",
+            remained_share,
+            price_r_share,
+            request.form.get("symbol"),
+            session.get("user_id"),
+        )
 
         # Update remained user cash
         db.execute(
             "UPDATE users SET cash = ? WHERE id = ?", final_cash, session.get("user_id")
-            )
+        )
 
         # Add history data to the tabel
         db.execute(
@@ -348,8 +370,8 @@ def sell():
             status["price"],
             request.form.get("shares"),
             current_date(),
-            "Sell"
-            )
+            "Sell",
+        )
 
         flash("Sold!")
         # Redirect user to home page
@@ -360,16 +382,13 @@ def sell():
         return render_template("sell.html", stocks=stocks)
 
 
-
-
 @app.route("/add", methods=["GET", "POST"])
 @login_required
 def add():
     """Add additional cash to their account."""
 
-     # User reached route via POST (as by submitting a form via POST)
+    # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
-
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
         cash = cash[0]["cash"]
 
@@ -380,12 +399,11 @@ def add():
             if not additional_cash:
                 return apology("must enter some cash", 403)
 
-             # Ensure amount of cash is a positive number
+            # Ensure amount of cash is a positive number
             if additional_cash < 0:
                 return apology("amount of cash must be positive", 403)
-        except(ValueError):
-                return apology("amount of cash must be a simple number", 403)
-
+        except ValueError:
+            return apology("amount of cash must be a simple number", 403)
 
         # Calculate final cash
         final_cash = additional_cash + cash
@@ -393,7 +411,7 @@ def add():
         # Update user cash
         db.execute(
             "UPDATE users SET cash = ? WHERE id = ?", final_cash, session.get("user_id")
-            )
+        )
 
         # Add history data to the tabel
         db.execute(
@@ -403,8 +421,8 @@ def add():
             additional_cash,
             "_",
             current_date(),
-            "Add Cash"
-            )
+            "Add Cash",
+        )
 
         flash("added!")
         # Redirect user to home page
