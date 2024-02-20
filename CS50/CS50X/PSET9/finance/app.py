@@ -285,9 +285,12 @@ def sell():
         # Calculate the remained share
         remained_share = share - int(request.form.get("shares"))
 
+         # Calculate the price of remained share
+        price_r_share = remained_share * price
+
         # Update purchase data
         db.execute(
-            "UPDATE purchase SET share = ? AND price = ? WHERE user_id = ?", remained_share, total, session["user_id"]
+            "UPDATE purchase SET share = ? AND price = ? WHERE user_id = ?", remained_share, price_r_share, session["user_id"]
             )
 
         # Update remained user cash
