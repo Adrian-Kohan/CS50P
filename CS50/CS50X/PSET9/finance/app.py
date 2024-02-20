@@ -290,7 +290,7 @@ def sell():
 
         # Update purchase data
         db.execute(
-            "UPDATE purchase SET share = ? AND price = ? WHERE user_id = ?", remained_share, price_r_share, session["user_id"]
+            "UPDATE purchase WHERE symbol = ? SET share = ? AND price = ? WHERE user_id = ?", request.form.get("symbol"), remained_share, price_r_share, session["user_id"]
             )
 
         # Update remained user cash
