@@ -103,15 +103,18 @@ def buy():
             #                       date DATETIME
             #                   )
             #                """)
-            # Add purchase data to a new tabel
-            db.execute(
-            "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?)",
-            session["user_id"],
-            request.form.get("symbol"),
-            status["price"],
-            request.form.get("shares"),
-            current_date()
-            )
+
+            db.execute("""
+
+                               CREATE TABLE history (
+                                   user_id INTEGER,
+                                   symbol TEXT,
+                                   price FLOAT,
+                                   share INTEGER,
+                                   date DATETIME,
+                                   transaction_type TEXT
+                               )
+                            """)
 
             # Add purchase data to a new tabel
             db.execute(
@@ -122,7 +125,18 @@ def buy():
             request.form.get("shares"),
             current_date()
             )
-            
+
+            # Add history data to a new tabel
+            db.execute(
+            "INSERT INTO history (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?)",
+            session["user_id"],
+            request.form.get("symbol"),
+            status["price"] * -1,
+            request.form.get("shares"),
+            current_date(),
+            "Buy"
+            )
+
             # Update remained user cash
             db.execute(
             "UPDATE users SET cash = ? WHERE id = ?", remained, session.get("user_id")
@@ -306,6 +320,17 @@ def sell():
         # Update remained user cash
         db.execute(
             "UPDATE users SET cash = ? WHERE id = ?", final_cash, session.get("user_id")
+            )
+
+        # Add history data to a new tabel
+        db.execute(
+            "INSERT INTO history (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?)",
+            session["user_id"],
+            request.form.get("symbol"),
+            status["price"],
+            request.form.get("shares"),
+            current_date(),
+            "Sell"
             )
 
         flash("Sold!")
