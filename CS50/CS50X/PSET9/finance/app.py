@@ -70,14 +70,14 @@ def buy():
 
         # Ensure symbol existx
         if status is None:
-            return apology("symbol does not exist", 403)
+            return apology("symbol does not exist", 400)
 
         try:
             # Ensure number of shares is a positive number
             if int(request.form.get("shares")) < 0:
-                return apology("number of shares must be positive", 403)
+                return apology("number of shares must be positive", 400)
         except(ValueError):
-                return apology("number of shares must be a simple number", 403)
+                return apology("number of shares must be a simple number", 400)
 
         # Look up stock price
         price = status["price"]
