@@ -100,7 +100,6 @@ def buy():
             #                       symbol TEXT,
             #                       price FLOAT,
             #                       share INTEGER,
-            #                       date DATETIME
             #                   )
             #                """)
 
@@ -118,12 +117,11 @@ def buy():
 
             # Add purchase data to a new tabel
             db.execute(
-            "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?)",
+            "INSERT INTO purchase (user_id, symbol, price, share) VALUES (?, ?, ?, ?)",
             session["user_id"],
             request.form.get("symbol"),
             status["price"],
             request.form.get("shares"),
-            current_date()
             )
 
             # Add history data to a new tabel
