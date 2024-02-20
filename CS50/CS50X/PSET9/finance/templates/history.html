@@ -32,7 +32,11 @@
                 {% if stock["transaction_type"] == "Sell" %}
                 <td>+${{stock["share"] * stock["price"]}}</td>
                 {% endif %}
-                
+
+                {% if stock["transaction_type"] == "Add Cash" %}
+                <td>${{stock["price"]}}</td>
+                {% endif %}
+
                 <td>{{stock["transaction_type"]}}</td>
                 <td>{{stock["date"]}}</td>
             </tr>
