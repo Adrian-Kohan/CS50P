@@ -286,7 +286,7 @@ def sell():
         remained_share = share - int(request.form.get("shares"))
 
          # Calculate the price of remained share
-        price_r_share = remained_share * price
+        price_r_share = float(remained_share * price)
 
         # Update purchase data
         db.execute(
