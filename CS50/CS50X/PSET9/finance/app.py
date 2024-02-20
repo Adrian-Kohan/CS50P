@@ -104,7 +104,7 @@ def buy():
             #                   )
             #                """)
 
-            #db.execute("""
+            # db.execute("""
             #
             #                  CREATE TABLE history (
             #                      user_id INTEGER,
@@ -128,7 +128,7 @@ def buy():
 
             # Add history data to a new tabel
             db.execute(
-            "INSERT INTO history (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?, ?)",
+            "INSERT INTO history (user_id, symbol, price, share, date, transaction_type) VALUES (?, ?, ?, ?, ?,?)",
             session["user_id"],
             request.form.get("symbol"),
             status["price"] * -1,
@@ -324,7 +324,7 @@ def sell():
 
         # Add history data to a new tabel
         db.execute(
-            "INSERT INTO history (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?, ?)",
+            "INSERT INTO history (user_id, symbol, price, share, date, transaction_type) VALUES (?, ?, ?, ?, ?, ?)",
             session["user_id"],
             request.form.get("symbol"),
             status["price"],
