@@ -286,11 +286,7 @@ def sell():
         db.execute(
             "UPDATE purchase SET share = ? WHERE id = ?", remained, session["user_id"]
             "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?)",
-            session["user_id"],
-            request.form.get("symbol"),
-            status["price"],
-            request.form.get("shares"),
-            current_date()
+            
             )
 
         # Update remained user cash
