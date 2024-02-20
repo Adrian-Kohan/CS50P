@@ -250,7 +250,7 @@ def sell():
      # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
-        share = db.execute("SELECT share, SUM(share) FROM purchase WHERE user_id = ? GROUP BY symbol", session.get("user_id"))
+        share = db.execute("SELECT symbol, SUM(share) FROM purchase WHERE user_id = ? GROUP BY symbol", session.get("user_id"))
         share = int(share[0]["share"])
         # Ensure symbol is not empty submitted
         if not request.form.get("symbol"):
