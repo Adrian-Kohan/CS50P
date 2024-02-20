@@ -40,7 +40,7 @@ def index():
     cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
     stocks = db.execute("SELECT symbol, SUM(share) AS share FROM purchase WHERE user_id = ? GROUP BY symbol", session.get("user_id"))
     cash = cash[0]["cash"]
-    total = "{:.2f}".cash
+    total = float(cash)
 
     # show the current price of each stock
     for stock in stocks:
