@@ -295,7 +295,7 @@ def sell():
 
         # Update remained user cash
         db.execute(
-            "UPDATE users SET cash = ? WHERE id = ?", final_cash, session["user_id"]
+            "UPDATE users SET cash = ? WHERE id = ?", final_cash, session.get("user_id")
             )
 
         flash("Sold!")
