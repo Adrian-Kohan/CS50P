@@ -220,7 +220,12 @@ def quote():
 
          # Ensure symbol is not empty submitted
         if not request.form.get("symbol"):
-            return apology("must provide symbol", 403)
+            return apology("must provide symbol", 400)
+
+         # Ensure symbol is valid
+        if lookup(request.form.get("symbol")) is None:
+            return apology("must provide a valid symbol", 400)
+
 
         # Look for symbol status
         status = lookup(request.form.get("symbol"))
@@ -254,7 +259,7 @@ def register():
 
         # Ensure password and confirmation are the same
         elif request.form.get("password") != request.form.get("confirmation"):
-            return apology("password do not match", 403)
+            return apology("password do not match", 400)
 
         db.execute(
             "INSERT INTO users (username, hash) VALUES (?, ?)",
