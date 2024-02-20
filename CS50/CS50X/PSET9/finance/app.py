@@ -279,8 +279,8 @@ def sell():
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
         cash = cash[0]["cash"]
 
-        # Calculate the remained user cash
-        remained = cash + total
+        # Calculate the final user cash
+        final_cash = cash + total
 
         # Calculate the remained share
         remained_share = share - int(request.form.get("shares"))
@@ -292,7 +292,7 @@ def sell():
 
         # Update remained user cash
         db.execute(
-            "UPDATE users SET cash = ? WHERE id = ?", remained, session["user_id"]
+            "UPDATE users SET cash = ? WHERE id = ?", final_cash, session["user_id"]
             )
 
         flash("Sold!")
