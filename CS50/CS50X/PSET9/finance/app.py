@@ -284,6 +284,7 @@ def sell():
 
         # Add purchase data to a new tabel
         db.execute(
+            "UPDATE purchase SET share = ? WHERE id = ?", remained, session["user_id"]
             "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?)",
             session["user_id"],
             request.form.get("symbol"),
