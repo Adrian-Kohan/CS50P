@@ -7,5 +7,5 @@
 {% block main %}
     <label>Name: </label>{{status["name"]}}
     <br>
-    <label>Price: </label>{{status["price"]}}
+    <label>Price: </label>{{ "{:.2f}".format(status["price"])}}
 {% endblock %}
