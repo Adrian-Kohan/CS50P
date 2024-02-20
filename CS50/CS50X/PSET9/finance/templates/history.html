@@ -24,9 +24,17 @@
                 <td>{{stock["symbol"]}}</td>
                 <td>{{stock["share"]}}</td>
                 <td>${{stock["price"]}}</td>
+
+                {% if stock["transaction_type"] == "Buy" %}
                 <td>-${{stock["share"] * stock["price"]}}</td>
-                <td>${{stock["transaction_type"]}}</td>
-                <td>${{stock["date"]}}</td>
+                {% endif %}
+
+                {% if stock["transaction_type"] == "Sell" %}
+                <td>+${{stock["share"] * stock["price"]}}</td>
+                {% endif %}
+                
+                <td>{{stock["transaction_type"]}}</td>
+                <td>{{stock["date"]}}</td>
             </tr>
             {% endfor %}
         </tbody>
