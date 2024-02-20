@@ -287,7 +287,7 @@ def sell():
 
         # Update purchase data
         db.execute(
-            "UPDATE purchase SET share = ? WHERE id = ?", remained_share, session["user_id"]
+            "UPDATE purchase SET share = ? AND price = ? WHERE id = ?", remained_share, total, session["user_id"]
             )
 
         # Update remained user cash
