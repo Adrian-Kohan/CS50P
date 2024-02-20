@@ -323,7 +323,7 @@ def sell():
             "UPDATE users SET cash = ? WHERE id = ?", final_cash, session.get("user_id")
             )
 
-        # Add history data to a new tabel
+        # Add history data to the tabel
         db.execute(
             "INSERT INTO history (user_id, symbol, price, share, date, transaction_type) VALUES (?, ?, ?, ?, ?, ?)",
             session["user_id"],
@@ -373,7 +373,16 @@ def add():
             "UPDATE users SET cash = ? WHERE id = ?", final_cash, session.get("user_id")
             )
 
-
+        # Add history data to the tabel
+        db.execute(
+            "INSERT INTO history (user_id, symbol, price, share, date, transaction_type) VALUES (?, ?, ?, ?, ?, ?)",
+            session["user_id"],
+            "_",
+            additional_cash,
+            "_",
+            current_date(),
+            "Add Cash"
+            )
         flash("added!")
         # Redirect user to home page
         return redirect("/")
