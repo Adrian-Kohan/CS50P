@@ -353,15 +353,20 @@ def add():
      # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
-        cash = request.form.get("cash")
-        # Ensure cash is not empty submitted
-        if not cash:
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
+        cash = cash[0]["cash"]
+        additional_cash = request.form.get("cash")
+
+        # Ensure additional cash is not empty submitted
+        if not additional_cash:
             return apology("must enter some cash", 403)
 
         # Ensure amount of cash is a positive number
-        if int(cash) < 0:
+        if int(additional_cash) < 0:
             return apology("amount of cash must be positive", 403)
 
+        # Calculate final cash
+        final_cash = additional_cash + cash
 
         # Update user cash
         db.execute(
