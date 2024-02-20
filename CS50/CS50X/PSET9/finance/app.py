@@ -280,7 +280,7 @@ def sell():
         cash = cash[0]["cash"]
 
         # Calculate the final user cash
-        final_cash = cash + total
+        final_cash = float(cash + total, 2)
 
         # Calculate the remained share
         remained_share = share - int(request.form.get("shares"))
