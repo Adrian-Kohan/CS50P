@@ -308,7 +308,7 @@ def sell():
 
         # ENSURE the user own that many shares of the stock
         if int(request.form.get("shares")) > share:
-            return apology("you not own that many shares of the stocke", 403)
+            return apology("you not own that many shares of the stocke", 400)
 
         # Look up stock price
         status = lookup(request.form.get("symbol"))
