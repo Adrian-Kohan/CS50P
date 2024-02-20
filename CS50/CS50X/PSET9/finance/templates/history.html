@@ -13,6 +13,8 @@
                 <th>Shares</th>
                 <th>Price</th>
                 <th>Total</th>
+                <th>Transaction Type</th>
+                <th>Date</th>
             </tr>
         </thead>
 
@@ -23,6 +25,8 @@
                 <td>{{stock["share"]}}</td>
                 <td>${{stock["price"]}}</td>
                 <td>${{stock["share"] * stock["price"]}}</td>
+                <td>${{stock["transaction_type"]}}</td>
+                <td>${{stock["date"]}}</td>
             </tr>
             {% endfor %}
         </tbody>
