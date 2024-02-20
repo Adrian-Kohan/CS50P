@@ -290,9 +290,14 @@ def sell():
         if share == 0:
             return apology("you don't have any share of this stock", 403)
 
-        # Ensure number of shares is a positive number
-        if int(request.form.get("shares")) < 0:
-            return apology("number of shares must be positive", 403)
+        try:
+            # Ensure number of shares is a positive number
+            if int(request.form.get("shares")) < 0:
+                return apology("number of shares must be positive", 403)
+        except(ValueError):
+                return apology("amount of cash must be a simple number", 403)
+
+
 
         # ENSURE the user own that many shares of the stock
         if int(request.form.get("shares")) > share:
@@ -366,11 +371,11 @@ def add():
         if not additional_cash:
             return apology("must enter some cash", 403)
 
-         try:
+        try:
              # Ensure amount of cash is a positive number
             if additional_cash < 0:
                 return apology("amount of cash must be positive", 403)
-         except(ValueError):
+        except(ValueError):
                 return apology("amount of cash must be a simple number", 403)
 
 
