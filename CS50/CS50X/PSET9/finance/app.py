@@ -365,13 +365,14 @@ def add():
 
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
         cash = cash[0]["cash"]
-        additional_cash = int(request.form.get("cash"))
-
-        # Ensure additional cash is not empty submitted
-        if not additional_cash:
-            return apology("must enter some cash", 403)
 
         try:
+            additional_cash = int(request.form.get("cash"))
+
+            # Ensure additional cash is not empty submitted
+            if not additional_cash:
+                return apology("must enter some cash", 403)
+            
              # Ensure amount of cash is a positive number
             if additional_cash < 0:
                 return apology("amount of cash must be positive", 403)
