@@ -300,9 +300,9 @@ def sell():
 
             # Ensure number of shares is a positive number
             if int(request.form.get("shares")) < 0:
-                return apology("number of shares must be positive", 403)
+                return apology("number of shares must be positive", 400)
         except(ValueError, IndexError):
-                return apology("amount of cash must be a simple number", 403)
+                return apology("amount of cash must be a simple number", 400)
 
 
 
