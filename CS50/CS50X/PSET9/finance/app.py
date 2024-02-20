@@ -383,6 +383,7 @@ def add():
             current_date(),
             "Add Cash"
             )
+
         flash("added!")
         # Redirect user to home page
         return redirect("/")
