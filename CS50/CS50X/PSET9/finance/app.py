@@ -265,7 +265,7 @@ def sell():
             return apology("number of shares must be positive", 403)
 
         # ENSURE the user own that many shares of the stock
-        if request.form.get("shares") > share:
+        if int(request.form.get("shares")) > share:
             return apology("you not own that many shares of the stocke", 403)
 
         # Look up stock price
