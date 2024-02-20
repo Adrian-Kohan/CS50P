@@ -283,14 +283,20 @@ def sell():
         final_cash = round(cash + total, 2)
 
         # Calculate the remained share
-        remained_share = share - int(request.form.get("shares"))
+        # remained_share = share - int(request.form.get("shares"))
 
-         # Calculate the price of remained share
-        price_r_share = float(remained_share * price)
+        # Calculate the price of remained share
+        # price_r_share = float(remained_share * price)
 
         # Update purchase data
         db.execute(
-                    "UPDATE purchase SET share = ?, price = ? WHERE symbol = ? AND user_id = ?", remained_share, price_r_share, request.form.get("symbol"), session.get("user_id")
+                    "INSERT INTO purchase (user_id, symbol, price, share, date) VALUES (?, ?, ?, ?, ?)",
+                    session["user_id"],
+                    request.form.get("symbol"),
+                    price_r_share,
+                    request.form.get("shares"),
+                    current_date()
+                    "UPDATE purchase SET share = ?, price = ? WHERE symbol = ? AND user_id = ?", , , request.form.get("symbol"), session.get("user_id")
                 )
 
         # Update remained user cash
