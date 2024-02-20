@@ -115,7 +115,7 @@ def buy():
 
             # Update remained user cash
             db.execute(
-            "UPDATE users SET cash = ? WHERE id = ?", remained, session.grt("user_id")
+            "UPDATE users SET cash = ? WHERE id = ?", remained, session.get("user_id")
             )
 
             flash("Bougth!")
@@ -290,7 +290,7 @@ def sell():
 
         # Update purchase data
         db.execute(
-                    db.execute("UPDATE purchase SET share = ?, price = ? WHERE symbol = ? AND user_id = ?", remained_share, price_r_share, request.form.get("symbol"), session.get("user_id"))
+                    "UPDATE purchase SET share = ?, price = ? WHERE symbol = ? AND user_id = ?", remained_share, price_r_share, request.form.get("symbol"), session.get("user_id")
                 )
 
         # Update remained user cash
