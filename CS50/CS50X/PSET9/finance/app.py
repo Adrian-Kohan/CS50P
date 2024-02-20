@@ -74,7 +74,7 @@ def buy():
 
         try:
             # Ensure number of shares is a positive number
-            if int(request.form.get("shares")) < 0 or float(request.form.get("shares")) < 0:
+            if int(request.form.get("shares")) < 0 and float(request.form.get("shares")) < 0:
                 return apology("number of shares must be positive", 400)
         except(ValueError):
                 return apology("number of shares must be a simple number", 400)
