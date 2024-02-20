@@ -23,14 +23,14 @@
             <tr>
                 <td>{{stock["symbol"]}}</td>
                 <td>{{stock["share"]}}</td>
-                <td>${{stock["price"]}}</td>
+                <td>{{stock["price"] | usd}}</td>
 
                 {% if stock["transaction_type"] == "Buy" %}
-                <td>-${{stock["share"] * stock["price"]}}</td>
+                <td>-{{stock["share"] * stock["price"] | usd}}</td>
                 {% endif %}
 
                 {% if stock["transaction_type"] == "Sell" %}
-                <td>+${{stock["share"] * stock["price"]}}</td>
+                <td>+{{stock["share"] * stock["price"] | usd}}</td>
                 {% endif %}
 
                 {% if stock["transaction_type"] == "Add Cash" %}
