@@ -72,10 +72,12 @@ def buy():
         if status is None:
             return apology("symbol does not exist", 403)
 
-        # Ensure number of shares is a positive number
-        if int(request.form.get("shares")) < 0:
-            return apology("number of shares must be positive", 403)
-
+        try:
+            # Ensure number of shares is a positive number
+            if int(request.form.get("shares")) < 0:
+                return apology("number of shares must be positive", 403)
+        except(ValueError):
+                return apology("number of shares must be a simple number", 403)
 
         # Look up stock price
         price = status["price"]
@@ -86,6 +88,7 @@ def buy():
         # Amount of cash that user has
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session.get("user_id"))
         cash = cash[0]["cash"]
+
         # Check if the purchase is successful or not
         if total > cash:
             return apology("you cannot afford the number of shares at the current price", 403)
