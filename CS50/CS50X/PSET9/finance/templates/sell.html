@@ -7,7 +7,7 @@
 {% block main %}
     <form action="/sell" method="post">
         <div class="mb-3">
-            <select autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" type="text">
+            <select class="form-select mx-auto w-auto mb-3" name="symbol" type="text">
                 {% for share in shares %}
                 <option>{{share["symbol"]}}</option>
                 {% endfor %}
