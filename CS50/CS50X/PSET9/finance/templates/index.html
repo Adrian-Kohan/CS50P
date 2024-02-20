@@ -21,7 +21,7 @@
             <tr>
                 <td>{{stock["symbol"]}}</td>
                 <td>{{stock["share"]}}</td>
-                <td>${{stock["price"]}}</td>
+                <td>{{stock["price"]}}| usd</td>
                 <td>${{stock["share"] * stock["price"]}}</td>
             </tr>
             {% endfor %}
