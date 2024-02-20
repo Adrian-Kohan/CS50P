@@ -366,9 +366,13 @@ def add():
         if not additional_cash:
             return apology("must enter some cash", 403)
 
-        # Ensure amount of cash is a positive number
-        if additional_cash < 0:
-            return apology("amount of cash must be positive", 403)
+         try:
+             # Ensure amount of cash is a positive number
+            if additional_cash < 0:
+                return apology("amount of cash must be positive", 403)
+        except(ValueError):
+                return apology("amount of cash must be a simple number", 403)
+
 
         # Calculate final cash
         final_cash = additional_cash + cash
