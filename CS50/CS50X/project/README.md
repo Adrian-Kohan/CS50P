@@ -4,7 +4,7 @@
 The Password Generator is a Python application designed to generate strong and complex passwords based on letters, numbers, and symbols. It also provides a convenient way to store and manage these passwords alongside their related websites and usernames. With this tool, you can easily retrieve your saved passwords by searching for the website name.
 
 Key Features
-Password Generation: Create random, secure passwords with customizable length and complexity.
+Password Generation: Create random, secure passwords with enought length and complexity.
 Website and User Information Storage: Associate passwords with specific websites and usernames.
 User-Friendly Interface: Built using Tkinter, the app offers an intuitive and visually appealing interface.
 Data Persistence: Save password data in JSON format for easy retrieval across sessions.
