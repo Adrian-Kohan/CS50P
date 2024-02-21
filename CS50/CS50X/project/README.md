@@ -11,7 +11,6 @@ Concepts Practised:
 -Saving Data to File
 -Dialog Boxes and Pop-Ups in Tkinter
 -Generate a Password & Copy it to the Clipboard
--Working w
 -Catching Exceptions: The try catch except finally Pattern
 -Raising Exceptions
 -IndexError Handling
