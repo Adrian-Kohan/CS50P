@@ -9,23 +9,29 @@ Website and User Information Storage: Associate passwords with specific websites
 User-Friendly Interface: Built using Tkinter, the app offers an intuitive and visually appealing interface.
 Data Persistence: Save password data in JSON format for easy retrieval across sessions.
 Clipboard Integration: Copy generated passwords directly to the clipboard for quick use.
+
 Concepts Practiced
 Python Lists and Shuffling: Utilize lists to create varied password components (letters, numbers, symbols) and shuffle them for randomness.
 Functions: Modularize code by defining functions for password generation, data storage, and UI interactions.
 JSON Output and File Saving: Serialize password data to JSON format and save it to a file.
+
 Tkinter GUI Development:
 Set up the canvas and organize widgets using grid() and columnspan.
 Handle dialog boxes and pop-ups for user interactions.
 Display images or icons within the app.
+
 Exception Handling:
 Implement the try-catch-except-finally pattern to gracefully handle errors.
 Address specific exceptions like IndexError and KeyError.
+
 Data Management:
 Read, write, and update JSON data within the password manager.
+
 Installation
 Prerequisites: Ensure you have Python 3.8+ installed.
-Clone the Repository: git clone https://github.com/yourusername/awesome-password-manager.git
+Clone the Repository: git clone https://github.com/yourusername/password-generator.git
 Install Dependencies: pip install -r requirements.txt
+
 Usage
 Run the app: python main.py
 Generate a password by adjusting the settings.
