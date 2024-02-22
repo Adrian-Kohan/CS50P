@@ -1,4 +1,4 @@
 import emoji
 
 text = input("Input: ")
-print(emoji.emojize(':thumbsup:', language='alias'))
+print(emoji.emojize(text, language='alias'))
