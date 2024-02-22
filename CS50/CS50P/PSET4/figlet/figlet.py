@@ -13,8 +13,8 @@ try:
         figlet = Figlet()
         figfonts = figlet.getFonts()
         random.seed()
-        figlet.setFont(random.choice(figfonts))
-        print (renderText(f"Output: {text}"))
+        f = figlet.setFont(font=random.choice(figfonts))
+        print (f.renderText(f"Output: {text}"))
 except:
     print("Error")
     sys.exit
