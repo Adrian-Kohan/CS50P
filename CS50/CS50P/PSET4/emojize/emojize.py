@@ -1,4 +1,4 @@
 import emoji
 
 text = input("Input: ")
-print(emoji.emojize(text, language='alias'))
+print(f"Output: {emoji.emojize(text, language='alias')}")
