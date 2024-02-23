@@ -6,9 +6,10 @@ figlet = Figlet()
 
 
 
-if len(sys.argv) == 2 and sys.argv[0] == "-f" or sys.argv[0] == "--font":
-    text = input("Input: ")
-    font = Figlet.setFont(font=sys.argv[1])
+if len(sys.argv) == 2:
+    if sys.argv[0] == "-f" or sys.argv[0] == "--font":
+        text = input("Input: ")
+        font = Figlet.setFont(font=sys.argv[1])
 
 elif len(sys.argv) == 0:
     text = input("Input: ")
