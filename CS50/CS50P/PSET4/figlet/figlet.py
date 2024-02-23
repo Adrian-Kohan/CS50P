@@ -1,6 +1,6 @@
 import sys
 from pyfiglet import Figlet
-import random
+from random import 
 
 figlet = Figlet()
 fonts = figlet.getFonts()
