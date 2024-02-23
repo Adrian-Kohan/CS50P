@@ -9,10 +9,10 @@ fonts = figlet.getFonts()
 
 
 if len(sys.argv) == 3:
-    if sys.argv[0] == "-f" or sys.argv[0] == "--font":
-        if sys.argv[1] in fonts:
+    if sys.argv[1] == "-f" or sys.argv[1] == "--font":
+        if sys.argv[2] in fonts:
             text = input("Input: ")
-            font = Figlet.setFont(font=sys.argv[1])
+            Figlet.setFont(sys.argv[2])
             print(f"Output:\n{figlet.renderText(text)}")
         else:
             print("Invalid usage")
