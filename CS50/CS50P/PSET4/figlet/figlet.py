@@ -12,7 +12,7 @@ if len(sys.argv) == 3:
     if sys.argv[1] == "-f" or sys.argv[1] == "--font":
         if sys.argv[2] in fonts:
             text = input("Input: ")
-            Figlet.setFont(sys.argv[2])
+            Figlet.setFont(font=sys.argv[2])
             print(f"Output:\n{figlet.renderText(text)}")
         else:
             print("Invalid usage")
@@ -23,7 +23,7 @@ if len(sys.argv) == 3:
 
 elif len(sys.argv) == 1:
     text = input("Input: ")
-    font = figlet.setFont(font=random.choice(fonts))
+    figlet.setFont(font=random.choice(fonts))
     print(f"Output:\n{figlet.renderText(text)}")
 
 else:
