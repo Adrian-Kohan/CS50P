@@ -14,7 +14,7 @@ elif len(sys.argv) == 0:
     font = figlet.setFont(font=random.choice(fonts))
 
 try:
-    print(f"Output: {figlet.renderText(text)}")
+    print(f"Output:\n{figlet.renderText(text)}")
 except:
-    print("Error")
+    print("Invalid usage")
     sys.exit
