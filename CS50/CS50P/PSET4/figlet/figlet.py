@@ -4,12 +4,14 @@ import random
 
 figlet = Figlet()
 
-text = input("Input: ")
 
 
-if len(sys.argv) == 2:
+if len(sys.argv) == 2 and sys.argv[0] == "-f" or sys.argv[0] == "--font":
+    text = input("Input: ")
     font = Figlet.setFont(font=sys.argv[1])
+
 elif len(sys.argv) == 0:
+    text = input("Input: ")
     fonts = figlet.getFonts()
     font = figlet.setFont(font=random.choice(fonts))
 
