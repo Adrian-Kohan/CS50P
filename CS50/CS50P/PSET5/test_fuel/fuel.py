@@ -15,7 +15,7 @@ def convert(fraction):
         if x <= y:
             return (x / y) * 100
 
-    except (ValueError, ZeroDivisionError):
+    except(ValueError, ZeroDivisionError):
         return True
 
 
