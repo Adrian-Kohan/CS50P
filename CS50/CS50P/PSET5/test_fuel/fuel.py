@@ -9,14 +9,16 @@ def convert(fraction):
     x = int(fraction[0])
     y = int(fraction[1])
 
-    if not x.isdigit() or not y.isdigit() or x > y:
+    if x <= y:
+        return gauge((x / y) * 100)
+
+    elif not str(x).isdigit() or not str(y).isdigit() or x > y:
         raise ValueError
 
     elif y == 0:
         raise ZeroDivisionError
 
-    elif x <= y:
-        return gauge((x / y) * 100)
+
 
 
 
