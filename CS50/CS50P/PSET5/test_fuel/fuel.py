@@ -1,7 +1,8 @@
 def main():
     fraction = input("Fraction: ")
-    if str(convert(fraction)).isdigit():
-        print(gauge(convert(fraction)))
+    fuel = convert(fraction)
+    if type(fuel) == float:
+        print(gauge(fuel))
 
 
 
@@ -16,7 +17,7 @@ def convert(fraction):
     elif y == 0:
         raise ZeroDivisionError
 
-    elif not str(x).isdigit() or not str(y).isdigit() or x > y:
+    else:
         raise ValueError
 
 
