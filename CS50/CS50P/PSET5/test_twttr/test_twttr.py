@@ -1,4 +1,4 @@
-form twttr import shorten
+from twttr import shorten
 
 def cap_vowel():
     assert shorten("HELLO") == "HLL"
