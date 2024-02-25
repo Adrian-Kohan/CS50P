@@ -7,7 +7,7 @@ def main():
 
 
 def is_valid(s):
-    symbols = "'!?@#$%^&*()/\_-+=}{[]"'"'
+    symbols = "'!?@#$%^&*()/\]_-+=}{["'"'
     is_true = False
 
     if 2 <= len(s) <= 6:
@@ -52,7 +52,7 @@ def is_valid(s):
                 is_true = False
     else:
         is_true = False
-        
+
 
 
 
