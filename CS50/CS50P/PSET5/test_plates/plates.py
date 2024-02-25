@@ -30,13 +30,13 @@ def is_valid(s):
                                 if s[after_i].isnumeric():
                                     return True
                                 else:
-                                    return False
-                                    break
+                                    return False, break
+
 
                             # check if first digit is 0 or not
                             if i == "0":
                                 if s[before_i].isalpha():
-                                    return False
+                                    return False, break
 
                                 else:
                                     return True
@@ -44,7 +44,7 @@ def is_valid(s):
                                     return True
 
                         else:
-                            return False
+                            return False, break
 
                 else:
                     return False
