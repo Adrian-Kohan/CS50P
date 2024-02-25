@@ -12,12 +12,11 @@ def convert(fraction):
     if x <= y:
         return gauge((x / y) * 100)
 
-    elif not str(x).isdigit() or not str(y).isdigit() or x > y:
-        raise ValueError
-
     elif y == 0:
         raise ZeroDivisionError
 
+    elif not str(x).isdigit() or not str(y).isdigit() or x > y:
+        raise ValueError
 
 
 
