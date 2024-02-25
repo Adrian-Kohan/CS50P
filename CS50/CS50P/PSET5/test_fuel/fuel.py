@@ -1,6 +1,7 @@
 def main():
     fraction = input("Fraction: ")
-    print(convert(fraction))
+    if str(convert(fraction)).isdigit():
+        print(gauge(convert(fraction)))
 
 
 
@@ -10,7 +11,7 @@ def convert(fraction):
     y = int(fraction[1])
 
     if x <= y:
-        return gauge((x / y) * 100)
+        return (x / y) * 100
 
     elif y == 0:
         raise ZeroDivisionError
