@@ -1,10 +1,21 @@
-greeting = input("Greeting: ").lower()
+def main():
+    greeting = input("Greeting: ").lower()
+    print(f"{value(greeting)}")
 
-first_h = greeting[0]
 
-if "hello" in greeting:
-    print("$0")
-elif first_h == "h":
-    print("$20")
-else:
-    print("$100")
+def value(greeting):
+    first_h = greeting[0]
+
+    if "hello" in greeting:
+        return "$0"
+    elif first_h == "h":
+        return "$20"
+    else:
+        return "$100"
+
+
+if __name__ == "__main__":
+    main()
+
+
+
