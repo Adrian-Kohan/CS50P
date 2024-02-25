@@ -15,10 +15,10 @@ def convert(fraction):
         return (x / y) * 100
 
     elif y == 0:
-        raise ZeroDivisionError
+        return ZeroDivisionError
 
     else:
-        raise ValueError
+        return ValueError
 
 
 
