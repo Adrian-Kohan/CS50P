@@ -1,17 +1,18 @@
 def main():
     while True:
         fraction = input("Fraction: ").split("/")
-        try:
-            convert(fraction)
 
-        except (ValueError, ZeroDivisionError):
-                continue
 
 
 
 def convert(fraction):
-    x = int(fraction[0])
-    y = int(fraction[1])
+    try:
+        x = int(fraction[0])
+        y = int(fraction[1])
+
+    except (ValueError, ZeroDivisionError):
+        continue
+
     if x <= y:
         fuel = (x / y) * 100
         if fuel <= 1:
