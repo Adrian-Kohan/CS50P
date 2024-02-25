@@ -1,7 +1,6 @@
 def main():
     user_input = input("Input: ")
-    shorten(user_input)
-    
+    print(f"{shorten(user_input)}")
 
 
 
