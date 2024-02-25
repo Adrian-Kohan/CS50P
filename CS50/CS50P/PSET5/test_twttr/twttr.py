@@ -9,7 +9,7 @@ def shorten(word):
     new_word = word
     for char in word:
         if char in vowels:
-            new_word = new_word.replace(char, "")
+            new_word = new_word.remove(char, "")
             return new_word
 
 
