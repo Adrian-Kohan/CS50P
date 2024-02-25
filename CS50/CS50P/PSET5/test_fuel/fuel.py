@@ -1,5 +1,5 @@
 def main():
-    while True:
+    while keep_asking:
         fraction = input("Fraction: ")
         print(gauge(convert(fraction)))
 
