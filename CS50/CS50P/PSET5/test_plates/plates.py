@@ -18,7 +18,7 @@ def is_valid(s):
                 if s[0].isalpha() and s[1].isalpha():
                     for i in s:
                         if i.isalpha():
-                            is_true = True
+                            return True
 
                         elif i.isnumeric():
                             index_i = s.index(i)
@@ -28,30 +28,30 @@ def is_valid(s):
                             # check if the number is not the last character and there is not a letter after that
                             if s.index(i) != s.index(s[-1]):
                                 if s[after_i].isnumeric():
-                                    is_true = True
+                                    return True
                                 else:
-                                    is_true = False
+                                    return False
                                     break
 
                             # check if first digit is 0 or not
                             if i == "0":
                                 if s[before_i].isalpha():
-                                    is_true = False
-                                    break
+                                    return False
+
                                 else:
-                                    is_true = True
+                                    return True
                             else:
-                                    is_true = True
+                                    return True
 
                         else:
-                            is_true = False
-                            break
+                            return False
+
                 else:
-                    is_true = False
+                    return False
             else:
-                is_true = False
+                return False
     else:
-        is_true = False
+        return False
 
 
 
