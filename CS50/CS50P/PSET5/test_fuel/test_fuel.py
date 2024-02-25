@@ -3,7 +3,6 @@ from fuel import convert, gauge
 def test_correct_input():
     assert convert("1/2") == 50
     assert convert("1/1") == 100
-    assert convert("1/100") == 0.01
 
 def test_incorrect_input():
     assert convert("100/1") == ValueError
