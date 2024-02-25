@@ -1,9 +1,10 @@
 def main():
-    greeting = input("Greeting: ").lower()
+    greeting = input("Greeting: ")
     print(f"{value(greeting)}")
 
 
 def value(greeting):
+    greeting = greeting.lower()
     first_h = greeting[0]
 
     if "hello" in greeting:
