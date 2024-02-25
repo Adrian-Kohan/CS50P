@@ -16,8 +16,7 @@ def convert(fraction):
             return main()
 
     except(ValueError, ZeroDivisionError):
-            return True
-
+        raise ValueError
 
 
 def gauge(percentage):
