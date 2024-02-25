@@ -18,7 +18,7 @@ def is_valid(s):
                 if s[0].isalpha() and s[1].isalpha():
                     for i in s:
                         if i.isalpha():
-                            return True
+                            is_true = True
 
                         elif i.isnumeric():
                             index_i = s.index(i)
@@ -28,30 +28,32 @@ def is_valid(s):
                             # check if the number is not the last character and there is not a letter after that
                             if s.index(i) != s.index(s[-1]):
                                 if s[after_i].isnumeric():
-                                    return True
+                                    is_true = True
                                 else:
-                                    return False, break
-
+                                    is_true = False
+                                    break
 
                             # check if first digit is 0 or not
                             if i == "0":
                                 if s[before_i].isalpha():
-                                    return False, break
-
+                                    is_true = False
+                                    break
                                 else:
-                                    return True
+                                    is_true = True
                             else:
-                                    return True
+                                    is_true = True
 
                         else:
-                            return False, break
-
+                            is_true = False
+                            break
                 else:
-                    return False
+                    is_true = False
             else:
-                return False
+                is_true = False
     else:
-        return False
+        is_true = False
+        
+
 
 
 
@@ -59,8 +61,6 @@ def is_valid(s):
         return True
     else:
         return False
-
-
 
 if __name__ == "__main__":
     main()
