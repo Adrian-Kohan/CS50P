@@ -5,18 +5,20 @@ def main():
 
 
 def convert(fraction):
-    try:
-        fraction = fraction.split("/")
-        x = int(fraction[0])
-        y = int(fraction[1])
-        if x <= y:
-            return gauge((x / y) * 100)
+    fraction = fraction.split("/")
+    x = int(fraction[0])
+    y = int(fraction[1])
 
-        else:
-            return main()
-
-    except(ValueError, ZeroDivisionError):
+    if not x.isdigit() or not y.isdigit() or x > y:
         raise ValueError
+
+    elif y == 0:
+        raise ZeroDivisionError
+
+    elif x <= y:
+        return gauge((x / y) * 100)
+
+
 
 
 def gauge(percentage):
