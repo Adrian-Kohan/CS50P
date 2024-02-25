@@ -5,15 +5,15 @@ def test_correct_input():
     assert convert("1/1") == 100
 
 def test_incorrect_input():
-    assert convert("100/1") == ValueError
-    assert convert("a/1") == ValueError
-    assert convert("100/a") == ValueError
-    assert convert("a/a") == ValueError
-    assert convert("1.2") == ValueError
+    assert convert("100/1") == raise ValueError
+    assert convert("a/1") == raise ValueError
+    assert convert("100/a") == raise ValueError
+    assert convert("a/a") == raise ValueError
+    assert convert("1.2") == raise ValueError
 
 
 def test_zero_y():
-    assert convert("100/0") == ZeroDivisionError
+    assert convert("100/0") == raise ZeroDivisionError
 
 def test_gauge():
     assert gauge(50) == "50%"
