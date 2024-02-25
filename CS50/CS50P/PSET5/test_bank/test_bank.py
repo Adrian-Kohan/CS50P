@@ -7,7 +7,7 @@ def test_with_hello():
 def test_with_h_at_first():
     assert value("hi, there") == "$20"
     assert value("Hi, there") == "$20"
-\
+
 def test_without_h():
     assert value("WHAT'S UP") == "$100"
     assert value("what's up") == "$100"
