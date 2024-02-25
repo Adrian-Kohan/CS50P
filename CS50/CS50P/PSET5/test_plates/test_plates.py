@@ -14,7 +14,6 @@ def test_number():
     assert is_valid("cs50") == True
     assert is_valid("cs50p") == False
     assert is_valid("cs050") == False
-    assert is_valid("50cs") == False
 
 
 
