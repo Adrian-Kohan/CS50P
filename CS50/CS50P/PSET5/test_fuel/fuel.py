@@ -1,7 +1,7 @@
 def main():
     fraction = input("Fraction: ")
     print(convert(fraction))
-        
+
 
 
 
@@ -14,8 +14,11 @@ def convert(fraction):
         if x <= y:
             return gauge((x / y) * 100)
 
+        else:
+            return main()
+
     except(ValueError, ZeroDivisionError):
-        return main()
+            return True
 
 
 
