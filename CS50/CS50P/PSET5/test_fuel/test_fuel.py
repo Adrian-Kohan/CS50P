@@ -1,19 +1,22 @@
 from fuel import convert, gauge
+import pytest
 
 def test_correct_input():
     assert convert("1/2") == 50
     assert convert("1/1") == 100
 
 def test_incorrect_input():
-    assert convert("100/1") == raise ValueError
-    assert convert("a/1") == raise ValueError
-    assert convert("100/a") == raise ValueError
-    assert convert("a/a") == raise ValueError
-    assert convert("1.2") == raise ValueError
+    with pytest.raises(ValueError):
+        convert("100/1")
+        convert("a/1")
+        convert("100/a")
+        convert("a/a")
+        convert("1.2")
 
 
 def test_zero_y():
-    assert convert("100/0") == raise ZeroDivisionError
+    with pytest.raises(ZeroDivisionError):
+        convert("100/0")
 
 def test_gauge():
     assert gauge(50) == "50%"
