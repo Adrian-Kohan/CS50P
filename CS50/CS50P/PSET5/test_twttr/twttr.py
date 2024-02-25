@@ -6,10 +6,11 @@ def main():
 
 def shorten(word):
     vowels = ["o", "a", "u", "e", "i", "O", "A", "U", "E", "I"]
-
+    new_word = word
     for char in word:
         if char in vowels:
-            return word.replace(char, "")
+            new_word = new_word.replace(char, "")
+            return new_word
 
 
 if __name__ == "__main__":
