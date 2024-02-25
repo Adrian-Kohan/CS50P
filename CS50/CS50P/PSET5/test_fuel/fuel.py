@@ -4,8 +4,6 @@ def main():
 
 
 
-
-
 def convert(fraction):
     try:
         fraction = fraction.split("/")
