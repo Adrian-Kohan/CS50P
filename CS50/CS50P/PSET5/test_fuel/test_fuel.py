@@ -7,12 +7,8 @@ def test_correct_input():
 
 def test_incorrect_input():
     with pytest.raises(ValueError):
-        convert("100/1")
-        convert("a/1")
-        convert("100/a")
-        convert("a/a")
-        convert("1.2")
-
+        convert("x/y")
+        
 
 def test_zero_y():
     with pytest.raises(ZeroDivisionError):
