@@ -9,4 +9,12 @@ if ".py" is not in sys.argv[1]:
 
 else:
     with open(sys.argv[1], "r") as code:
-        data = code.read()
+        data = code.readlines()
+        lines = 0
+        for i in data:
+            if data[0] == "#":
+                pass
+            elif data is not None:
+                lines += 1
+
+        print(lines)
