@@ -16,7 +16,8 @@ else:
             data = code.readlines()
             lines = 0
             for i in data:
-                if i.strip()[0] == "#" and "###" not in i:
+                i = i.strip()
+                if i[0] == "#" and "###" not in i:
                     pass
                 elif i.strip() == "\n":
                     pass
