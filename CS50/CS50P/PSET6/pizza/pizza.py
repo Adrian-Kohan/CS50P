@@ -14,9 +14,9 @@ elif ".csv" not in sys.argv[1]:
 else:
     try:
         with open(sys.argv[1], "r") as table:
-            table = code.read()
-            print(table)
-            # print(tabulate(table, headers, tablefmt="grid"))
+            data = table.read()
+            print(data)
+            print(tabulate(data, headers, tablefmt="grid"))
 
 
     except(FileNotFoundError):
