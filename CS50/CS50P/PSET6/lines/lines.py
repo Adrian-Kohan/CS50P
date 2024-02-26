@@ -9,4 +9,4 @@ if ".py" is not in sys.argv[1]:
 
 else:
     with open(sys.argv[1], "r") as code:
-        data = json.load(code)
+        data = code.read()
