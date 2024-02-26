@@ -16,9 +16,11 @@ else:
             data = code.readlines()
             lines = 0
             for i in data:
-                if "#" in i and "###" not in i:
+                if i.strip().startswith("#"):
                     pass
                 elif i.isspace():
+                    pass
+                elif i.strip().startswith("\n"):
                     pass
                 else:
                     lines += 1
