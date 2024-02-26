@@ -18,7 +18,7 @@ try:
             for i in data:
                 if i[0] == "#" and  i[1] != "#":
                     pass
-                elif i[0] == " ":
+                elif i.isspace():
                     pass
                 elif i == "\n":
                     pass
