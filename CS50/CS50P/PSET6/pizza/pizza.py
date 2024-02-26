@@ -18,6 +18,8 @@ else:
             data = list(csv.DictReader(table, delimiter=","))
 
             print(tabulate(data, tablefmt="grid"))
+            print(data[0])
+
 
 
     except(FileNotFoundError):
