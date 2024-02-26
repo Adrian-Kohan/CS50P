@@ -15,13 +15,9 @@ elif ".csv" not in sys.argv[1]:
 else:
     try:
         with open(sys.argv[1], "r") as table:
-            data = csv.DictReader(table, delimiter=",")
+            data = list(csv.DictReader(table, delimiter=","))
 
-            reader = csv.reader(table)
-            headers = next(reader, None)
-
-
-            print(tabulate(data, headers, tablefmt="grid"))
+            print(tabulate(data, headers="Keys", tablefmt="grid"))
 
 
     except(FileNotFoundError):
