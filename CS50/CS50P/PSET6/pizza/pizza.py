@@ -15,7 +15,8 @@ else:
     try:
         with open(sys.argv[1], "r") as table:
             table = code.read()
-            print(tabulate(table, headers, tablefmt="grid"))
+            print(table)
+            # print(tabulate(table, headers, tablefmt="grid"))
 
 
     except(FileNotFoundError):
