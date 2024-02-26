@@ -18,7 +18,9 @@ else:
             for i in data:
                 if "#" in i and "###" not in i:
                     pass
-                elif i == "\n":
+                elif i.strip() == "\n":
+                    pass
+                elif i.isspace():
                     pass
                 else:
                     lines += 1
