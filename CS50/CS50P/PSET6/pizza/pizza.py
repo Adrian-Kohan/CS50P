@@ -19,7 +19,7 @@ else:
 
             reader = csv.reader(table)
             headers = next(reader, None)
-            print(headers)
+
 
             #print(tabulate(data, headers, tablefmt="grid"))
 
