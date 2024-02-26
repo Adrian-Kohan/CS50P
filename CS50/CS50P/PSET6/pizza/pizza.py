@@ -16,10 +16,12 @@ else:
     try:
         with open(sys.argv[1], "r") as table:
             data = csv.DictReader(table, delimiter=",")
-            header = data[0].keys()
-            rows =  [x.values() for x in data]
 
-            print(tabulate(rows, headers=header, tablefmt="grid"))
+            reader = csv.reader(table)
+            headers = next(reader, None)
+
+
+            print(tabulate(data, headers, tablefmt="grid"))
 
 
     except(FileNotFoundError):
