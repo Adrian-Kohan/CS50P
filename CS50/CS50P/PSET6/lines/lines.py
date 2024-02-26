@@ -1,10 +1,10 @@
 import sys
 
 
-if len(sys.argv) == 0:
+if len(sys.argv) == 1:
     sys.exit("Too few command-line arguments")
 
-if ".py" is not in sys.argv[1]:
+elif ".py" not in sys.argv[1]:
     sys.exit("Not a python file")
 
 else:
