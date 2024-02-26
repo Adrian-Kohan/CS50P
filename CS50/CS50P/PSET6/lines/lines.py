@@ -1,6 +1,7 @@
 import sys
 
 
+try:
 if len(sys.argv) == 1:
     sys.exit("Too few command-line arguments")
 
@@ -11,12 +12,10 @@ else:
     with open(sys.argv[1], "r") as code:
         data = code.readlines()
         lines = 0
-        print(data)
         for i in data:
             if i[0] == "#":
-                print(i[0])
                 pass
-            elif data is "\n":
+            elif i == "\n":
                 pass
             else:
                 lines += 1
