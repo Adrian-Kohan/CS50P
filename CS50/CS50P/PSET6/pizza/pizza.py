@@ -16,7 +16,11 @@ else:
     try:
         with open(sys.argv[1], "r") as table:
             data = csv.DictReader(table, delimiter=",")
-            print(tabulate(data, headers="Keys", tablefmt="grid"))
+
+            dict_from_csv = dict(list(data)[0])
+            list_of_column_names = list(dict_from_csv.keys())
+
+            print(tabulate(data, headers=list_of_column_names, tablefmt="grid"))
 
 
     except(FileNotFoundError):
