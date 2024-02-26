@@ -11,6 +11,7 @@ else:
     with open(sys.argv[1], "r") as code:
         data = code.readlines()
         lines = 0
+        print(data)
         for i in data:
             if data[0] == "#":
                 pass
