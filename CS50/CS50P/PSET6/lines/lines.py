@@ -13,9 +13,12 @@ else:
         lines = 0
         print(data)
         for i in data:
-            if data[0] == "#":
+            if i[0] == "#":
+                print(i[0])
                 pass
-            elif data is not None:
+            elif data is "\n":
+                pass
+            else:
                 lines += 1
 
         print(lines)
