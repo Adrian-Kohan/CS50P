@@ -16,9 +16,9 @@ else:
     try:
         with open(sys.argv[1], "r") as table:
             data = list(csv.DictReader(table, delimiter=","))
-            headers = data[0].keys()
+            headers = list(data[0].keys())
             print(headers)
-            #print(tabulate(data, headers=headers, tablefmt="grid"))
+            print(tabulate(data, headers=headers, tablefmt="grid"))
 
 
     except(FileNotFoundError):
