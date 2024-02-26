@@ -14,8 +14,9 @@ elif ".csv" not in sys.argv[1]:
 else:
     try:
         with open(sys.argv[1], "r") as table:
-            data = table.read()
+            data = table.readlines()
             print(data)
+            headers = data[0]
             print(tabulate(data, headers, tablefmt="grid"))
 
 
