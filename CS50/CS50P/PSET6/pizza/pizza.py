@@ -22,4 +22,4 @@ else:
 
 
     except(FileNotFoundError):
-        print("File does not exist")
+        sys.exit("File does not exist")
