@@ -17,8 +17,8 @@ else:
         with open(sys.argv[1], "r") as table:
             data = list(csv.DictReader(table, delimiter=","))
             headers = list(data[0].keys())
-            print(headers)
-            print(tabulate(data, headers=headers, tablefmt="grid"))
+            data_as_lists = [list(d.values()) for d in data]
+            print(tabulate(data_as_lists, headers=headers, tablefmt="grid"))
 
 
     except(FileNotFoundError):
