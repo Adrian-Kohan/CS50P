@@ -21,7 +21,7 @@ else:
             headers = next(reader, None)
 
 
-            #print(tabulate(data, headers, tablefmt="grid"))
+            print(tabulate(data, headers=headers, tablefmt="grid"))
 
 
     except(FileNotFoundError):
