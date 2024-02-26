@@ -18,8 +18,7 @@ else:
             for i in data:
                 if "#" in i and "###" not in i:
                     pass
-                elif i == "\n":
-                    pass
+                
                 elif i.isspace():
                     pass
                 else:
