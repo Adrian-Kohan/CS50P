@@ -17,7 +17,7 @@ else:
         with open(sys.argv[1], "r") as table:
             data = list(csv.DictReader(table, delimiter=","))
 
-            print(tabulate(data, headers="Keys", tablefmt="grid"))
+            print(tabulate(data, tablefmt="grid"))
 
 
     except(FileNotFoundError):
