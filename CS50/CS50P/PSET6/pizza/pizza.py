@@ -1,6 +1,6 @@
 import sys
 from tabulate import tabulate
-import pandas
+import csv
 
 
 if len(sys.argv) == 1:
@@ -14,11 +14,9 @@ elif ".csv" not in sys.argv[1]:
 
 else:
     try:
-
-        data = pandas.read_csv(ys.argv[1])
-        print(data)
-        headers = data[0]
-        print(tabulate(data, headers, tablefmt="grid"))
+        with open(sys.argv[1], "r") as table:
+            data = csv.DictReader(table, delimiter=",")
+            print(tabulate(data, headers="Keys", tablefmt="grid"))
 
 
     except(FileNotFoundError):
