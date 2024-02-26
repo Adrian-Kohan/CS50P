@@ -18,6 +18,8 @@ try:
             for i in data:
                 if i[0] == "#" and  i[1] != "#":
                     pass
+                elif i[0] == " ":
+                    pass
                 elif i == "\n":
                     pass
                 else:
