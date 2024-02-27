@@ -1,5 +1,5 @@
 import sys
-from PIL import Image
+from PIL import Image, ImageOps
 
 
 if len(sys.argv) < 3:
@@ -12,8 +12,8 @@ elif len(sys.argv) > 3:
 else:
     try:
         with Image.open(sys.argv[1]) as im:
-            im.thumbnail(size)
-            im.save(file + ".thumbnail", "JPEG")
+            ImageOps.fit(im, size).save("imageops_fit.png")
+
 
 
 
