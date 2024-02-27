@@ -11,6 +11,7 @@ elif len(sys.argv) > 3:
 
 else:
     try:
+        size = (100, 150)
         with Image.open(sys.argv[1]) as im:
             ImageOps.fit(im, size).save("imageops_fit.png")
 
