@@ -1,5 +1,5 @@
 import sys
-import csv
+from PIL import Image
 
 
 if len(sys.argv) < 3:
