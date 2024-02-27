@@ -11,6 +11,8 @@ elif len(sys.argv) > 3:
 
 else:
     try:
+        print(sys.argv[1])
+        print(sys.argv[2])
         with open(sys.argv[1], sys.argv[2], "r") as data_1:
             dataset1 = list(csv.DictReader(data_1, delimiter=","))
             dataset2 = list(csv.DictReader(data_2, delimiter=","))
