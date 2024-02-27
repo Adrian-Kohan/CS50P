@@ -11,6 +11,7 @@ elif len(sys.argv) > 3:
 
 else:
     try:
+        dataset2 = []
         with open(sys.argv[1], "r") as data_1:
             dataset1 = list(csv.DictReader(data_1, delimiter=","))
 
@@ -20,12 +21,13 @@ else:
                 last = new_name[0]
                 house = i["house"]
 
-                new_data = {"first": first, "last": last, "house": house}
+                dataset2.append({"first": first, "last": last, "house": house})
 
-                with open('after.csv', 'w', newline='') as data_2:
-                    writer = csv.DictWriter(data_2, fieldnames=new_data.keys())
-                    writer.writeheader()
-                    writer.writerow(new_data)
+        with open('after.csv', 'w', newline='\n') as data_2:
+            for i in dataset2:
+                writer = csv.DictWriter(data_2, fieldnames=i.keys())
+                writer.writeheader()
+                writer.writerow(i)
 
     except(FileNotFoundError):
         sys.exit(f"Could not read {sys.argv[1]}")
