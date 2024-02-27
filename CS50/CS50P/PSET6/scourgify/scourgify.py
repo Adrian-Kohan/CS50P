@@ -24,10 +24,10 @@ else:
                 dataset2.append({"first": first, "last": last, "house": house})
 
         with open('after.csv', 'w', newline='\n') as data_2:
-            for i in dataset2:
-                writer = csv.DictWriter(data_2, fieldnames=i.keys())
+                writer = csv.DictWriter(data_2, fieldnames=dataset2[0].keys())
                 writer.writeheader()
-                writer.writerow(i)
+                for i in dataset2:
+                    writer.writerow(i)
 
     except(FileNotFoundError):
         sys.exit(f"Could not read {sys.argv[1]}")
