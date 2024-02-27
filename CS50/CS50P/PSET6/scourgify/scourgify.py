@@ -19,6 +19,8 @@ else:
                     dataset2 = list(csv.DictReader(data_2, delimiter=","))
                     first = new_name[0]
                     last = new_name[1]
+                    house = i["house"]
+                    dataset2.append({"first": first, "last": last, "house": house})
 
 
 
