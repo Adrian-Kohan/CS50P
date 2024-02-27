@@ -8,16 +8,15 @@ if len(sys.argv) == 1:
 elif len(sys.argv) > 3:
     sys.exit("Too many command-line arguments")
 
-elif ".csv" not in sys.argv[1]:
-    sys.exit("Not a python file")
 
 else:
     try:
-        with open(sys.argv[1], "r") as table:
-            data = list(csv.DictReader(table, delimiter=","))
-            headers = list(data[0].keys())
-            data_as_lists = [list(d.values()) for d in data]
-            print(tabulate(data_as_lists, headers=headers, tablefmt="grid"))
+        with open(sys.argv[1], "r") as data_1:
+            dataset1 = list(csv.DictReader(data_1, delimiter=","))
+
+        with open(sys.argv[2], "r") as data_2:
+            dataset2 = list(csv.DictReader(data_2, delimiter=","))
+
 
 
     except(FileNotFoundError):
