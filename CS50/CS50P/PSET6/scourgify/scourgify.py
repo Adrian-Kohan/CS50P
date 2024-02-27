@@ -22,6 +22,7 @@ else:
                 last = new_name[0]
                 house = i["house"]
                 dataset2.append({"first": first, "last": last, "house": house})
+        
 
 
     except(FileNotFoundError):
