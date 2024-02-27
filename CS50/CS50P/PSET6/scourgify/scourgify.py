@@ -21,7 +21,7 @@ else:
                 last = new_name[0]
                 house = i["house"]
 
-                dataset2.append({"first": first, "last": last, "house": house})
+                dataset2.append({"first": first.lstrip(), "last": last.lstrip(), "house": house})
 
         with open('after.csv', 'w') as data_2:
                 writer = csv.DictWriter(data_2, fieldnames=dataset2[0].keys())
