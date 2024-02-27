@@ -23,7 +23,7 @@ else:
 
                 dataset2.append({"first": first.lstrip(), "last": last.lstrip(), "house": house})
 
-        with open('after.csv', 'w') as data_2:
+        with open(sys.argv[2], 'w') as data_2:
                 writer = csv.DictWriter(data_2, fieldnames=dataset2[0].keys())
                 writer.writeheader()
                 for i in dataset2:
