@@ -10,7 +10,7 @@ elif len(sys.argv) > 2:
     sys.exit("Too many command-line arguments")
 
 elif ".csv" not in sys.argv[1]:
-    sys.exit("Not a python file")
+    sys.exit("Not a csv file")
 
 else:
     try:
