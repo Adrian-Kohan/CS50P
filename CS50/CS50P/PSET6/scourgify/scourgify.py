@@ -16,7 +16,7 @@ else:
             dataset1 = list(csv.DictReader(data_1, delimiter=","))
 
             for i in dataset1:
-                new_name = i["name"].split(", ")
+                new_name = i["name"].split(",")
                 first = new_name[1]
                 last = new_name[0]
                 house = i["house"]
