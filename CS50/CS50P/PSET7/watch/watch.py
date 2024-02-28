@@ -7,7 +7,7 @@ def main():
 
 
 def parse(s):
-    if matches := re.search(r"^$",s):
+    if matches := re.search(r'^src="https?://(?:www\.)?"$',s):
 
 
 
