@@ -17,7 +17,7 @@ elif sys.argv[1][-2] != sys.argv[2][-2]:
 else:
     try:
         with Image.open(sys.argv[1]) as im1:
-            size = im1.size()
+            size = im1.size
             print(size)
 
         with Image.open(sys.argv[2]) as im2:
