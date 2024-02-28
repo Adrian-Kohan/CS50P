@@ -11,13 +11,14 @@ elif len(sys.argv) > 3:
 
 else:
     try:
-        with Image.open(sys.argv[1]) as im:
-            
-        size = (100, 150)
-        with Image.open(sys.argv[2]) as im:
-            ImageOps.fit(im, size).save("imageops_fit.png")
-            Image.paste(im, box=None, mask=None)
-            im.save(file + ".thumbnail", "JPEG")
+        with Image.open(sys.argv[1]) as im1:
+            size = im1.size()
+            print(size)
+
+        with Image.open(sys.argv[2]) as im2:
+            ImageOps.fit(im2, size).save("image_fit.jpg")
+            Image.paste(im1, box=None, mask=None)
+            im2.save("Output", "JPG")
 
 
 
