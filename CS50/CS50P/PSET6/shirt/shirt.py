@@ -22,7 +22,7 @@ else:
 
         with Image.open("shirt.png") as im2:
             ImageOps.fit(im2, size, method=Image.Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
-            Image.paste(im1, box=None, mask=None)
+            im2.paste(im1, box=None, mask=None)
             im2.save(sys.argv[2])
 
 
