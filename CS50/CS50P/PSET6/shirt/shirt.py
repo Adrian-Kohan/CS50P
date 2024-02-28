@@ -16,9 +16,9 @@ else:
             print(size)
 
         with Image.open(sys.argv[2]) as im2:
-            ImageOps.fit(im2, size).save("image_fit.jpg")
+            ImageOps.fit(im2, size, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
             Image.paste(im1, box=None, mask=None)
-            im2.save("Output", "JPG")
+            im2.save("Output.jpg")
 
 
 
