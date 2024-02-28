@@ -20,10 +20,10 @@ else:
             size = im1.size
             print(size)
 
-        with Image.open(sys.argv[2]) as im2:
+        with Image.open(shirt.png) as im2:
             ImageOps.fit(im2, size, method=Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
             Image.paste(im1, box=None, mask=None)
-            im2.save("after.jpg")
+            im2.save(sys.argv[2])
 
 
 
