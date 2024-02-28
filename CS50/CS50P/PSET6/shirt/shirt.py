@@ -16,14 +16,13 @@ elif sys.argv[1][-2] != sys.argv[2][-2]:
 
 else:
     try:
-        with Image.open(sys.argv[1]) as im1:
-            size = im1.size
-            print(size)
+        im1 = Image.open(sys.argv[1])
+        size = im1.size
 
-        with Image.open("shirt.png") as im2:
-            ImageOps.fit(im2, size, method=Image.Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
-            im2.paste(im1, (0, 0))
-            im2.save(sys.argv[2])
+        im2 = Image.open("shirt.png")
+        ImageOps.fit(im2, size, method=Image.Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
+        im2.paste(im1, (0, 0))
+        im2.save(sys.argv[2])
 
 
 
