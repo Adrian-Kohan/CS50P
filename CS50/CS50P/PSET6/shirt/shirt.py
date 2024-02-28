@@ -8,7 +8,8 @@ if len(sys.argv) < 3:
 elif len(sys.argv) > 3:
     sys.exit("Too many command-line arguments")
 
-elif sys.agv[1].endswith()
+elif not sys.agv[1].endswith((".jpg",".jpeg", "png")) or not sys.agv[2].endswith((".jpg",".jpeg", "png")):
+    
 else:
     try:
         with Image.open(sys.argv[1]) as im1:
