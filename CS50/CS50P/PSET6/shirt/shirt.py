@@ -26,8 +26,5 @@ else:
         final.save(sys.argv[2])
 
 
-
-
-
     except(FileNotFoundError):
         sys.exit(f"Could not read {sys.argv[1]}")
