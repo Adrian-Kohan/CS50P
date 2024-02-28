@@ -21,7 +21,7 @@ else:
 
         im2 = Image.open("shirt.png")
         fited_img = ImageOps.fit(im2, size, method=Image.Resampling.BICUBIC, bleed=0.0, centering=(0.5, 0.5))
-        fited_img.paste(im1, (0, 0))
+        im1.paste(fited_img, (0, 0))
         final = im1.convert("RGB")
         final.save(sys.argv[2])
 
