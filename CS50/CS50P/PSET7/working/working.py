@@ -14,7 +14,7 @@ def convert(s):
             time1 = f"{int(matches.group(1)) + 12}:{matches.group(2)}"
 
         elif "PM" in matches.group(6):
-            time2 = f"{int(matches.group(1)) + 12}:{matches.group(2)}"
+            time2 = f"{int(matches.group(4)) + 12}:{matches.group(5)}"
 
 
 
