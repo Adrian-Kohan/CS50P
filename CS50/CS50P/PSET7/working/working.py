@@ -7,7 +7,7 @@ def main():
 
 
 def convert(s):
-    if matches := re.search(r'^[0-9]?[0-9]*$',s):
+    if matches := re.search(r'^[0-9]*[0-9]?:?(?:00)? A?P?M to [0-9]*[0-9]?:?(?:00)? A?P?M$',s):
 
 
 
