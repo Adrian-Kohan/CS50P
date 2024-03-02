@@ -7,11 +7,11 @@ def main():
 
 
 def convert(s):
-    if matches := re.search(r'^([0-9]{1}[0-9]?):?([0-9]?[0-9]?) (A?P?M) to ([0-9]{1}[0-9]?):?([0-9]?[0-9]?) (A?P?M)$',s):
+    if matches := re.search(r'^([0-9]{1}[0-9]?):?([0-9]?[0-9]?) (A?P?M) to ([0-9]{1}[0-9]?):?([0-9]?[0-9]?) (A?P?M)$',s) and int(h1) < 24 and int(h2) < 24 and int(m1) < 60 and int(m2) < 60:
 
         h1 = matches.group(1)
         m1 = matches.group(2)
-        
+
 
         h2 = matches.group(4)
         m2 = matches.group(5)
