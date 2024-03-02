@@ -17,23 +17,23 @@ def convert(s):
         m2 = matches.group(5)
         time2 = f"{h2}:{m2}"
 
-        if len(h1) == 1:
-            h1 = "0" + h1
-
         if "PM" in matches.group(3):
             h1 = int(h1) + 12
 
-        if len(m1) == 0:
-            m1 = "00"
+        if len(h1) == 1:
+            h1 = "0" + h1
 
-        if len(h2) == 1:
-            h2 = "0" + h2
+        if len(m1) == 0:
+            m1 = "00" + m1
 
         if "PM" in matches.group(6):
             h2 = int(h2) + 12
 
+        if len(h2) == 1:
+            h2 = "0" + h2
+
         if len(m2) == 0:
-            m2 = "00"
+            m2 = "00" + m2
 
         return f"{time1} to {time2}"
 
