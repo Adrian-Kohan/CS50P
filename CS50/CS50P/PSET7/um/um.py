@@ -7,7 +7,7 @@ def main():
 
 
 def count(s):
-    if matches := re.search(r'^.*$',s):
+    if matches := re.search(r'^ um ?\.?$',s):
 
 
 
