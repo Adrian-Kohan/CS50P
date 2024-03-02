@@ -20,8 +20,8 @@ def convert(s):
         if "PM" in matches.group(3):
             h1 = int(h1) + 12
 
-        if len(h1) == 1:
-            h1 = "0" + h1
+        if len(str(h1)) == 1:
+            h1 = "0" + str(h1)
 
         if len(m1) == 0:
             m1 = "00" + m1
@@ -29,8 +29,8 @@ def convert(s):
         if "PM" in matches.group(6):
             h2 = int(h2) + 12
 
-        if len(h2) == 1:
-            h2 = "0" + h2
+        if len(str(h2)) == 1:
+            h2 = "0" + str(h2)
 
         if len(m2) == 0:
             m2 = "00" + m2
