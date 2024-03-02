@@ -13,10 +13,9 @@ def convert(s):
         m1 = matches.group(2)
         h2 = matches.group(4)
         m2 = matches.group(5)
-        print(type(h1))
 
         if len(matches.group(1)) == 1:
-            h1 = 0 + matches.group(1)
+            h1 = "0" + matches.group(1)
 
         if "PM" in matches.group(3):
                 return f"{int(h1) + 12}:{m1}"
@@ -25,7 +24,7 @@ def convert(s):
                 return f"{h1}:{m1}"
 
         if len(matches.group(1)) == 1:
-            h2 = 0 + matches.group(4)
+            h2 = "0" + matches.group(4)
 
         if "PM" in matches.group(6):
             return f"{int(h2) + 12}:{m2}"
