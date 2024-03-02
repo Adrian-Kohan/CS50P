@@ -24,7 +24,7 @@ def convert(s):
             h1 = int(h1) + 12
 
         if len(m1) == 0:
-            time1 = h1
+            m1 = "00"
 
         if len(h2) == 1:
             h2 = "0" + h2
@@ -33,7 +33,7 @@ def convert(s):
             h2 = int(h2) + 12
 
         if len(m2) == 0:
-            time1 = h1
+            m2 = "00"
 
         return f"{time1} to {time2}"
 
