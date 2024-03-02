@@ -36,7 +36,9 @@ def convert(s):
                 m2 = "00" + m2
 
             return f"{h1}:{m1} to {h2}:{m2}"
-    
+
+        else:
+            raise ValueError
 
     else:
         raise ValueError
