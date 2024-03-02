@@ -35,7 +35,7 @@ def convert(s):
         if len(m2) == 0:
             time1 = h1
 
-        
+        return f"{time1} to {time2}"
 
     else:
         raise ValueError
