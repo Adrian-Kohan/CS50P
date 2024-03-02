@@ -27,7 +27,7 @@ def convert(s):
             h2 = 0 + matches.group(4)
 
         if "PM" in matches.group(6):
-            return = f"{int(h2) + 12}:{m2}"
+            return f"{int(h2) + 12}:{m2}"
 
         elif "AM" in matches.group(6):
             return f"{h2}:{m2}"
