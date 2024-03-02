@@ -13,6 +13,9 @@ def convert(s):
     m2 = ""
     time2 = ""
     if matches := re.search(r'^([0-9]{1}[0-9]?):?([0-9]?[0-9]?) (A?P?M) to ([0-9]{1}[0-9]?):?([0-9]?[0-9]?) (A?P?M)$',s):
+        if len(matches.group(1)) == 1:
+            h1 = 0 + matches.group(1)
+        
         if "PM" in matches.group(3):
             time1 = f"{int(matches.group(1)) + 12}:{matches.group(2)}"
 
