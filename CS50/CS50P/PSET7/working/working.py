@@ -11,6 +11,7 @@ def convert(s):
 
         h1 = matches.group(1)
         m1 = matches.group(2)
+        
 
         h2 = matches.group(4)
         m2 = matches.group(5)
