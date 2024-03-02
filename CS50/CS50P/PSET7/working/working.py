@@ -17,6 +17,7 @@ def convert(s):
         if "PM" in matches.group(3):
             if int(h1) != 12:
                 h1 = int(h1) + 12
+                
         if "AM" in matches.group(3) and h1 == "12":
             h1 = "00"
 
