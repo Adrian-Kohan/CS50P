@@ -33,8 +33,7 @@ def convert(s):
             return f"{h2}:{m2}"
 
 
-
-...
+    else:
 
 
 if __name__ == "__main__":
