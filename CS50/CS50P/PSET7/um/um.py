@@ -7,6 +7,7 @@ def main():
 
 def count(s):
     matches = re.findall(r'\bum\b',s)
+    print(matches)
     return len(matches)
 
 
