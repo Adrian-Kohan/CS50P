@@ -11,14 +11,22 @@ def convert(s):
 
         h1 = matches.group(1)
         m1 = matches.group(2)
+        time1 = h1:m1
+
         h2 = matches.group(4)
         m2 = matches.group(5)
+        time2 = h2:m2
 
         if len(h1) == 1:
             h1 = "0" + h1
 
         if "PM" in matches.group(3):
             h1 = int(h1) + 12
+
+        if len(m1) == 0:
+            time1 = h1
+
+        
 
         elif "AM" in matches.group(3):
                 return f"{h1}:{m1}"
