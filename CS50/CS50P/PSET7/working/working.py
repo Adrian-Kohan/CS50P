@@ -7,7 +7,10 @@ def main():
 
 
 def convert(s):
-    time1 = ""
+    h1 = ""
+    m1 = ""
+    h2 = ""
+    m2 = ""
     time2 = ""
     if matches := re.search(r'^([0-9]{1}[0-9]?):?([0-9]?[0-9]?) (A?P?M) to ([0-9]{1}[0-9]?):?([0-9]?[0-9]?) (A?P?M)$',s):
         if "PM" in matches.group(3):
