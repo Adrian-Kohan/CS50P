@@ -4,9 +4,9 @@ def main():
     email = input("What's your email address? ")
 
     if validators.email(email):
-        return Valid
+        return "\nValid"
     else:
-        return Invalid
+        return "\nInvalid"
 
 
 
