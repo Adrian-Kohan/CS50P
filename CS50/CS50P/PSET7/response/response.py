@@ -1,7 +1,12 @@
+import validators
+
 def main():
     email = input("What's your email address? ")
 
-    if email.
+    if validators.email(email):
+        return Valid
+    else:
+        return Invalid
 
 
 
