@@ -34,7 +34,7 @@ def convert(s):
 
 
     else:
-
+        raise ValueError
 
 if __name__ == "__main__":
     main()
