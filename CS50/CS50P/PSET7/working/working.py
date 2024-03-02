@@ -14,8 +14,8 @@ def convert(s):
 
         h2 = matches.group(4)
         m2 = matches.group(5)
-        if 
-        if int(h1) < 24 and int(h2) < 24 and int(m1) < 60 and int(m2) < 60:
+        if
+        if int(h1) < 24 and int(h2):
 
             if "PM" in matches.group(3):
                 h1 = int(h1) + 12
