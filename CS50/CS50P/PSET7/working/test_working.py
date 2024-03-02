@@ -11,4 +11,5 @@ def test_incorrect_input_time:
 
 
 def test_incorrect_time:
-    with 
+    with pytest.raises(ValueError):
+        assert convert("9:60 AM to 5:60 PM")
