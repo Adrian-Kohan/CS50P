@@ -11,11 +11,9 @@ def convert(s):
 
         h1 = matches.group(1)
         m1 = matches.group(2)
-        time1 = f"{h1}:{m1}"
 
         h2 = matches.group(4)
         m2 = matches.group(5)
-        time2 = f"{h2}:{m2}"
 
         if "PM" in matches.group(3):
             h1 = int(h1) + 12
@@ -35,7 +33,7 @@ def convert(s):
         if len(m2) == 0:
             m2 = "00" + m2
 
-        return f"{time1} to {time2}"
+        return f"{h1}:{m1} to {h2}:{m2}"
 
     else:
         raise ValueError
