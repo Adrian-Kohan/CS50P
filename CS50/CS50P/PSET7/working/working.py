@@ -17,17 +17,20 @@ def convert(s):
         if len(matches.group(1)) == 1:
             h1 = 0 + matches.group(1)
 
-            if "PM" in matches.group(3):
+        if "PM" in matches.group(3):
                 return f"{int(h1) + 12}:{m1}"
 
-            else:
+        elif "AM" in matches.group(3):
                 return f"{h1}:{m1}"
 
-        elif len(matches.group(1)) == 1:
+        if len(matches.group(1)) == 1:
             h2 = 0 + matches.group(4)
 
-            if "PM" in matches.group(6):
-                time2 = f"{int(matches.group(4)) + 12}:{matches.group(5)}"
+        if "PM" in matches.group(6):
+            return = f"{int(h2) + 12}:{m2}"
+
+        elif "AM" in matches.group(6):
+            return f"{h2}:{m2}"
 
 
 
