@@ -13,7 +13,7 @@ def convert(s):
         m1 = matches.group(2)
         h2 = matches.group(4)
         m2 = matches.group(5)
-        print(t)
+        print(type(h1))
 
         if len(matches.group(1)) == 1:
             h1 = 0 + matches.group(1)
