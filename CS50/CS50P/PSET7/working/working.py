@@ -35,7 +35,8 @@ def convert(s):
 
         if int(h1) < 24 and int(h2) < 24 and int(m1) < 60 and int(m2) < 60:
             return f"{h1}:{m1} to {h2}:{m2}"
-
+        else:
+            raise ValueError
 
     else:
         raise ValueError
