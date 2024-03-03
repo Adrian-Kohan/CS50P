@@ -1,7 +1,8 @@
 class Jar:
     def __init__(self, capacity=12):
-        if int(capacity) < 0:
-             raise ValueError("Missing name")
+        if capacity < 0:
+             raise ValueError("Enter a positive number")
+        self.capacity = capacity
 
     def __str__(self):
         ...
