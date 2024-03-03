@@ -30,7 +30,7 @@ def convert(date1, date2):
             return words
 
 
-    except:
+    except(ValueError, ):
         sys.exit ("Invalid date")
 
 if __name__ == "__main__":
