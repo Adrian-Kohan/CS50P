@@ -1,11 +1,12 @@
 from seasons import convert
+from datetime import date
 import sys
 
 def test_incorrect_date_format():
-    assert convert("1990.2.2") == sys.exit ("Invalid date")
+    assert convert("1990.2.2", date(2003, 1, 1)) == sys.exit ("Invalid date")
 
 def test_incorrect_date():
-    assert convert("1990.24.50") == sys.exit ("Invalid date")
+    assert convert("1990.24.50", date(2003, 1, 1)) == sys.exit ("Invalid date")
 
 def test_correct_date():
-    assert convert("2001-01-01", "2003-01-01") == "One million, fifty-one thousand, two hundred minutes"
+    assert convert(date(2001, 1, 1), date(2003, 1, 1)) == "One million, fifty-one thousand, two hundred minutes"
