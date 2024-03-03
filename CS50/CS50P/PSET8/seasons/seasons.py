@@ -19,7 +19,7 @@ def main():
 
             inflector = inflect.engine()
             words = inflector.number_to_words(days_in_min)
-            words = words.replace("and", "")
+            words = words.replace(" and", ",")
             print(words)
 
 
