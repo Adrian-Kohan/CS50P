@@ -18,8 +18,8 @@ def main():
             # print(days_in_min)
 
             # datetime(year, month, day, hour, minute, second)
-            a = datetime(birth_date)
-            b = datetime(today)
+            a = datetime(int(year), int(month), int(day))
+            b = datetime(today.year, today.month, today.day)
 
             # returns a timedelta object
             c = a-b
