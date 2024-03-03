@@ -11,6 +11,8 @@ def main():
         year, month, day = user_birth_date.split("-")
 
         if birth_date := date(int(year), int(month), int(day)):
+            
+            # returns a timedelta object
             days = abs(birth_date - today).days
             days_in_min = days * 24 * 60
             print(days_in_min)
