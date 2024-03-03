@@ -1,9 +1,10 @@
 from seasons import convert
 from datetime import date
-import sys
+import pytest
 
 def test_incorrect_date_format():
-    assert convert("1990.2.2", date(2003, 1, 1)) == "Invalid date"
+    with pytest.SystemExit:
+        assert convert("1990.2.2", date(2003, 1, 1)) == "Invalid date"
 
 def test_incorrect_date():
     assert convert("1990.24.50", date(2003, 1, 1)) == "Invalid date"
