@@ -25,8 +25,7 @@ def convert(date1, date2):
             days_in_min = days * 24 * 60
 
             # turn numerical numbers to English words
-            words = inflector.number_to_words(days_in_min).capitalize()
-            words = words.replace(" and", ",")
+            words = inflector.number_to_words(days_in_min, group=3).capitalize()
             return words
 
 
