@@ -3,21 +3,21 @@ import sys
 
 
 def main():
-    user_birth_date = date(input("Date of birth: "))
+    user_birth_date = input("Date of birth: ")
     today = date.today()
-    # try:
-        # if date(int(user_birth_date)):
+
+    try:
+        year, month, day = user_birth_date.split("-")
+
+        if birth_date := date(int(year), int(month), int(day)):
+            days = abs(birth_date - today).days
+            days_in_min = days * 24 * 60
+            
 
 
 
-    time_delta1 = timedelta(user_birth_date.year, user_birth_date.month, user_birth_date.day)
-    time_delta2 = timedelta(today.year, today.month, today.day)
-
-    result = time_delta1 - time_delta2
-    print(result)
-    # except:
-    #     sys.exit ("Invalid date")
-
+    except:
+        sys.exit ("Invalid date")
 
 
 
