@@ -1,11 +1,17 @@
 from datetime import date
+import sys
 
 
 def main():
     user_birth_date = input("Date of birth: ")
     today = date.today()
-    
-    print(today)
+    try:
+        year1, month1, day1 = user_birth_date.split("-")
+        year2, month2, day2 = today.split("-")
+        years_in_min = (year2 -year1) * 365
+        print(today)
+    except:
+        sys.exit "Invalid date"
 
 
 
