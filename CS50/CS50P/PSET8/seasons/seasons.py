@@ -26,6 +26,7 @@ def convert(date1, date2):
 
             # turn numerical numbers to English words
             words = inflector.number_to_words(days_in_min).capitalize() + " minutes"
+            words = words.replace(" and", "")
             return words
 
 
