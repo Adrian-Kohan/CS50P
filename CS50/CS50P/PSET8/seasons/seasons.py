@@ -11,15 +11,23 @@ def main():
         year, month, day = user_birth_date.split("-")
 
         if birth_date := date(int(year), int(month), int(day)):
-            
+
             # returns a timedelta object
             days = abs(birth_date - today).days
-            days_in_min = days * 24 * 60
-            print(days_in_min)
 
-            inflector = inflect.engine()
-            words = inflector.number_to_words(days_in_min)
-            print(words)
+            # days_in_min = days * 24 * 60
+            # print(days_in_min)
+
+            minutes = days.total_seconds() / 60
+            print('Total difference in minutes: ', minutes)
+
+            # returns the difference of the time of the day
+            minutes = days.seconds / 60
+            print('Difference in minutes: ', minutes)
+
+            # inflector = inflect.engine()
+            # words = inflector.number_to_words(days_in_min)
+            # print(words)
 
 
     except:
