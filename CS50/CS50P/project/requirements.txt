@@ -1,0 +1,8 @@
+# GUI library
+tkinter==8.6
+
+# Text-to-speech library
+gTTS==2.5.0
+
+# PDF handling library
+PyPDF2==3.0.1
